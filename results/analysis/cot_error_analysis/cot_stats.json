@@ -1,0 +1,386 @@
+{
+    "OpenGVLab/InternVL2-4B": {
+        "real": {
+            "geometry__triangle": {
+                "%_improved": 16.0,
+                "%_degraded": 14.000000000000002,
+                "%_correct": 52.0,
+                "%_incorrect": 48.0
+            },
+            "geometry__quadrilateral": {
+                "%_improved": 28.000000000000004,
+                "%_degraded": 26.0,
+                "%_correct": 50.0,
+                "%_incorrect": 50.0
+            },
+            "geometry__length": {
+                "%_improved": 12.0,
+                "%_degraded": 46.0,
+                "%_correct": 22.0,
+                "%_incorrect": 78.0
+            },
+            "geometry__angle": {
+                "%_improved": 14.000000000000002,
+                "%_degraded": 54.0,
+                "%_correct": 22.0,
+                "%_incorrect": 78.0
+            },
+            "geometry__area": {
+                "%_improved": 18.0,
+                "%_degraded": 40.0,
+                "%_correct": 26.0,
+                "%_incorrect": 74.0
+            },
+            "geometry__diameter_radius": {
+                "%_improved": 22.0,
+                "%_degraded": 20.0,
+                "%_correct": 50.0,
+                "%_incorrect": 50.0
+            },
+            "chemistry__shape_single": {
+                "%_improved": 20.0,
+                "%_degraded": 14.000000000000002,
+                "%_correct": 56.00000000000001,
+                "%_incorrect": 44.0
+            },
+            "chemistry__shape_multi": {
+                "%_improved": 12.0,
+                "%_degraded": 84.0,
+                "%_correct": 14.000000000000002,
+                "%_incorrect": 86.0
+            },
+            "charts__extraction": {
+                "%_improved": 14.000000000000002,
+                "%_degraded": 50.0,
+                "%_correct": 34.0,
+                "%_incorrect": 66.0
+            },
+            "charts__intersection": {
+                "%_improved": 22.0,
+                "%_degraded": 16.0,
+                "%_correct": 60.0,
+                "%_incorrect": 40.0
+            }
+        }
+    },
+    "OpenGVLab/InternVL2-8B": {
+        "real": {
+            "geometry__triangle": {
+                "%_improved": 2.0,
+                "%_degraded": 2.0,
+                "%_correct": 50.0,
+                "%_incorrect": 50.0
+            },
+            "geometry__quadrilateral": {
+                "%_improved": 12.0,
+                "%_degraded": 6.0,
+                "%_correct": 42.0,
+                "%_incorrect": 57.99999999999999
+            },
+            "geometry__length": {
+                "%_improved": 14.000000000000002,
+                "%_degraded": 34.0,
+                "%_correct": 34.0,
+                "%_incorrect": 66.0
+            },
+            "geometry__angle": {
+                "%_improved": 6.0,
+                "%_degraded": 64.0,
+                "%_correct": 14.000000000000002,
+                "%_incorrect": 86.0
+            },
+            "geometry__area": {
+                "%_improved": 14.000000000000002,
+                "%_degraded": 24.0,
+                "%_correct": 30.0,
+                "%_incorrect": 70.0
+            },
+            "geometry__diameter_radius": {
+                "%_improved": 18.0,
+                "%_degraded": 12.0,
+                "%_correct": 64.0,
+                "%_incorrect": 36.0
+            },
+            "chemistry__shape_single": {
+                "%_improved": 10.0,
+                "%_degraded": 6.0,
+                "%_correct": 57.99999999999999,
+                "%_incorrect": 42.0
+            },
+            "chemistry__shape_multi": {
+                "%_improved": 8.0,
+                "%_degraded": 78.0,
+                "%_correct": 16.0,
+                "%_incorrect": 84.0
+            },
+            "charts__extraction": {
+                "%_improved": 12.0,
+                "%_degraded": 10.0,
+                "%_correct": 57.99999999999999,
+                "%_incorrect": 42.0
+            },
+            "charts__intersection": {
+                "%_improved": 14.000000000000002,
+                "%_degraded": 14.000000000000002,
+                "%_correct": 57.99999999999999,
+                "%_incorrect": 42.0
+            }
+        }
+    },
+    "OpenGVLab/InternVL2-26B": {
+        "real": {
+            "geometry__triangle": {
+                "%_improved": 2.0,
+                "%_degraded": 4.0,
+                "%_correct": 46.0,
+                "%_incorrect": 54.0
+            },
+            "geometry__quadrilateral": {
+                "%_improved": 16.0,
+                "%_degraded": 22.0,
+                "%_correct": 44.0,
+                "%_incorrect": 56.00000000000001
+            },
+            "geometry__length": {
+                "%_improved": 24.0,
+                "%_degraded": 32.0,
+                "%_correct": 34.0,
+                "%_incorrect": 66.0
+            },
+            "geometry__angle": {
+                "%_improved": 8.0,
+                "%_degraded": 57.99999999999999,
+                "%_correct": 18.0,
+                "%_incorrect": 82.0
+            },
+            "geometry__area": {
+                "%_improved": 12.0,
+                "%_degraded": 44.0,
+                "%_correct": 32.0,
+                "%_incorrect": 68.0
+            },
+            "geometry__diameter_radius": {
+                "%_improved": 8.0,
+                "%_degraded": 8.0,
+                "%_correct": 57.99999999999999,
+                "%_incorrect": 42.0
+            },
+            "chemistry__shape_single": {
+                "%_improved": 16.0,
+                "%_degraded": 20.0,
+                "%_correct": 52.0,
+                "%_incorrect": 48.0
+            },
+            "chemistry__shape_multi": {
+                "%_improved": 16.0,
+                "%_degraded": 54.0,
+                "%_correct": 32.0,
+                "%_incorrect": 68.0
+            },
+            "charts__extraction": {
+                "%_improved": 14.000000000000002,
+                "%_degraded": 20.0,
+                "%_correct": 60.0,
+                "%_incorrect": 40.0
+            },
+            "charts__intersection": {
+                "%_improved": 10.0,
+                "%_degraded": 10.0,
+                "%_correct": 50.0,
+                "%_incorrect": 50.0
+            }
+        }
+    },
+    "OpenGVLab/InternVL2-Llama3-76B": {
+        "real": {
+            "geometry__triangle": {
+                "%_improved": 6.0,
+                "%_degraded": 0.0,
+                "%_correct": 54.0,
+                "%_incorrect": 46.0
+            },
+            "geometry__quadrilateral": {
+                "%_improved": 8.0,
+                "%_degraded": 4.0,
+                "%_correct": 48.0,
+                "%_incorrect": 52.0
+            },
+            "geometry__length": {
+                "%_improved": 4.0,
+                "%_degraded": 22.0,
+                "%_correct": 28.000000000000004,
+                "%_incorrect": 72.0
+            },
+            "geometry__angle": {
+                "%_improved": 8.0,
+                "%_degraded": 48.0,
+                "%_correct": 22.0,
+                "%_incorrect": 78.0
+            },
+            "geometry__area": {
+                "%_improved": 12.0,
+                "%_degraded": 34.0,
+                "%_correct": 44.0,
+                "%_incorrect": 56.00000000000001
+            },
+            "geometry__diameter_radius": {
+                "%_improved": 2.0,
+                "%_degraded": 4.0,
+                "%_correct": 57.99999999999999,
+                "%_incorrect": 42.0
+            },
+            "chemistry__shape_single": {
+                "%_improved": 14.000000000000002,
+                "%_degraded": 22.0,
+                "%_correct": 48.0,
+                "%_incorrect": 52.0
+            },
+            "chemistry__shape_multi": {
+                "%_improved": 14.000000000000002,
+                "%_degraded": 44.0,
+                "%_correct": 38.0,
+                "%_incorrect": 62.0
+            },
+            "charts__extraction": {
+                "%_improved": 10.0,
+                "%_degraded": 30.0,
+                "%_correct": 56.00000000000001,
+                "%_incorrect": 44.0
+            },
+            "charts__intersection": {
+                "%_improved": 0.0,
+                "%_degraded": 2.0,
+                "%_correct": 50.0,
+                "%_incorrect": 50.0
+            }
+        }
+    },
+    "gemini-1.5-pro-002": {
+        "real": {
+            "geometry__triangle": {
+                "%_improved": 8.0,
+                "%_degraded": 4.0,
+                "%_correct": 52.0,
+                "%_incorrect": 48.0
+            },
+            "geometry__quadrilateral": {
+                "%_improved": 22.0,
+                "%_degraded": 4.0,
+                "%_correct": 68.0,
+                "%_incorrect": 32.0
+            },
+            "geometry__length": {
+                "%_improved": 8.0,
+                "%_degraded": 8.0,
+                "%_correct": 36.0,
+                "%_incorrect": 64.0
+            },
+            "geometry__angle": {
+                "%_improved": 2.0,
+                "%_degraded": 14.000000000000002,
+                "%_correct": 42.0,
+                "%_incorrect": 57.99999999999999
+            },
+            "geometry__area": {
+                "%_improved": 6.0,
+                "%_degraded": 8.0,
+                "%_correct": 46.0,
+                "%_incorrect": 54.0
+            },
+            "geometry__diameter_radius": {
+                "%_improved": 18.0,
+                "%_degraded": 10.0,
+                "%_correct": 72.0,
+                "%_incorrect": 28.000000000000004
+            },
+            "chemistry__shape_single": {
+                "%_improved": 14.000000000000002,
+                "%_degraded": 8.0,
+                "%_correct": 70.0,
+                "%_incorrect": 30.0
+            },
+            "chemistry__shape_multi": {
+                "%_improved": 6.0,
+                "%_degraded": 20.0,
+                "%_correct": 52.0,
+                "%_incorrect": 48.0
+            },
+            "charts__extraction": {
+                "%_improved": 6.0,
+                "%_degraded": 10.0,
+                "%_correct": 70.0,
+                "%_incorrect": 30.0
+            },
+            "charts__intersection": {
+                "%_improved": 22.0,
+                "%_degraded": 18.0,
+                "%_correct": 62.0,
+                "%_incorrect": 38.0
+            }
+        }
+    },
+    "gpt-4o-2024-08-06": {
+        "real": {
+            "geometry__triangle": {
+                "%_improved": 20.0,
+                "%_degraded": 20.0,
+                "%_correct": 57.99999999999999,
+                "%_incorrect": 42.0
+            },
+            "geometry__quadrilateral": {
+                "%_improved": 14.000000000000002,
+                "%_degraded": 14.000000000000002,
+                "%_correct": 52.0,
+                "%_incorrect": 48.0
+            },
+            "geometry__length": {
+                "%_improved": 8.0,
+                "%_degraded": 16.0,
+                "%_correct": 28.000000000000004,
+                "%_incorrect": 72.0
+            },
+            "geometry__angle": {
+                "%_improved": 8.0,
+                "%_degraded": 40.0,
+                "%_correct": 30.0,
+                "%_incorrect": 70.0
+            },
+            "geometry__area": {
+                "%_improved": 6.0,
+                "%_degraded": 16.0,
+                "%_correct": 34.0,
+                "%_incorrect": 66.0
+            },
+            "geometry__diameter_radius": {
+                "%_improved": 12.0,
+                "%_degraded": 8.0,
+                "%_correct": 76.0,
+                "%_incorrect": 24.0
+            },
+            "chemistry__shape_single": {
+                "%_improved": 20.0,
+                "%_degraded": 8.0,
+                "%_correct": 80.0,
+                "%_incorrect": 20.0
+            },
+            "chemistry__shape_multi": {
+                "%_improved": 10.0,
+                "%_degraded": 38.0,
+                "%_correct": 52.0,
+                "%_incorrect": 48.0
+            },
+            "charts__extraction": {
+                "%_improved": 16.0,
+                "%_degraded": 20.0,
+                "%_correct": 56.00000000000001,
+                "%_incorrect": 44.0
+            },
+            "charts__intersection": {
+                "%_improved": 22.0,
+                "%_degraded": 34.0,
+                "%_correct": 42.0,
+                "%_incorrect": 57.99999999999999
+            }
+        }
+    }
+}

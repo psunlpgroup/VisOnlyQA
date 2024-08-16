@@ -1,0 +1,53 @@
+{
+    "error_counts": {
+        "geometry__triangle": {
+            "Perception Error": 5
+        },
+        "all": {
+            "Perception Error": 47,
+            "Reasoning Error": 4
+        },
+        "geometry__quadrilateral": {
+            "Perception Error": 5
+        },
+        "geometry__length": {
+            "Perception Error": 5
+        },
+        "geometry__angle": {
+            "Perception Error": 5
+        },
+        "geometry__area": {
+            "Perception Error": 2,
+            "Reasoning Error": 3
+        },
+        "geometry__diameter_radius": {
+            "Perception Error": 5
+        },
+        "chemistry__shape_single": {
+            "Perception Error": 5
+        },
+        "chemistry__shape_multi": {
+            "Perception Error": 5
+        },
+        "charts__extraction": {
+            "Perception Error": 5,
+            "Reasoning Error": 1
+        },
+        "charts__intersection": {
+            "Perception Error": 5
+        }
+    },
+    "split_counts": {
+        "geometry__triangle": 5,
+        "all": 50,
+        "geometry__quadrilateral": 5,
+        "geometry__length": 5,
+        "geometry__angle": 5,
+        "geometry__area": 5,
+        "geometry__diameter_radius": 5,
+        "chemistry__shape_single": 5,
+        "chemistry__shape_multi": 5,
+        "charts__extraction": 5,
+        "charts__intersection": 5
+    }
+}

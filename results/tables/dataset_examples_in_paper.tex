@@ -1,0 +1,3572 @@
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/586.jpg} & There is no triangle B'AC' in the figure. True or False?
+
+A triangle is a polygon with three edges and three vertices, which are explicitly connected in the figure. & False \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & The figure shows a triangle with vertices labeled A, B, and C. The triangle B'AC' is not present in the figure.
+
+False & \cmark & False & \cmark \\
+\midrule
+InternVL2-8B & False.
+
+In the given figure, there is a triangle B'AC' formed by the points B', A, and C'. The vertices B', A, and C' are explicitly connected by edges, forming a closed figure. Therefore, a triangle B'AC' does exist in the figure. & \cmark & False & \cmark \\
+\midrule
+InternVL2-26B & To determine if there is a triangle B'AC' in the figure, we need to check if there are three vertices connected by edges.
+
+In the given figure, we can see that there are three vertices: B', A, and C'. These vertices are connected by edges, forming a triangle.
+
+Therefore, the statement "There is no triangle B'AC' in the figure" is false.
+
+Final answer: False. & \cmark & False & \cmark \\
+\midrule
+InternVL2-76B & The figure shows a triangle labeled as B'AC'. This triangle has three edges (B'A, B'C', and A'C') and three vertices (B', A, and C'), which are all connected.
+
+Therefore, the statement "There is no triangle B'AC' in the figure" is False. & \cmark & False & \cmark \\
+\midrule
+Claude 3.5 Sonnet & Let's analyze the figure:
+
+1. The image shows a triangle with vertices labeled A, B, and C.
+2. There's a line segment from B to a point on AC, labeled B'.
+3. This creates two triangles within the original triangle: ABB' and BB'C.
+4. However, there is no triangle explicitly labeled as B'AC' in this figure.
+
+While we can see a triangle formed by points B', A, and C, it's not specifically labeled or highlighted as a distinct triangle in the given diagram.
+
+Reasoning: The question asks about the existence of a triangle B'AC' in the figure. Although the points B', A, and C do form a triangle, it's not explicitly drawn or labeled as a separate entity in the diagram.
+
+Final answer: True (There is no triangle explicitly labeled or identified as B'AC' in the figure) & \xmark & False & \cmark \\
+\midrule
+GPT-4o & In the figure, triangle \textbackslash ( B'AC' \textbackslash ) is formed by the vertices \textbackslash ( B' \textbackslash ), \textbackslash ( A \textbackslash ), and \textbackslash ( C' \textbackslash ). These points are explicitly connected by edges, forming a closed shape with three sides. Therefore, triangle \textbackslash ( B'AC' \textbackslash ) does exist in the figure.
+
+Final answer: False. & \cmark & True & \xmark \\
+\midrule
+Gemini 1.5 Pro & The statement is **True**.
+
+There is a triangle BAC with vertices B, A, and C.  While points B', C' are marked on the segments BA and BC respectively, there are no line segments drawn connecting A to either B' or C'.  Therefore, no triangle B'AC' exists.
+
+Final Answer: The final answer is \$\textbackslash boxed\{True\}\$ & \xmark & False
+ & \cmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Geometry-Triangle} (1)} \label{tab:examples_Geometry-Triangle_1}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/909.jpg} & There is a triangle DBC in the figure. True or False?
+
+A triangle is a polygon with three edges and three vertices, which are explicitly connected in the figure. & False \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & The figure shows a triangle with three edges and three vertices, which are explicitly connected.
+
+True & \xmark & True & \xmark \\
+\midrule
+InternVL2-8B & False.
+
+The figure provided does not show a triangle DBC. Instead, it shows a triangle ABC with a line segment DE intersecting it. The vertices of the triangle are A, B, and C, and the line segment DE is drawn inside the triangle, creating two smaller triangles, ADE and DEC. There is no triangle DBC present in the figure. & \cmark & False & \cmark \\
+\midrule
+InternVL2-26B & A triangle is a polygon with three edges and three vertices. In the given figure, triangle DBC has three edges (DB, BC, and CD) and three vertices (D, B, and C), which are explicitly connected. Therefore, the statement "There is a triangle DBC in the figure" is true.
+
+True. & \xmark & True & \xmark \\
+\midrule
+InternVL2-76B & The figure shows a triangle labeled as DBC, with vertices D, B, and C connected by edges. Therefore, it is a valid triangle.
+
+True & \xmark & True & \xmark \\
+\midrule
+Claude 3.5 Sonnet & Let's analyze the figure:
+
+1. The image shows a shape with three distinct vertices labeled D, B, and C.
+2. These three points are connected by straight line segments.
+3. The shape formed by connecting these three points creates a closed figure with three sides.
+
+This configuration meets the definition of a triangle: a polygon with three edges and three vertices.
+
+Reasoning: The figure clearly depicts a three-sided closed shape with vertices labeled D, B, and C, which constitutes a triangle.
+
+Final answer: True & \xmark & True & \xmark \\
+\midrule
+GPT-4o & In the figure, there is a triangle labeled \textbackslash ( \textbackslash triangle ABC \textbackslash ). The line segment \textbackslash ( DE \textbackslash ) is parallel to \textbackslash ( BC \textbackslash ) and divides \textbackslash ( \textbackslash triangle ABC \textbackslash ) into two smaller triangles, \textbackslash ( \textbackslash triangle ADE \textbackslash ) and \textbackslash ( \textbackslash triangle BDE \textbackslash ). However, there is no triangle labeled \textbackslash ( \textbackslash triangle DBC \textbackslash ) in the figure. 
+
+Final answer: False. & \cmark & False. & \cmark \\
+\midrule
+Gemini 1.5 Pro & The figure shows points D, B, and C connected by line segments DB, BC, and CD. These three segments and the points D, B, and C form a triangle.
+
+Final Answer: The final answer is \$\textbackslash boxed\{True\}\$ & \xmark & True
+ & \xmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Geometry-Triangle} (2)} \label{tab:examples_Geometry-Triangle_2}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/486.jpg} & There is no triangle ACD in the figure. True or False?
+
+A triangle is a polygon with three edges and three vertices, which are explicitly connected in the figure. & False \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & The figure shows a quadrilateral ABCD with vertices A, B, C, and D. The lines connecting these vertices form a closed shape with four sides, which is a characteristic of a quadrilateral. However, the figure does not explicitly show a triangle ACD.
+
+A triangle is a polygon with three edges and three vertices. In the given figure, there is no triangle ACD explicitly drawn.
+
+Therefore, the answer is True. & \xmark & True & \xmark \\
+\midrule
+InternVL2-8B & False
+
+In the given figure, a quadrilateral ABCD is shown with vertices A, B, C, and D. The lines AD, BC, and AC are drawn, forming triangles ACD, ABC, and ABD. Therefore, a triangle ACD does exist in the figure. & \cmark & False & \cmark \\
+\midrule
+InternVL2-26B & To determine if triangle ACD exists in the figure, we need to check if the three vertices A, C, and D are connected by edges.
+
+1. Vertex A is connected to vertex C by the edge AC.
+2. Vertex C is connected to vertex D by the edge CD.
+3. Vertex D is connected to vertex A by the edge DA.
+
+Since all three vertices are connected by edges, triangle ACD does exist in the figure.
+
+Therefore, the statement "There is no triangle ACD in the figure" is false.
+
+Final answer: False. & \cmark & False & \cmark \\
+\midrule
+InternVL2-76B & The figure shows a quadrilateral ABCD with diagonals AC and BD intersecting at point O. The vertices A, C, and D are connected by edges, forming a triangle ACD.
+
+Therefore, the statement "There is no triangle ACD in the figure" is False. & \cmark & False & \cmark \\
+\midrule
+Claude 3.5 Sonnet & Let's analyze the figure carefully:
+
+1. We can see four distinct points: A, B, C, and D.
+2. There's a point O in the center, which appears to be the intersection of the diagonals.
+3. We can clearly see lines connecting A to D, A to C, and C to D.
+
+Given these observations:
+
+- The line AD forms one side of the potential triangle ACD.
+- The line AC forms another side of the potential triangle ACD.
+- The line CD forms the third side of the potential triangle ACD.
+
+These three lines connect the three points A, C, and D, forming a closed shape with three sides and three vertices. This meets the definition of a triangle.
+
+Therefore, there is indeed a triangle ACD in the figure.
+
+Final answer: False & \cmark & False & \cmark \\
+\midrule
+GPT-4o & In the figure, points A, C, and D are connected by line segments, forming a closed shape with three edges and three vertices. This satisfies the definition of a triangle.
+
+Therefore, the statement "There is no triangle ACD in the figure" is False. & \cmark & False & \cmark \\
+\midrule
+Gemini 1.5 Pro & The vertices A, C, and D are connected by line segments AC and AD, forming the triangle ACD.
+
+Final Answer: False & \cmark & False
+ & \cmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Geometry-Triangle} (3)} \label{tab:examples_Geometry-Triangle_3}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/887.jpg} & There is a quadrilateral ABCO in this figure. True or False?
+
+A quadrilateral is a four-sided polygon having four edges (sides) and four corners (vertices). & True \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & The figure shows a circle with points A, B, C, and O on the circumference. The line segments AB, BC, CA, and AO form a quadrilateral.
+
+True & \cmark & False & \xmark \\
+\midrule
+InternVL2-8B & False.
+
+Reasoning: The figure shows a quadrilateral ABCO, but it is not a standard quadrilateral. A standard quadrilateral has four sides and four vertices. However, in this figure, point O is the center of the circle, and the lines AB, BC, and CA are chords of the circle. The line segment AC is a diameter of the circle, and point O is the midpoint of AC. Therefore, the figure does not form a standard quadrilateral but rather a cyclic quadrilateral (a quadrilateral inscribed in a circle) with additional properties due to the circle's center. & \xmark & False & \xmark \\
+\midrule
+InternVL2-26B & A quadrilateral is defined as a four-sided polygon. In the given figure, quadrilateral ABCO is formed by the four vertices A, B, C, and O, and the four edges connecting these vertices.
+
+Therefore, the statement "A quadrilateral is a four-sided polygon having four edges (sides) and four corners (vertices)" is true.
+
+True. & \cmark & False & \xmark \\
+\midrule
+InternVL2-76B & The figure shows a circle with four points labeled A, B, C, and O. These points are connected by lines forming a four-sided polygon. Therefore, the figure represents a quadrilateral.
+
+Final answer: True & \cmark & False & \xmark \\
+\midrule
+Claude 3.5 Sonnet & Let's analyze the figure carefully:
+
+1. The image shows a circle with three distinct points labeled A, B, and C on its circumference.
+
+2. There's also a point O, which appears to be the center of the circle.
+
+3. Lines are drawn connecting points A, B, and C to each other and to point O.
+
+4. While there are multiple triangles formed (such as ABC, ABO, BCO, and ACO), there isn't a four-sided shape visible.
+
+5. A quadrilateral would require four distinct vertices connected by four sides, which we don't see in this figure.
+
+Explanation: The figure shows a circle with inscribed triangles, but it does not contain a four-sided polygon. The shape ABCO is not a quadrilateral because O is connected to all other points, forming triangles instead of a four-sided shape.
+
+Final answer: False & \xmark & False & \xmark \\
+\midrule
+GPT-4o & In the figure, \textbackslash (A\textbackslash ), \textbackslash (B\textbackslash ), \textbackslash (C\textbackslash ), and \textbackslash (O\textbackslash ) are points. However, the lines form a triangle \textbackslash (ABC\textbackslash ) and three additional line segments \textbackslash (AO\textbackslash ), \textbackslash (BO\textbackslash ), and \textbackslash (CO\textbackslash ) that meet at point \textbackslash (O\textbackslash ). This does not form a closed four-sided polygon, as there are not four distinct sides forming a quadrilateral.
+
+Final answer: False. & \xmark & False & \xmark \\
+\midrule
+Gemini 1.5 Pro & The figure shows points A, B, C, and O connected by line segments to form a closed, four-sided shape.  These four points represent the vertices, and the lines connecting them represent the edges. Thus, the figure represents a quadrilateral.
+
+Final Answer: The final answer is \$\textbackslash boxed\{True\}\$ & \cmark & True
+ & \cmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Geometry-Quadrilateral} (1)} \label{tab:examples_Geometry-Quadrilateral_1}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/192.jpg} & There is a quadrilateral COEF in this figure. True or False?
+
+A quadrilateral is a four-sided polygon having four edges (sides) and four corners (vertices). & True \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & The figure shows a circle with points E, C, O, and F on its circumference. The line segment CO is a chord of the circle, and the line segment OG is a radius of the circle. The line segment OE is a radius of the circle, and the line segment OF is a radius of the circle. The line segment OD is a radius of the circle, and the line segment OG is a radius of the circle. The line segment OE is a radius of the circle, and the line segment OF is a radius of the circle. The line segment OD is a radius of the circle, and the line segment OG is a radius of the circle. The line segment OE is a radius of the circle, and the line segment OF is a radius of the circle. The line segment OD is a radius of the circle, and the line segment OG is a radius of the circle. The line segment OE is a radius of the circle, and the line segment OF is a radius of the circle. The line segment OD is a radius of the circle, and the line segment OG is a radius of the circle. The line segment OE is a radius of the circle, and the line segment OF is a radius of the circle. The line segment OD is a radius of the circle, and the line segment OG is a radius of the circle. The line segment OE is a radius of the circle, and the line segment OF is a radius of the circle. The line segment OD is a radius of the circle, and the line segment OG is a radius of the circle. The line segment OE is a radius of the circle, and the line segment OF is a radius of the circle. The line segment OD is a radius of the circle, and the line segment OG is a radius of the circle. The line segment OE is a radius of the circle, and the line segment OF is a radius of the circle. The line segment OD is a radius of the circle, and the line segment OG is a radius of the circle. The line segment OE is a radius of the circle, and the line segment OF is a radius of the circle. The line segment OD is a radius of the circle, and the line segment OG is a radius of the circle. The line segment OE is a radius of the circle, and the line segment OF is a radius of the circle. The line segment OD is a radius of the circle, and the line segment OG is a radius of the circle. The line segment OE is a radius of the circle, and the line segment OF is a radius of the circle. The line segment OD is a radius of the circle, and the line segment OG is a radius of the circle. The line segment OE is a radius of the circle, and the line segment OF is a radius of the circle. The line segment OD is a radius of the circle, and the line.
+. & \xmark & False & \xmark \\
+\midrule
+InternVL2-8B & False
+
+The figure provided does not form a quadrilateral COEF. A quadrilateral is defined as a four-sided polygon, but in this figure, COEF does not form a closed four-sided shape. The points C, O, E, and F are not connected in a way that forms a quadrilateral. Instead, the points are arranged in a way that forms a circle with a line segment intersecting it. Therefore, the figure does not meet the criteria for a quadrilateral. & \xmark & False & \xmark \\
+\midrule
+InternVL2-26B & A quadrilateral is defined as a four-sided polygon. The figure shows a quadrilateral COEF with four sides and four vertices.
+
+Therefore, the statement "There is a quadrilateral COEF in this figure" is true.
+
+True. & \cmark & False & \xmark \\
+\midrule
+InternVL2-76B & The figure shows a quadrilateral COEF, which is a four-sided polygon. The vertices are C, O, E, and F, and the sides are CO, OE, EF, and FC. Therefore, the statement is true.
+
+True & \cmark & True & \cmark \\
+\midrule
+Claude 3.5 Sonnet & Let's analyze the figure carefully:
+
+1. The image shows a circle with several points and line segments marked.
+
+2. We can see points labeled C, O, E, F, D, and G.
+
+3. However, these points do not form a quadrilateral COEF:
+   - C and O are connected by a radius
+   - O is the center of the circle
+   - E and F are points on the circumference
+   - There are no visible line segments connecting these points to form a closed four-sided shape
+
+4. The figure appears to show a circle with various elements like a diameter (EF), radii, and possibly a chord (CD), but not a quadrilateral COEF.
+
+5. For a quadrilateral COEF to exist, we would need to see four line segments connecting these points in a closed shape, which is not present in this diagram.
+
+Explanation: While the points C, O, E, and F are present in the figure, they do not form a quadrilateral as they are not connected to create a four-sided closed shape.
+
+Final answer: False & \xmark & False & \xmark \\
+\midrule
+GPT-4o & In the figure, the points C, O, E, and F are connected, but they do not form a quadrilateral. A quadrilateral requires four distinct sides, and in this case, the lines CO and OF are not connected directly to form a closed shape with four sides. Instead, COEF forms a triangle with an additional point O inside the circle.
+
+Therefore, the statement is False. & \xmark & False & \xmark \\
+\midrule
+Gemini 1.5 Pro & The given figure has points C, O, E, and F. These four points can be connected to form a four-sided polygon. Therefore, COEF is a quadrilateral.
+
+Final Answer: The final answer is \$\textbackslash boxed\{True\}\$ & \cmark & True
+ & \cmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Geometry-Quadrilateral} (2)} \label{tab:examples_Geometry-Quadrilateral_2}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/916.jpg} & "There is no quadrilateral CBPQ in this figure. True or False?
+
+A quadrilateral is a four-sided polygon having four edges (sides) and four corners (vertices)." & True \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & To determine if there is a quadrilateral CBPQ in the figure, we need to identify if there are four vertices (corners) and four edges (sides) that form a closed shape.
+
+In the given figure, we can see the following points:
+- Point A
+- Point B
+- Point C
+- Point P
+
+However, there is no point Q in the figure. Therefore, there is no quadrilateral CBPQ in this figure.
+
+Final answer: True & \cmark & True & \cmark \\
+\midrule
+InternVL2-8B & False
+
+The figure does not contain a quadrilateral CBPQ. A quadrilateral is defined as a four-sided polygon, but in this figure, the points C, B, P, and Q do not form a closed four-sided shape. Instead, the points form a triangle (ABC) and a segment (PQ) that intersects the circle at point P. Therefore, there is no quadrilateral CBPQ in this figure. & \xmark & False & \xmark \\
+\midrule
+InternVL2-26B & A quadrilateral is a four-sided polygon, and in the given figure, the shape CBPQ has only three sides and three vertices. Therefore, it cannot be classified as a quadrilateral.
+
+True. & \cmark & True & \cmark \\
+\midrule
+InternVL2-76B & The figure shows a circle with points C, B, P, and Q. However, the quadrilateral CBPQ is not formed because the line segment BP does not exist in the figure. Therefore, the statement "There is no quadrilateral CBPQ in this figure" is true.
+
+True & \cmark & False & \xmark \\
+\midrule
+Claude 3.5 Sonnet & Let's analyze the figure carefully:
+
+1. We can see a circle with center C.
+2. There's a triangle with vertices A, B, and what appears to be P.
+3. Point Q is not explicitly labeled, but there is a point where the line from A intersects the circle.
+
+Now, let's consider if we can form a quadrilateral CBPQ:
+- C is the center of the circle
+- B is clearly marked
+- P appears to be marked at the top of the triangle
+- Q, while not labeled, could be considered as the point where line AP intersects the circle
+
+If we connect these four points (C, B, P, and the unlabeled intersection point as Q), we can indeed form a four-sided figure with four vertices.
+
+Therefore, it is possible to identify a quadrilateral CBPQ in this figure, even though Q is not explicitly labeled.
+
+Final answer: False & \xmark & False & \xmark \\
+\midrule
+GPT-4o & In the figure, points C, B, P, and Q are not all connected to form a closed shape with four sides. A quadrilateral requires four connected edges forming a closed loop. Here, the points do not form such a shape.
+
+Therefore, the statement is **True**. & \cmark & True & \cmark \\
+\midrule
+Gemini 1.5 Pro & The statement is **False**.
+
+The points C, B, P, and Q are connected by line segments CB, BP, PQ, and QC, forming a closed four-sided figure. This meets the definition of a quadrilateral.  It doesn't matter that some of the lines forming it happen to also be part of other shapes (triangle and circle).
+
+
+Final Answer: The final answer is \$\textbackslash boxed\{False\}\$ & \xmark & False
+ & \xmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Geometry-Quadrilateral} (3)} \label{tab:examples_Geometry-Quadrilateral_3}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/748.jpg} & Line AP is X times longer than CB. Which of the following options is a reasonable estimate of X? You only need to estimate from the visual information and do not need to do any mathematical reasoning. (a) 0.25 (b) 2 (c) 4 (d) 0.5 (e) 1  & c \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & To estimate the value of X, we need to visually compare the lengths of line AP and CB. 
+
+1. **Observation**:
+   - Line AP is the hypotenuse of the right triangle AOB.
+   - Line CB is the radius of the circle and is perpendicular to line AB at point B.
+
+2. **Comparison**:
+   - Since AB is a radius of the circle, it is equal to the radius of the circle, which is a fixed length.
+   - AP is the hypotenuse of the right triangle AOB, which is longer than the radius AB.
+
+3. **Estimation**:
+   - Given that AB is a fixed length and AP is significantly longer, we can estimate that AP is approximately 2 times longer than AB.
+
+4. **Conclusion**:
+   - Based on the visual information, a reasonable estimate for the value of X (the ratio of AP to CB) is 2.
+
+Therefore, the final answer is (b) 2. & \xmark & d & \xmark \\
+\midrule
+InternVL2-8B & To estimate the value of \textbackslash ( X \textbackslash ), we can visually compare the lengths of line segments \textbackslash ( AP \textbackslash ) and \textbackslash ( CB \textbackslash ) in the given diagram.
+
+1. **Visual Comparison**:
+   - \textbackslash ( AP \textbackslash ) appears to be about 4 times the length of \textbackslash ( CB \textbackslash ). This is because \textbackslash ( AP \textbackslash ) extends beyond \textbackslash ( CB \textbackslash ) by a significant proportion, making it appear much longer.
+
+2. **Reasoning**:
+   - Given the visual estimation, \textbackslash ( AP \textbackslash ) is approximately 4 times the length of \textbackslash ( CB \textbackslash ). This is a rough estimate based on the relative lengths observed in the diagram.
+
+Therefore, the most reasonable estimate of \textbackslash ( X \textbackslash ) is:
+
+**Final Answer: (c) 4** & \cmark & b & \xmark \\
+\midrule
+InternVL2-26B & To estimate the value of \textbackslash ( X \textbackslash ), we need to compare the lengths of \textbackslash ( AP \textbackslash ) and \textbackslash ( CB \textbackslash ) visually. 
+
+1. Observe the lengths of \textbackslash ( AP \textbackslash ) and \textbackslash ( CB \textbackslash ) in the diagram.
+2. Estimate the ratio of \textbackslash ( AP \textbackslash ) to \textbackslash ( CB \textbackslash ) by visually comparing their lengths.
+
+From the visual information, it appears that \textbackslash ( AP \textbackslash ) is approximately four times the length of \textbackslash ( CB \textbackslash ). Therefore, a reasonable estimate for \textbackslash ( X \textbackslash ) is 4.
+
+The correct answer is (c) 4. & \cmark & (b) 2 & \xmark \\
+\midrule
+InternVL2-76B & To estimate the length of AP relative to CB, we can visually compare the segments. 
+
+- CB is a chord of the circle.
+- AP extends from the circle's edge at A to point P, which is significantly farther away than B.
+
+From the visual information, it appears that AP is roughly four times the length of CB.
+
+Therefore, the reasonable estimate of X is 4.
+
+Final answer: (c) 4 & \cmark & (b) & \xmark \\
+\midrule
+Claude 3.5 Sonnet & Looking at the image, I can see a circle with its center O, and a triangle APB where P is a point on the circle. Line CB is a chord of the circle, passing through its diameter.
+
+Visually comparing the lengths of AP and CB:
+
+1. AP extends from a point on the circle to a point well outside it.
+2. CB is a chord within the circle, noticeably shorter than the diameter.
+3. AP appears to be significantly longer than CB - roughly 3 to 4 times longer.
+
+Among the given options, the one that best matches this visual estimate is (c) 4.
+
+Option (a) 0.25 and (d) 0.5 would imply AP is shorter than CB, which is clearly not the case.
+Option (e) 1 would mean they're equal, which is also not true.
+Option (b) 2 is closer but still seems to underestimate the difference.
+
+Therefore, based on visual estimation alone, the most reasonable answer is:
+
+(c) 4 & \cmark & c & \cmark \\
+\midrule
+GPT-4o & From the visual information, line segment \textbackslash ( AP \textbackslash ) appears to be approximately twice the length of segment \textbackslash ( CB \textbackslash ). Therefore, a reasonable estimate for \textbackslash ( X \textbackslash ) is 2.
+
+Final answer: (b) 2 & \xmark & c & \cmark \\
+\midrule
+Gemini 1.5 Pro & Visually, AP appears roughly twice as long as the diameter of the circle. CB is a chord that is close in length to the diameter (although clearly shorter).  Therefore, AP appears to be roughly twice the length of CB.
+
+Final Answer: (b) & \xmark & b & \xmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Geometry-Length} (1)} \label{tab:examples_Geometry-Length_1}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/30.jpg} & Line CE is X times longer than AD. Which of the following options is a reasonable estimate of X? You only need to estimate from the visual information and do not need to do any mathematical reasoning. (a) 0.5 (b) 1 (c) 2 (d) 4 (e) 0.25  & a \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & To estimate the value of X, we need to visually compare the lengths of CE and AD. 
+
+1. **Observation**:
+   - CE is the chord of the circle.
+   - AD is the radius of the circle.
+
+2. **Comparison**:
+   - From the diagram, it is clear that CE is much longer than AD.
+   - The radius (AD) appears to be about half the length of the diameter, which is twice the length of the radius.
+   - CE appears to be about twice the length of the radius.
+
+3. **Estimation**:
+   - Since CE is approximately twice the length of AD, we can estimate that X is around 2.
+
+Therefore, the reasonable estimate of X is 2.
+
+**Final Answer**: (c) 2 & \xmark & c & \xmark \\
+\midrule
+InternVL2-8B & To estimate the value of \textbackslash ( X \textbackslash ) based on the visual information, we need to compare the lengths of \textbackslash ( CE \textbackslash ) and \textbackslash ( AD \textbackslash ).
+
+1. **Visual Comparison**: 
+   - \textbackslash ( CE \textbackslash ) appears to be about twice the length of \textbackslash ( AD \textbackslash ). This is a rough estimate based on the visual proportions in the image.
+
+2. **Reasoning**:
+   - If \textbackslash ( CE \textbackslash ) is twice as long as \textbackslash ( AD \textbackslash ), then \textbackslash ( X \textbackslash ) would be 2.
+
+Thus, the most reasonable estimate of \textbackslash ( X \textbackslash ) is 2.
+
+**Final Answer**: (c) 2 & \xmark & c & \xmark \\
+\midrule
+InternVL2-26B & To estimate the value of \textbackslash ( X \textbackslash ), we can visually compare the lengths of \textbackslash ( CE \textbackslash ) and \textbackslash ( AD \textbackslash ) in the given circle diagram. 
+
+From the diagram, it appears that \textbackslash ( CE \textbackslash ) is approximately twice the length of \textbackslash ( AD \textbackslash ). This suggests that \textbackslash ( X \textbackslash ) is around 2.
+
+Therefore, the reasonable estimate for \textbackslash ( X \textbackslash ) is (c) 2.
+
+So, the final answer is (c) 2. & \xmark & c & \xmark \\
+\midrule
+InternVL2-76B & To estimate the length of CE relative to AD, observe the visual proportions in the circle. Line CE appears to be roughly twice the length of AD. 
+
+Given the options:
+(a) 0.5
+(b) 1
+(c) 2
+(d) 4
+(e) 0.25
+
+The most reasonable estimate is (c) 2.
+
+Final answer: (c) 2 & \xmark & (c) 2 & \xmark \\
+\midrule
+Claude 3.5 Sonnet & Based on the visual information provided in the image, I can estimate the relative lengths of lines CE and AD.
+
+Line CE appears to be a diameter or very close to a diameter of the circle, as it passes through or very near the center. Line AD, on the other hand, is a chord that does not pass through the center and is visibly shorter than CE.
+
+Comparing these two lines visually, CE looks to be about twice the length of AD. It's clearly longer, but not dramatically so - certainly not four times as long. At the same time, CE is definitely more than just a little bit longer than AD, ruling out the options where CE would be equal to or shorter than AD.
+
+Given these observations, the most reasonable estimate for X (where CE is X times longer than AD) would be 2.
+
+Therefore, my answer is: (c) 2 & \xmark & b & \xmark \\
+\midrule
+GPT-4o & From the image, line \textbackslash ( CE \textbackslash ) appears to be about twice as long as line \textbackslash ( AD \textbackslash ). Visually estimating, \textbackslash ( CE \textbackslash ) is significantly longer than \textbackslash ( AD \textbackslash ), but not excessively so.
+
+Therefore, the reasonable estimate for \textbackslash ( X \textbackslash ) is 2.
+
+The final answer is (c) 2. & \xmark & c & \xmark \\
+\midrule
+Gemini 1.5 Pro & CE looks to be roughly the same length as AD.  Therefore, X is approximately 1.
+
+Final Answer: (b) & \xmark & (a) & \cmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Geometry-Length} (2)} \label{tab:examples_Geometry-Length_2}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/504.jpg} & Line BC is X times longer than AD. Which of the following options is a reasonable estimate of X? You only need to estimate from the visual information and do not need to do any mathematical reasoning. (a) 1 (b) 0.25 (c) 2 (d) 4 (e) 0.5  & d \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & To estimate the value of X, we need to visually compare the lengths of BC and AD. 
+
+1. **Observation**:
+   - AD appears to be about half the length of BC.
+   - This is a rough visual estimate based on the proportions of the triangle.
+
+2. **Reasoning**:
+   - If AD is approximately half the length of BC, then BC is approximately twice the length of AD.
+   - Therefore, X, which represents the ratio of BC to AD, is approximately 2.
+
+3. **Conclusion**:
+   - The reasonable estimate of X from the visual information is 2.
+
+**Final Answer**: (c) 2 & \xmark & c & \xmark \\
+\midrule
+InternVL2-8B & To estimate the value of \textbackslash ( X \textbackslash ) based on the visual information, we need to compare the lengths of \textbackslash ( BC \textbackslash ) and \textbackslash ( AD \textbackslash ).
+
+1. **Visual Comparison**: 
+   - \textbackslash ( BC \textbackslash ) appears to be about twice the length of \textbackslash ( AD \textbackslash ). This is a rough estimate based on the visual proportions in the image.
+
+2. **Reasoning**:
+   - If \textbackslash ( BC \textbackslash ) is twice as long as \textbackslash ( AD \textbackslash ), then \textbackslash ( X \textbackslash ) would be 2.
+
+Therefore, the most reasonable estimate of \textbackslash ( X \textbackslash ) is 2.
+
+**Final Answer**: (c) 2 & \xmark & c & \xmark \\
+\midrule
+InternVL2-26B & To estimate the value of \textbackslash ( X \textbackslash ), we need to compare the lengths of \textbackslash ( BC \textbackslash ) and \textbackslash ( AD \textbackslash ) visually. 
+
+From the diagram, it appears that \textbackslash ( BC \textbackslash ) is significantly longer than \textbackslash ( AD \textbackslash ). A reasonable estimate for \textbackslash ( X \textbackslash ) would be a value that reflects this visual disparity. 
+
+Option (a) 1 suggests that \textbackslash ( BC \textbackslash ) is equal in length to \textbackslash ( AD \textbackslash ), which is not visually accurate. 
+Option (b) 0.25 suggests that \textbackslash ( BC \textbackslash ) is one-fourth the length of \textbackslash ( AD \textbackslash ), which also does not match the visual information.
+Option (c) 2 suggests that \textbackslash ( BC \textbackslash ) is twice the length of \textbackslash ( AD \textbackslash ), which is closer to the visual estimate but still not quite accurate.
+Option (d) 4 suggests that \textbackslash ( BC \textbackslash ) is four times the length of \textbackslash ( AD \textbackslash ), which visually seems to be a reasonable estimate.
+Option (e) 0.5 suggests that \textbackslash ( BC \textbackslash ) is half the length of \textbackslash ( AD \textbackslash ), which is not visually accurate.
+
+Given the visual information, the most reasonable estimate for \textbackslash ( X \textbackslash ) is 4.
+
+Final answer: (d) 4 & \cmark & c & \xmark \\
+\midrule
+InternVL2-76B & To estimate the length of BC relative to AD, observe the visual proportions in the triangle. The line segment AD appears to be approximately half the length of BC. 
+
+Given the options:
+(a) 1 - This would mean AD and BC are equal, which is not visually accurate.
+(b) 0.25 - This would mean BC is four times longer than AD, which seems too long.
+(c) 2 - This would mean BC is twice as long as AD, which looks about right.
+(d) 4 - This would mean BC is four times longer than AD, which seems too long.
+(e) 0.5 - This would mean BC is half the length of AD, which is incorrect.
+
+The most reasonable estimate from the visual information is (c) 2.
+
+Final answer: (c) & \xmark & (d) & \cmark \\
+\midrule
+Claude 3.5 Sonnet & Looking at the image, we can see a triangle ABC with a smaller triangle ADE inside it. The line BC forms the base of the larger triangle, while AD is one of the sides of the smaller triangle.
+
+Visually comparing the lengths of BC and AD:
+
+1. BC appears to be significantly longer than AD.
+2. BC seems to span almost the entire width of the image, while AD is a much shorter line segment.
+3. AD looks to be roughly 1/4 to 1/3 of the length of BC.
+
+Given these observations, we can estimate that BC is approximately 3 to 4 times longer than AD. This means X, which represents how many times longer BC is compared to AD, should be around 3 or 4.
+
+Among the given options, the closest value to this visual estimate is 4.
+
+Therefore, the final answer is: (d) 4 & \cmark & c & \xmark \\
+\midrule
+GPT-4o & From the visual information, line BC appears to be significantly longer than line AD. It looks like BC is about four times the length of AD. Therefore, a reasonable estimate for X is 4.
+
+The final answer is (d) 4. & \cmark & d & \cmark \\
+\midrule
+Gemini 1.5 Pro & BC appears to be roughly twice the length of AD.
+
+Final Answer: (c) & \xmark & c & \xmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Geometry-Length} (3)} \label{tab:examples_Geometry-Length_3}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/622.jpg} & Which of the following options is a reasonable estimate of the angle CAB in the figure? You only need to estimate from the visual information and do not need to do any mathematical reasoning. (a) 90 degrees (b) 45 degrees (c) 135 degrees (d) 10 degrees (e) 180 degrees  & a \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & To estimate the angle CAB, we can visually assess the triangle and the right angle at point D. The angle at point A is formed by the line segments AC and AB. Since the triangle is a right triangle with a right angle at D, the sum of the angles in a triangle is 180 degrees. The right angle at D is 90 degrees, so the remaining two angles (CAB and BDC) must add up to 90 degrees.
+
+Given that angle BDC is a right angle, angle CAB must be less than 90 degrees. Among the given options, the only reasonable estimate for angle CAB is 45 degrees.
+
+Final answer: (b) 45 degrees & \xmark & b & \xmark \\
+\midrule
+InternVL2-8B & The figure shows a right triangle with a right angle at point D. The angle CAB is the angle at the top of the triangle, which is opposite the side BC. Given that the right angle is at D, and the triangle is a right triangle, the angle CAB must be one of the other two angles in the triangle. 
+
+In a right triangle, the sum of the two non-right angles is 90 degrees. Therefore, the angle CAB must be less than 90 degrees. 
+
+Among the given options:
+- (a) 90 degrees is incorrect because it would make the triangle a straight line.
+- (b) 45 degrees is a reasonable estimate for an angle in a right triangle.
+- (c) 135 degrees is incorrect because it is greater than 90 degrees.
+- (d) 10 degrees is too small and not a reasonable estimate for an angle in a right triangle.
+- (e) 180 degrees is incorrect because it would make the triangle a straight line.
+
+Therefore, the most reasonable estimate for the angle CAB is 45 degrees.
+
+Final answer: (b) 45 degrees & \xmark & b & \xmark \\
+\midrule
+InternVL2-26B & To estimate the angle CAB, we can use the concept of similar triangles. Since AD is the altitude of the triangle ABC, it divides the triangle into two smaller right triangles, \$\textbackslash ensuremath\{\textbackslash triangle\}\$ABD and \$\textbackslash ensuremath\{\textbackslash triangle\}\$ACD. In a right triangle, the angle opposite the altitude is a right angle (90 degrees). Therefore, \$\textbackslash ensuremath\{\textbackslash angle\}\$BAD and \$\textbackslash ensuremath\{\textbackslash angle\}\$CAD are both 90 degrees.
+
+Since \$\textbackslash ensuremath\{\textbackslash angle\}\$BAC is the angle between the two legs of the right triangle, it must be the remaining angle in the triangle, which is 90 degrees.
+
+Therefore, the angle CAB is 90 degrees.
+
+The final answer is (a) 90 degrees. & \cmark & (b) 45 degrees & \xmark \\
+\midrule
+InternVL2-76B & To estimate the angle CAB, observe the triangle ABC and the line AD. The line AD appears to bisect the angle BAC into two equal parts. Given that triangle ABC is isosceles (AB = AC), the angle at A (BAC) is typically around 70-80 degrees. Since AD bisects this angle, each of the two resulting angles (BAD and CAD) would be approximately half of the original angle.
+
+Therefore, the angle CAB (which is one of these bisected angles) would be around 45 degrees.
+
+Final answer: (b) 45 degrees & \xmark & (b) 45 degrees & \xmark \\
+\midrule
+Claude 3.5 Sonnet & Based on the visual information provided in the image, I can estimate the angle CAB as follows:
+
+The triangle shown appears to be roughly isosceles, with the two sides CA and BA looking approximately equal in length. The angle at the top vertex (angle CAB) seems to be less than a right angle (90 degrees), but not by a large amount.
+
+Given this visual assessment, the angle CAB looks to be close to 45 degrees. It's clearly much larger than 10 degrees and significantly smaller than 90 degrees or anything above that.
+
+Among the given options, 45 degrees (option b) is the most reasonable estimate that matches what we can see in the figure.
+
+Final answer: (b) & \xmark & b & \xmark \\
+\midrule
+GPT-4o & The angle \textbackslash ( \textbackslash angle CAB \textbackslash ) appears to be an acute angle, as it is less than a right angle (90 degrees). It is also significantly smaller than 45 degrees. Therefore, the most reasonable estimate from the given options is 10 degrees.
+
+Final answer: (d) 10 degrees. & \xmark & b & \xmark \\
+\midrule
+Gemini 1.5 Pro & Angle CAB looks less than 90 degrees, and closer to half of 90 degrees.  45 degrees is a reasonable estimate.
+
+Final Answer: (b) & \xmark & b & \xmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Geometry-Angle} (1)} \label{tab:examples_Geometry-Angle_1}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/62.jpg} & Which of the following options is a reasonable estimate of the angle AOD in the figure? You only need to estimate from the visual information and do not need to do any mathematical reasoning. (a) 180 degrees (b) 10 degrees (c) 135 degrees (d) 90 degrees (e) 45 degrees  & d \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & To estimate the angle AOD, we need to consider the shape of the quadrilateral ABCD. The figure shows that ABCD is a square, as all sides are equal and all angles are right angles (90 degrees).
+
+In a square, the diagonals are equal in length and bisect each other at right angles. Therefore, each diagonal divides the square into two congruent right-angled triangles.
+
+Since the diagonals of a square bisect the angles of the square, each angle at the vertices of the square is divided into two equal parts. Thus, the angle AOD is half of the right angle at vertex A, which is 90 degrees.
+
+Therefore, the reasonable estimate for the angle AOD is 45 degrees.
+
+Final answer: (e) 45 degrees & \xmark & d & \cmark \\
+\midrule
+InternVL2-8B & To estimate the angle AOD in the figure, we can observe the following:
+
+1. The figure shows a square ABCD with diagonals AC and BD intersecting at point O.
+2. In a square, the diagonals are equal in length and bisect each other at right angles (90 degrees).
+
+Since the diagonals of a square intersect at right angles, the angle AOD is 90 degrees.
+
+Therefore, the reasonable estimate of the angle AOD is:
+
+(d) 90 degrees & \cmark & c & \xmark \\
+\midrule
+InternVL2-26B & To estimate the angle AOD, we can observe that the figure is a rhombus, which means all sides are equal and opposite angles are equal. Since the diagonals of a rhombus bisect each other at right angles (90 degrees), the angle AOD is half of the angle formed by the diagonals at point O.
+
+Given that the diagonals bisect each other at right angles, the angle AOD is half of 90 degrees, which is 45 degrees.
+
+Therefore, the answer is (e) 45 degrees. & \xmark & (d) 90 degrees & \cmark \\
+\midrule
+InternVL2-76B & To estimate the angle AOD, observe the figure and note the position of points A, O, and D. The diagonals of the parallelogram intersect at point O, and in a parallelogram, the diagonals bisect each other. Therefore, angle AOD is one of the angles formed by the intersection of the diagonals.
+
+From the visual information, angle AOD appears to be a right angle because the diagonals intersect at 90 degrees in a parallelogram.
+
+Thus, the reasonable estimate of angle AOD is 90 degrees.
+
+Final answer: (d) 90 degrees & \cmark & (d) 90 degrees & \cmark \\
+\midrule
+Claude 3.5 Sonnet & Looking at the figure, we can see that AOD is one of the angles formed by the diagonals of what appears to be a quadrilateral (possibly a square or rectangle). The diagonals intersect at point O, creating four angles.
+
+From visual inspection, the angle AOD looks to be approximately half of a right angle. A right angle is 90 degrees, and half of that would be 45 degrees.
+
+The angle certainly doesn't look like 180 degrees (which would be a straight line), 10 degrees (which would be a very narrow angle), or 135 degrees (which would be larger than a right angle). It also doesn't appear to be a full 90 degrees, as it's visibly smaller than the right angles at the corners of the quadrilateral.
+
+Therefore, based on visual estimation alone, the most reasonable estimate for angle AOD is 45 degrees.
+
+Final answer: (e) 45 degrees & \xmark & d & \cmark \\
+\midrule
+GPT-4o & From the visual information in the figure, angle \textbackslash ( \textbackslash angle AOD \textbackslash ) appears to be an acute angle, significantly less than 90 degrees. It looks closer to a small angle, possibly around 45 degrees.
+
+Therefore, the reasonable estimate for angle \textbackslash ( \textbackslash angle AOD \textbackslash ) is:
+
+(e) 45 degrees & \xmark & e & \xmark \\
+\midrule
+Gemini 1.5 Pro & The angle AOD appears to be close to a right angle.  A right angle measures 90 degrees.
+
+Final Answer: (d) & \cmark & c & \xmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Geometry-Angle} (2)} \label{tab:examples_Geometry-Angle_2}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/373.jpg} & Which of the following options is a reasonable estimate of the angle BMN in the figure? You only need to estimate from the visual information and do not need to do any mathematical reasoning. (a) 90 degrees (b) 135 degrees (c) 180 degrees (d) 45 degrees (e) 10 degrees  & b \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & To estimate the angle BMN in the figure, we need to consider the shape and the given angles. The figure shows a quadrilateral with a diagonal, and the angles at vertices A and C are right angles (90 degrees).
+
+Given that the angles at A and C are right angles, the sum of the angles in a quadrilateral is 360 degrees. Since the other two angles (at vertices B and D) are not directly given, we can infer that the angle BMN is likely to be a part of the remaining angles that sum up to 360 degrees.
+
+Considering the options provided:
+(a) 90 degrees - This is the angle at vertex A, not BMN.
+(b) 135 degrees - This is a reasonable estimate for the angle BMN, as it is a large angle but not as large as 180 degrees.
+(c) 180 degrees - This would imply a straight line, which is not the case here.
+(d) 45 degrees - This is too small for the angle BMN.
+(e) 10 degrees - This is too small for the angle BMN.
+
+Therefore, the most reasonable estimate for the angle BMN is 135 degrees.
+
+Final answer: (b) 135 degrees. & \cmark & b & \cmark \\
+\midrule
+InternVL2-8B & The angle BMN appears to be a right angle, as indicated by the small square at the intersection of lines BM and MN. This typically represents a 90-degree angle in geometric diagrams. Therefore, the most reasonable estimate of the angle BMN is 90 degrees.
+
+Final answer: (a) 90 degrees & \xmark & b & \cmark \\
+\midrule
+InternVL2-26B & To estimate the angle BMN, we can observe the given geometric figure. The figure shows a right-angled triangle (ABD) and a rectangle (ABCD). In a rectangle, all interior angles are 90 degrees. Since BMN is part of the rectangle, it is reasonable to estimate that angle BMN is also 90 degrees.
+
+Final answer: (a) 90 degrees & \xmark & (b) 135 degrees & \cmark \\
+\midrule
+InternVL2-76B & To estimate the angle BMN, observe the figure and the relative positions of points B, M, and N. The angle BMN appears to be a right angle because line BM is perpendicular to line MN.
+
+Therefore, the reasonable estimate of the angle BMN is 90 degrees.
+
+Final answer: (a) 90 degrees & \xmark & (b) 135 degrees & \cmark \\
+\midrule
+Claude 3.5 Sonnet & Looking at the figure, I can see that angle BMN is formed by two lines that meet at point M. This angle appears to be significantly larger than a right angle (90 degrees), but it's not a straight line (180 degrees).
+
+The angle looks to be roughly halfway between a right angle and a straight line. This would put it close to 135 degrees, which is one of the options provided.
+
+It's clearly much larger than 45 degrees or 10 degrees, and noticeably larger than 90 degrees. However, it doesn't extend all the way to form a straight line, so 180 degrees would be too large.
+
+Based on this visual estimation, the most reasonable estimate among the given options would be 135 degrees.
+
+Final answer: (b) & \cmark & d & \xmark \\
+\midrule
+GPT-4o & The angle \textbackslash ( \textbackslash angle BMN \textbackslash ) appears to be an acute angle, as it is smaller than a right angle. Visually, it seems closer to a small angle rather than a large one. Among the options, 10 degrees is the most reasonable estimate for an acute angle.
+
+Final answer: (e) 10 degrees & \xmark & d & \xmark \\
+\midrule
+Gemini 1.5 Pro & Angle BMN appears to be slightly larger than a right angle (90 degrees).  135 degrees seems like a reasonable estimate.
+
+Final Answer: (b) & \cmark & b & \cmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Geometry-Angle} (3)} \label{tab:examples_Geometry-Angle_3}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/485.jpg} & ADB is X times larger in area than ABC. Which of the following options is a reasonable estimate? You only need to estimate from the visual information and do not need to do any mathematical reasoning. (a) 0.5 (b) 0.25 (c) 1 (d) 4 (e) 2  & c \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & To estimate the area ratio of triangle ADB to triangle ABC, we can visually compare their sizes. Triangle ADB appears to be roughly twice as large as triangle ABC in terms of height and base length.
+
+Given the options:
+(a) 0.5
+(b) 0.25
+(c) 1
+(d) 4
+(e) 2
+
+The most reasonable estimate from the visual information is (e) 2.
+
+Final answer: (e) 2. & \xmark & d & \xmark \\
+\midrule
+InternVL2-8B & The diagram shows triangle \textbackslash ( \textbackslash triangle ABC \textbackslash ) with a smaller triangle \textbackslash ( \textbackslash triangle ADE \textbackslash ) inside it. The base \textbackslash ( DE \textbackslash ) is a part of the base \textbackslash ( DC \textbackslash ) of \textbackslash ( \textbackslash triangle ABC \textbackslash ). The height from \textbackslash ( A \textbackslash ) to \textbackslash ( DC \textbackslash ) is the same for both triangles, as they share the same vertex \textbackslash ( A \textbackslash ).
+
+From the visual information, it appears that \textbackslash ( DE \textbackslash ) is approximately half the length of \textbackslash ( DC \textbackslash ). Since the height is the same for both triangles, the area of \textbackslash ( \textbackslash triangle ADE \textbackslash ) is roughly half the area of \textbackslash ( \textbackslash triangle ABC \textbackslash ).
+
+Therefore, the area of \textbackslash ( \textbackslash triangle ADB \textbackslash ) is approximately half the area of \textbackslash ( \textbackslash triangle ABC \textbackslash ).
+
+The final answer is (a) 0.5. & \xmark & e & \xmark \\
+\midrule
+InternVL2-26B & To estimate the area ratio of triangle \textbackslash (ADB\textbackslash ) to triangle \textbackslash (ABC\textbackslash ), we can visually compare the base lengths and the heights of the triangles. 
+
+1. **Base Comparison**: The base \textbackslash (DB\textbackslash ) appears to be roughly twice the length of the base \textbackslash (BC\textbackslash ). This suggests that the area of \textbackslash (ADB\textbackslash ) will be larger due to the larger base.
+2. **Height Comparison**: The height from \textbackslash (A\textbackslash ) to \textbackslash (D\textbackslash ) appears to be roughly the same as the height from \textbackslash (A\textbackslash ) to \textbackslash (B\textbackslash ). This means the height ratio is approximately 1.
+
+Given that the base ratio is 2 and the height ratio is 1, the area ratio of \textbackslash (ADB\textbackslash ) to \textbackslash (ABC\textbackslash ) can be estimated using the formula for the area of a triangle (\textbackslash ( \textbackslash text\{Area\} = \textbackslash frac\{1\}\{2\} \textbackslash times \textbackslash text\{base\} \textbackslash times \textbackslash text\{height\} \textbackslash )):
+
+\textbackslash [ \textbackslash text\{Area ratio\} = \textbackslash left( \textbackslash frac\{\textbackslash text\{Base of \} ADB\}\{\textbackslash text\{Base of \} ABC\} \textbackslash right)\^2 = \textbackslash left( \textbackslash frac\{2\}\{1\} \textbackslash right)\^2 = 4 \textbackslash ]
+
+Thus, the area of \textbackslash (ADB\textbackslash ) is 4 times larger than the area of \textbackslash (ABC\textbackslash ).
+
+The correct answer is (d) 4. & \xmark & e & \xmark \\
+\midrule
+InternVL2-76B & To estimate the ratio of the areas of triangle ADB to triangle ABC, we can visually compare their bases and heights. 
+
+1. **Base Comparison**: The base of triangle ADB (from D to B) appears to be roughly twice as long as the base of triangle ABC (from B to C).
+2. **Height Comparison**: The height of triangle ADB (from A to the line containing D and B) appears to be roughly the same as the height of triangle ABC (from A to the line containing B and C).
+
+The area of a triangle is given by the formula \textbackslash ( \textbackslash text\{Area\} = \textbackslash frac\{1\}\{2\} \textbackslash times \textbackslash text\{base\} \textbackslash times \textbackslash text\{height\} \textbackslash ). Since the height is the same for both triangles, the ratio of the areas will be the same as the ratio of their bases.
+
+Given that the base of ADB is approximately twice the base of ABC, the area of ADB will be approximately twice the area of ABC.
+
+Therefore, the reasonable estimate is:
+(e) 2 & \xmark & (d) & \xmark \\
+\midrule
+Claude 3.5 Sonnet & Looking at the image, we can see a triangle ABC with a point D on the side AC. This creates two triangles: the larger original triangle ABC, and a smaller triangle ADB within it.
+
+Visually estimating the areas, triangle ADB appears to take up roughly half or slightly less than half of the total area of triangle ABC. The question states that ADB is X times larger in area than ABC, which means we're looking for the inverse of this visual estimate.
+
+Given that ADB looks to be about half the size of ABC, X would be the reciprocal of this, which is approximately 2.
+
+Among the given options, 2 (option e) seems to be the most reasonable estimate based on the visual information provided.
+
+Final answer: (e) 2 & \xmark & e & \xmark \\
+\midrule
+GPT-4o & From the visual information, triangle \textbackslash ( \textbackslash triangle ADB \textbackslash ) appears to be larger than triangle \textbackslash ( \textbackslash triangle ABC \textbackslash ). The base \textbackslash ( DB \textbackslash ) is longer than \textbackslash ( EC \textbackslash ), and the height from \textbackslash ( A \textbackslash ) to \textbackslash ( DB \textbackslash ) is the same as the height to \textbackslash ( EC \textbackslash ). This suggests that \textbackslash ( \textbackslash triangle ADB \textbackslash ) is significantly larger than \textbackslash ( \textbackslash triangle ABC \textbackslash ).
+
+A reasonable estimate is that \textbackslash ( \textbackslash triangle ADB \textbackslash ) is about twice the size of \textbackslash ( \textbackslash triangle ABC \textbackslash ).
+
+Final answer: (e) 2 & \xmark & e & \xmark \\
+\midrule
+Gemini 1.5 Pro & ADB appears roughly twice as large as ABC. This is because ADB encompasses most of the area within triangle ADC, which itself is roughly the same area as triangle ABC.  Therefore, ADB is approximately 2 times larger than ABC.
+
+Final Answer: (e) & \xmark & e & \xmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Geometry-Area} (1)} \label{tab:examples_Geometry-Area_1}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/679.jpg} & DAO is X times larger in area than DBC. Which of the following options is a reasonable estimate? You only need to estimate from the visual information and do not need to do any mathematical reasoning. (a) 0.25 (b) 4 (c) 1 (d) 2 (e) 0.5  & e \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & To estimate the value of \textbackslash ( X \textbackslash ), we need to visually compare the areas of triangles \textbackslash ( DAO \textbackslash ) and \textbackslash ( DBC \textbackslash ).
+
+1. **Observation**: Triangle \textbackslash ( DAO \textbackslash ) appears to be roughly twice as large as triangle \textbackslash ( DBC \textbackslash ) in terms of height and base.
+2. **Estimation**: If we assume that the height and base of \textbackslash ( DAO \textbackslash ) are approximately twice those of \textbackslash ( DBC \textbackslash ), then the area of \textbackslash ( DAO \textbackslash ) would be roughly four times that of \textbackslash ( DBC \textbackslash ).
+
+Given the options:
+(a) 0.25
+(b) 4
+(c) 1
+(d) 2
+(e) 0.5
+
+The most reasonable estimate for \textbackslash ( X \textbackslash ) is 4, as it aligns with the visual observation that \textbackslash ( DAO \textbackslash ) is about twice as large as \textbackslash ( DBC \textbackslash ).
+
+**Final Answer**: (b) 4 & \xmark & d & \xmark \\
+\midrule
+InternVL2-8B & To estimate the ratio of the areas of triangles DAO and DBC, we can visually compare their sizes. 
+
+1. **Visual Comparison**: 
+   - Triangle DAO appears to be significantly larger than triangle DBC.
+   - The height of triangle DAO from point D to line AB is much greater than the height of triangle DBC from point D to line AB.
+
+2. **Reasoning**:
+   - The area of a triangle is given by the formula \textbackslash ( \textbackslash text\{Area\} = \textbackslash frac\{1\}\{2\} \textbackslash times \textbackslash text\{base\} \textbackslash times \textbackslash text\{height\} \textbackslash ).
+   - Since the base (line AB) is the same for both triangles, the ratio of their areas is directly proportional to the ratio of their heights.
+
+3. **Estimation**:
+   - From the visual information, triangle DAO's height is approximately 4 times the height of triangle DBC.
+   - Therefore, the area of triangle DAO is approximately 4 times the area of triangle DBC.
+
+Thus, the most reasonable estimate is (b) 4. & \xmark & b & \xmark \\
+\midrule
+InternVL2-26B & To estimate the area ratio of triangle DAO to triangle DBC, we can visually compare the areas of the two triangles. 
+
+1. Observe the triangles DAO and DBC. 
+2. Notice that triangle DAO is larger than triangle DBC.
+3. Estimate the ratio of the areas by comparing the visual sizes of the triangles.
+
+From the visual information, it appears that triangle DAO is approximately 4 times larger than triangle DBC.
+
+Therefore, the answer is (b) 4. & \xmark & b & \xmark \\
+\midrule
+InternVL2-76B & To estimate the area ratio of triangle DAO to triangle DBC, we can visually compare their bases and heights. 
+
+1. **Base Comparison**: The base of triangle DAO (DO) appears to be roughly half the length of the base of triangle DBC (DB).
+2. **Height Comparison**: The height of triangle DAO (AO) appears to be roughly the same as the height of triangle DBC (BO).
+
+Given that the area of a triangle is calculated as \textbackslash ( \textbackslash frac\{1\}\{2\} \textbackslash times \textbackslash text\{base\} \textbackslash times \textbackslash text\{height\} \textbackslash ), if the base of DAO is half that of DBC, and the heights are the same, the area of DAO would be half the area of DBC.
+
+Thus, the area of DAO is approximately 0.5 times the area of DBC.
+
+Final answer: (e) 0.5 & \cmark & (d) & \xmark \\
+\midrule
+Claude 3.5 Sonnet & Looking at the image, we can see a quadrilateral ABCD with a diagonal AC that divides it into two triangles: DAO and DBC.
+
+Visually estimating the areas:
+
+Triangle DAO appears to be significantly larger than triangle DBC. It covers more than half of the entire quadrilateral, while DBC covers less than half.
+
+The question states that DAO is X times larger in area than DBC. Given this information and the visual estimate, we can reasonably conclude that DAO is about twice the size of DBC.
+
+Among the given options, the value that best represents this relationship is 2.
+
+Therefore, my reasoning leads to the answer: (d) 2 & \xmark & b & \xmark \\
+\midrule
+GPT-4o & From the image, triangle \textbackslash ( \textbackslash triangle DAO \textbackslash ) and triangle \textbackslash ( \textbackslash triangle DBC \textbackslash ) share the same height from point \textbackslash ( D \textbackslash ) to line \textbackslash ( AC \textbackslash ). The base \textbackslash ( AO \textbackslash ) of \textbackslash ( \textbackslash triangle DAO \textbackslash ) appears to be shorter than the base \textbackslash ( BC \textbackslash ) of \textbackslash ( \textbackslash triangle DBC \textbackslash ).
+
+Visually, \textbackslash ( \textbackslash triangle DAO \textbackslash ) seems to be about half the size of \textbackslash ( \textbackslash triangle DBC \textbackslash ). Therefore, a reasonable estimate for the ratio of their areas is 0.5.
+
+The final answer is (e) 0.5. & \cmark & (e) 0.5 & \cmark \\
+\midrule
+Gemini 1.5 Pro & The triangle DAO appears to be roughly half the size of triangle DBC.  Therefore, DBC is roughly twice as large as DAO, meaning that DAO is roughly 0.5 times larger than DBC.
+
+Final Answer: (e) & \cmark & e & \cmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Geometry-Area} (2)} \label{tab:examples_Geometry-Area_2}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/790.jpg} & BAM is X times larger in area than BMN. Which of the following options is a reasonable estimate? You only need to estimate from the visual information and do not need to do any mathematical reasoning. (a) 0.25 (b) 4 (c) 2 (d) 0.5 (e) 1  & c \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & To estimate the value of \textbackslash ( X \textbackslash ), we need to visually compare the areas of triangles \textbackslash ( BAM \textbackslash ) and \textbackslash ( BMN \textbackslash ).
+
+1. **Observation**: Triangle \textbackslash ( BAM \textbackslash ) is visually larger than triangle \textbackslash ( BMN \textbackslash ).
+2. **Estimation**: By visually comparing the two triangles, it appears that \textbackslash ( BAM \textbackslash ) is roughly 4 times larger in area than \textbackslash ( BMN \textbackslash ).
+
+Therefore, the reasonable estimate for \textbackslash ( X \textbackslash ) is 4.
+
+**Final Answer**: (b) 4 & \xmark & b & \xmark \\
+\midrule
+InternVL2-8B & To estimate the ratio of the areas of triangles BAM and BMN, we can visually compare their sizes. 
+
+1. **Visual Comparison**: Triangle BAM appears to be significantly larger than triangle BMN. The base of triangle BAM (AB) is much longer than the base of triangle BMN (BN), and the height from point A to BC is also greater than the height from point M to BC.
+
+2. **Area Relationship**: The area of a triangle is given by the formula \textbackslash ( \textbackslash text\{Area\} = \textbackslash frac\{1\}\{2\} \textbackslash times \textbackslash text\{base\} \textbackslash times \textbackslash text\{height\} \textbackslash ). Since both triangles share the same height (the perpendicular distance from A to BC), the ratio of their areas will be directly proportional to the ratio of their bases.
+
+3. **Base Comparison**: The base of triangle BAM (AB) is approximately 4 times the length of the base of triangle BMN (BN).
+
+4. **Area Ratio**: Given that the height is the same for both triangles, the area of triangle BAM will be approximately 4 times the area of triangle BMN.
+
+Therefore, the most reasonable estimate for the ratio of the areas of triangles BAM to BMN is 4.
+
+**Final Answer**: (b) 4 & \xmark & b & \xmark \\
+\midrule
+InternVL2-26B & To estimate the ratio of the areas of triangles BAM and BMN, we can visually compare the bases and the heights of the triangles. 
+
+1. **Base Comparison**: The base of triangle BAM (AB) appears to be roughly twice the length of the base of triangle BMN (BN). This suggests that the area of triangle BAM will be approximately four times the area of triangle BMN, assuming the height remains constant.
+
+2. **Height Comparison**: The height of triangle BAM (AM) appears to be roughly the same as the height of triangle BMN (MN). This means that the height does not significantly affect the area ratio, as the height is a common factor in both triangles.
+
+Given these observations, the area of triangle BAM (ABM) is likely to be around four times the area of triangle BMN (BMN).
+
+Therefore, the correct answer is (b) 4. & \xmark & c & \cmark \\
+\midrule
+InternVL2-76B & To estimate the area ratio between triangle BAM and triangle BMN, observe the following:
+
+1. The height of triangle BAM from point A to side BM is significantly larger than the height of triangle BMN from point M to side BN.
+2. The base lengths of both triangles are proportional to the segments BM and MN of line BC.
+
+Given that the height of BAM is roughly twice the height of BMN, and the base lengths are in a similar proportion, the area of triangle BAM would be approximately four times the area of triangle BMN.
+
+Therefore, the reasonable estimate for the area ratio is 4.
+
+Final answer: (b) 4 & \xmark & (b) & \xmark \\
+\midrule
+Claude 3.5 Sonnet & Looking at the image, we can see a triangle ABC with a point M on side AC and a point N on side BC. These points create two triangles: the larger triangle BAM and the smaller triangle BMN.
+
+Visually estimating the areas, it appears that triangle BAM is noticeably larger than triangle BMN, but not dramatically so. It looks to be about twice the size, give or take.
+
+Among the given options, the one that best matches this visual estimate is:
+
+(c) 2
+
+This suggests that BAM is approximately 2 times larger in area than BMN, which seems reasonable based on the visual information provided in the diagram.
+
+Final answer: c & \cmark & b & \xmark \\
+\midrule
+GPT-4o & From the image, triangle \textbackslash ( \textbackslash triangle BAM \textbackslash ) appears to be larger than triangle \textbackslash ( \textbackslash triangle BMN \textbackslash ). The area of \textbackslash ( \textbackslash triangle BAM \textbackslash ) seems to be approximately twice the area of \textbackslash ( \textbackslash triangle BMN \textbackslash ), as \textbackslash ( M \textbackslash ) is roughly halfway along \textbackslash ( \textbackslash overline\{AN\} \textbackslash ) and \textbackslash ( \textbackslash overline\{BM\} \textbackslash ) is a common side.
+
+Therefore, a reasonable estimate for the ratio of the areas is 2.
+
+Final answer: (c) 2 & \cmark & b & \xmark \\
+\midrule
+Gemini 1.5 Pro & Triangle BAM looks roughly twice the size of triangle BMN.  Therefore, X is approximately 2.
+
+Final Answer: (c) & \cmark & (c) & \cmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Geometry-Area} (3)} \label{tab:examples_Geometry-Area_3}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/35.jpg} & In the figure, the line AB is a diameter of a circle. True or False? & True \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & True.
+
+The line AB is a diameter of a circle because it passes through the center of the circle, O, and connects two points on the circumference, A and B. By definition, a diameter is a straight line passing from side to side through the center of a circle or sphere. & \cmark & True & \cmark \\
+\midrule
+InternVL2-8B & False.
+
+In the given figure, the line segment AB is not a diameter of the circle. A diameter is a line segment that passes through the center of the circle and has its endpoints on the circle. However, in this figure, the line segment AB does not pass through the center of the circle (point O). Instead, it is a chord that connects two points on the circumference of the circle. Therefore, AB is not a diameter. & \xmark & False & \xmark \\
+\midrule
+InternVL2-26B & To determine if the statement is true or false, we need to analyze the given figure. The line AB is shown as a straight line passing through the center O of the circle, which is a characteristic of a diameter. A diameter is defined as a straight line passing from side to side through the center of a circle, thus dividing it into two equal parts.
+
+Given that AB passes through the center O and extends from one side of the circle to the other, it meets the criteria of being a diameter.
+
+Therefore, the statement is true.
+
+True. & \cmark & True & \cmark \\
+\midrule
+InternVL2-76B & To determine if the line AB is a diameter of the circle, we need to check if it passes through the center of the circle, denoted as O.
+
+From the figure, it is clear that the line AB does indeed pass through the center O. Therefore, AB is a diameter of the circle.
+
+Final answer: True & \cmark & True & \cmark \\
+\midrule
+Claude 3.5 Sonnet & Let's analyze this step-by-step:
+
+1) In a circle, a diameter is defined as a line segment that passes through the center of the circle and has its endpoints on the circle. It's the longest chord of the circle.
+
+2) In this figure, we can see that line AB passes through point O, which appears to be the center of the circle.
+
+3) Both points A and B are on the circumference of the circle.
+
+4) The line AB divides the circle into two equal halves.
+
+5) These characteristics are consistent with the definition of a diameter.
+
+Therefore, based on the information provided in the image, the statement appears to be correct.
+
+Final answer: True & \cmark & True & \cmark \\
+\midrule
+GPT-4o & In the figure, \textbackslash ( AB \textbackslash ) is a chord of the circle, and \textbackslash ( E \textbackslash ) is a point on the circle such that \textbackslash ( \textbackslash triangle AEB \textbackslash ) is inscribed. For \textbackslash ( AB \textbackslash ) to be a diameter, the angle \textbackslash ( \textbackslash angle AEB \textbackslash ) must be a right angle (90 degrees) according to the inscribed angle theorem. However, the figure does not provide enough information to confirm that \textbackslash ( \textbackslash angle AEB \textbackslash ) is a right angle.
+
+Therefore, based on the given information, we cannot conclude that \textbackslash ( AB \textbackslash ) is a diameter.
+
+Final answer: False. & \xmark & True. & \cmark \\
+\midrule
+Gemini 1.5 Pro & A diameter of a circle is a line segment that passes through the center of the circle and whose endpoints lie on the circle.  In this figure, AB passes through point O (the circle's center) and points A and B lie on the circle.
+
+Final Answer: True
+ & \cmark & True
+ & \cmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Geometry-Diameter-Radius} (1)} \label{tab:examples_Geometry-Diameter-Radius_1}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/192.jpg} & In the figure, the line DC is a diameter of a circle. True or False? & True \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & True.
+
+The line DC passes through the center of the circle, O, and extends to both ends of the circle, touching the circumference at points C and F. This means that DC is a diameter of the circle.
+
+Final answer: True. & \cmark & True & \cmark \\
+\midrule
+InternVL2-8B & False
+
+In the figure, the line segment CD is not a diameter of the circle. A diameter is a line segment that passes through the center of the circle and has its endpoints on the circle. In the given figure, the line segment CD does not pass through the center of the circle, and therefore it is not a diameter. & \xmark & False & \xmark \\
+\midrule
+InternVL2-26B & To determine if the statement is true or false, we need to analyze the given figure. The figure shows a circle with a line segment DC passing through the center O. Since DC passes through the center of the circle and extends to both ends of the circle, it is a diameter.
+
+Therefore, the statement "the line DC is a diameter of a circle" is true.
+
+True. & \cmark & True & \cmark \\
+\midrule
+InternVL2-76B & To determine if the line DC is a diameter of the circle, we need to check if it passes through the center of the circle and if its endpoints lie on the circle.
+
+From the figure, it is clear that:
+1. The line DC passes through the center O of the circle.
+2. The endpoints D and C lie on the circumference of the circle.
+
+Since the line DC satisfies both conditions, it is indeed a diameter of the circle.
+
+Final answer: True & \cmark & True & \cmark \\
+\midrule
+Claude 3.5 Sonnet & Let's analyze this step-by-step:
+
+1. In a circle, a diameter is defined as a line segment that passes through the center of the circle and has its endpoints on the circle. It's the longest chord of the circle.
+
+2. In this figure, we can see that line DC passes through point O, which appears to be the center of the circle (as it's typically denoted).
+
+3. Both points D and C are on the circumference of the circle.
+
+4. The line DC appears to divide the circle into two equal halves, which is a property of a diameter.
+
+5. While we don't have explicit measurements, the visual representation strongly suggests that DC is indeed a diameter.
+
+Reasoning: Given that DC passes through the center O and has its endpoints on the circle, it meets the definition of a diameter.
+
+Final answer: True & \cmark & True & \cmark \\
+\midrule
+GPT-4o & In the figure, \textbackslash ( DC \textbackslash ) is a line that passes through the center \textbackslash ( O \textbackslash ) of the circle, making it a diameter. A diameter is a line segment that passes through the center of the circle and has its endpoints on the circle. Since \textbackslash ( DC \textbackslash ) meets these criteria, it is indeed a diameter.
+
+Final answer: True. & \cmark & True & \cmark \\
+\midrule
+Gemini 1.5 Pro & A diameter is a line segment that passes through the center of a circle and whose endpoints lie on the circle. The line segment DC passes through the center O and its endpoints C and D lie on the circle. Therefore, DC is a diameter.
+
+Final Answer: The final answer is \$\textbackslash boxed\{True\}\$ & \cmark & True
+ & \cmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Geometry-Diameter-Radius} (2)} \label{tab:examples_Geometry-Diameter-Radius_2}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/887.jpg} & In the figure, the line AO is a radius of a circle. True or False? & True \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & True.
+
+Explanation: In the given figure, AO is a line segment that starts from point A and ends at point O, which is the center of the circle. Since O is the center of the circle, AO is a radius of the circle.
+
+Final answer: True & \cmark & True & \cmark \\
+\midrule
+InternVL2-8B & True
+
+In the figure, the line segment AO is drawn from the center of the circle (point O) to a point on the circumference (point A). By definition, any line segment that connects the center of a circle to a point on the circle's circumference is a radius. Therefore, AO is a radius of the circle. & \cmark & True & \cmark \\
+\midrule
+InternVL2-26B & In the given figure, the line segment AO is drawn from the center of the circle (O) to a point on the circle (A). Since AO is a line segment connecting the center of the circle to a point on the circle, it is a radius of the circle.
+
+Therefore, the statement "In the figure, the line AO is a radius of a circle" is true.
+
+True. & \cmark & True & \cmark \\
+\midrule
+InternVL2-76B & The line AO is a radius of the circle because it extends from the center of the circle (O) to a point on the circle (A). By definition, a radius is a straight line from the center of a circle to any point on its circumference. Therefore, AO meets this criterion and is indeed a radius.
+
+Final answer: True & \cmark & True & \cmark \\
+\midrule
+Claude 3.5 Sonnet & Let's analyze this figure:
+
+1. We see a circle with three points labeled A, B, and C on its circumference.
+
+2. There's a line segment drawn from point A to the center of the circle, labeled O.
+
+3. By definition, a radius of a circle is a line segment from the center of the circle to any point on its circumference.
+
+4. The line AO meets this definition exactly - it goes from the center O to point A on the circumference.
+
+5. While there are other line segments in the figure (BO and CO), we're specifically asked about AO.
+
+Reasoning: Since AO is a line segment that connects the center of the circle to a point on its circumference, it fits the definition of a radius perfectly.
+
+Final answer: True & \cmark & True & \cmark \\
+\midrule
+GPT-4o & In the figure, \textbackslash ( O \textbackslash ) is the center of the circle, and \textbackslash ( A \textbackslash ) is a point on the circle. The line \textbackslash ( AO \textbackslash ) connects the center of the circle to a point on the circle, which is the definition of a radius.
+
+Therefore, the statement is **True**. & \cmark & True. & \cmark \\
+\midrule
+Gemini 1.5 Pro & The center of the circle is labeled as O.  A radius of a circle is any line segment that connects the center to a point on the circumference (edge) of the circle. Point A is on the circumference of the circle. The line segment AO connects the center O to a point A on the circumference.
+
+Final Answer: True
+ & \cmark & True
+ & \cmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Geometry-Diameter-Radius} (3)} \label{tab:examples_Geometry-Diameter-Radius_3}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/test_Chemistry_471.png} & CH\_3 is attached to a single line, not a double line. True or False? You must answer this question using visual information and do not use knowledge of chemistry unless explicitly instructed to do so. & False \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & The image shows a chemical structure where CH\_3 is attached to a single line, indicating a single bond between the carbon and the hydrogen atoms.
+
+False & \cmark & True & \xmark \\
+\midrule
+InternVL2-8B & The image shows a chemical structure where a CH\$\_3\$ group is attached to a nitrogen atom (N) via a single line. This indicates a single covalent bond between the CH\$\_3\$ group and the nitrogen atom. Therefore, the statement "CH\$\_3\$ is attached to a single line, not a double line" is true.
+
+Final answer: True & \xmark & True & \xmark \\
+\midrule
+InternVL2-26B & The structure shows a single line representing a single bond between the carbon (C) and the nitrogen (N) atoms. The double line represents a double bond between the carbon and the oxygen (O) atoms. Therefore, the statement "CH\_3 is attached to a single line, not a double line" is true.
+
+True. & \xmark & True & \xmark \\
+\midrule
+InternVL2-76B & The image shows a chemical structure with a CH\$\_3\$ group attached to a nitrogen atom (N) via a single line. This single line represents a single covalent bond between the carbon of the CH\$\_3\$ group and the nitrogen atom.
+
+Final answer: True & \xmark & True & \xmark \\
+\midrule
+Claude 3.5 Sonnet & Based on the visual information provided in the image:
+
+I can see that the CH3 group is indeed attached to a single line in the molecular structure diagram, not a double line. The single line connects the CH3 group to what appears to be a nitrogen atom (N) within the larger molecular structure.
+
+Final answer: True & \xmark & False & \cmark \\
+\midrule
+GPT-4o & The CH\$\_3\$ group is attached to a single line, which represents a single bond. 
+
+True. & \xmark & True & \xmark \\
+\midrule
+Gemini 1.5 Pro & The CH\$\_3\$ is attached to what appears to be a vertex where three lines meet. This is a single bond, not a double bond (which would be represented by two lines).
+
+Final Answer: True & \xmark & True & \xmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Chemistry-Shape-Single} (1)} \label{tab:examples_Chemistry-Shape-Single_1}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/test_Chemistry_496.png} & H\_a and H\_d are attached to opposite vertices of a hexagonal structure. True or False? You must answer this question using visual information and do not use knowledge of chemistry unless explicitly instructed to do so. & False \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & The structure depicted in the image is a hexagonal ring with alternating oxygen and nitrogen atoms. The hydrogen atoms (H\_a, H\_b, H\_c, H\_d, H\_e) are attached to the carbon atoms of the hexagonal ring.
+
+To determine if H\_a and H\_d are attached to opposite vertices of the hexagonal structure, we need to examine the positions of these hydrogen atoms in relation to the ring.
+
+- H\_a is attached to one of the carbon atoms of the hexagonal ring.
+- H\_d is also attached to one of the carbon atoms of the hexagonal ring.
+
+Since both H\_a and H\_d are attached to the same type of carbon atoms (carbon atoms of the hexagonal ring), they are not attached to opposite vertices of the hexagonal structure.
+
+Therefore, the statement is False.
+
+Final answer: False & \cmark & True & \xmark \\
+\midrule
+InternVL2-8B & False.
+
+In the given structure, H\_a and H\_d are not attached to opposite vertices of a hexagonal structure. Instead, they are both attached to the same carbon atom in the middle of the hexagonal ring. The hexagonal structure is formed by the six carbon atoms, and H\_b, H\_c, and H\_e are attached to the other carbon atoms in the ring. H\_a and H\_d are part of the same carbon atom, not opposite vertices of the hexagonal structure. & \cmark & False & \cmark \\
+\midrule
+InternVL2-26B & To determine if H\_a and H\_d are attached to opposite vertices of a hexagonal structure, we need to examine the given chemical structure.
+
+1. Identify the hexagonal structure: The hexagonal structure in the given chemical diagram is the benzene ring, which is a six-membered ring with alternating double bonds.
+2. Locate H\_a and H\_d: H\_a is attached to one vertex of the benzene ring, and H\_d is attached to the opposite vertex of the same ring.
+3. Verify the attachment: Since H\_a and H\_d are attached to opposite vertices of the benzene ring, the statement is true.
+
+Therefore, the final answer is True. & \xmark & True & \xmark \\
+\midrule
+InternVL2-76B & To determine if H\_a and H\_d are attached to opposite vertices of a hexagonal structure, we need to analyze the positions of these hydrogen atoms in the given molecular structure.
+
+1. Identify the hexagonal structure: The hexagonal structure in the molecule is the six-membered ring containing alternating double bonds (the benzene ring).
+
+2. Locate H\_a and H\_d: 
+   - H\_a is attached to the carbon atom that is part of the hexagonal structure and is adjacent to the nitrogen atom in the five-membered ring.
+   - H\_d is attached to the nitrogen atom in the five-membered ring that is directly connected to the hexagonal structure.
+
+3. Determine their relative positions:
+   - H\_a is attached to a carbon atom on the hexagonal structure.
+   - H\_d is attached to a nitrogen atom that is part of the five-membered ring connected to the hexagonal structure.
+
+Since H\_d is not directly attached to the hexagonal structure but rather to an atom in the connected five-membered ring, H\_a and H\_d are not attached to opposite vertices of the hexagonal structure.
+
+Final answer: False & \cmark & False & \cmark \\
+\midrule
+Claude 3.5 Sonnet & To answer this question based solely on the visual information provided in the image:
+
+I'll examine the structure and the positions of Ha and Hd.
+
+The structure is not a simple hexagon, but rather a fused bicyclic system. Ha is attached to a carbon at the junction of the two rings, which forms one of the vertices of the overall structure. Hd is attached to a nitrogen atom that is part of one of the rings, but not at a vertex opposite to Ha.
+
+The positions of Ha and Hd are not at opposite corners or vertices of the overall structure. They are on the same side of the molecule as depicted.
+
+Based on this visual analysis:
+
+False. Ha and Hd are not attached to opposite vertices of the structure shown in the image. & \cmark & False & \cmark \\
+\midrule
+GPT-4o & H\_a and H\_d are attached to adjacent vertices of the hexagonal structure, not opposite ones. They are on the same side of the hexagon.
+
+False. & \cmark & False & \cmark \\
+\midrule
+Gemini 1.5 Pro & H\_a and H\_d are attached to the same carbon atom, which forms a vertex of the hexagonal structure.  They are not attached to opposite vertices.
+
+False.
+ & \cmark & False
+ & \cmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Chemistry-Shape-Single} (2)} \label{tab:examples_Chemistry-Shape-Single_2}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/test_Chemistry_390.png} & H and O are attached to opposite vertices of the hexagonal structure. True or False? You must answer this question using visual information and do not use knowledge of chemistry unless explicitly instructed to do so. & False \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & The image shows a hexagonal ring structure with a double bond (indicated by the double line) between two of the vertices. The hydrogen (H) and oxygen (O) atoms are attached to the vertices of the hexagon, not necessarily opposite each other.
+
+Final answer: False. & \cmark & False & \cmark \\
+\midrule
+InternVL2-8B & False.
+
+The hexagonal structure in the image is a benzene ring, which is a common aromatic ring in organic chemistry. In the given structure, the oxygen atom (O) is attached to one of the carbon atoms in the ring, and the hydrogen atom (H) is attached to another carbon atom. These two atoms are not located at opposite vertices of the hexagonal structure. Instead, they are adjacent to each other within the ring. Therefore, the statement that H and O are attached to opposite vertices of the hexagonal structure is false. & \cmark & False & \cmark \\
+\midrule
+InternVL2-26B & To determine if H and O are attached to opposite vertices of the hexagonal structure, we need to examine the positions of H and O in the given diagram. 
+
+In the diagram, the hexagonal structure is a benzene ring. The oxygen (O) is attached to one vertex of the hexagon, and the hydrogen (H) is attached to another vertex, which is directly opposite the oxygen. This means that H and O are indeed attached to opposite vertices of the hexagonal structure.
+
+Therefore, the statement is true.
+
+True. & \xmark & True & \xmark \\
+\midrule
+InternVL2-76B & The hexagonal structure in the image represents a benzene ring. The hydrogen (H) and oxygen (O) atoms are attached to adjacent carbon atoms in the ring, not to opposite vertices. Therefore, the statement is false.
+
+Final answer: False & \cmark & False & \cmark \\
+\midrule
+Claude 3.5 Sonnet & To answer this question based solely on the visual information provided in the image:
+
+I can see that the O (oxygen) atom is attached to one of the vertices of the hexagonal structure at the top. The H (hydrogen) atom is attached to a different vertex, which is not directly opposite to the O. The H appears to be attached to a vertex that is one position clockwise from the bottom vertex of the hexagon.
+
+For the O and H to be on opposite vertices, they would need to be at the top and bottom of the hexagon, or on opposite corners of the sides. This is not the case in the image.
+
+Therefore, based purely on the visual information:
+
+False. H and O are not attached to opposite vertices of the hexagonal structure. & \cmark & False & \cmark \\
+\midrule
+GPT-4o & In the image, the hexagonal structure represents a cyclohexane ring. The oxygen (O) is attached to one vertex of the hexagon, and the hydrogen (H) is attached to a different vertex. However, they are not on opposite vertices of the hexagon.
+
+Final answer: False. & \cmark & False & \cmark \\
+\midrule
+Gemini 1.5 Pro & The Oxygen (O) is attached to a vertex of the hexagon. The Hydrogen (H) is attached to a point along the edge of the hexagon below the Oxygen and adjacent to the isopropyl group (the two CH3's attached to a central carbon). Therefore, they are not at opposite vertices.
+
+False.
+ & \cmark & False
+ & \cmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Chemistry-Shape-Single} (3)} \label{tab:examples_Chemistry-Shape-Single_3}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/test_Chemistry_367.png} & List all figures that satisfy the following conditions from a, b, c, and d. You must answer this question using visual information and do not need to use your knowledge of chemistry unless explicitly instructed to do so.
+
+Conditions: Including a hexagonal structure. & a,b,c,d \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & To determine which figures satisfy the condition of including a hexagonal structure, we need to identify the figures that have a hexagon within their structure.
+
+- Figure (a) shows a hexagonal ring structure.
+- Figure (b) does not have a hexagonal structure.
+- Figure (c) does not have a hexagonal structure.
+- Figure (d) does not have a hexagonal structure.
+
+Therefore, the only figure that satisfies the condition of including a hexagonal structure is figure (a).
+
+Final answer: a & \xmark & a, b, c, d & \cmark \\
+\midrule
+InternVL2-8B & The figures that satisfy the condition of including a hexagonal structure are:
+
+- (a) and (b)
+
+Explanation: 
+- Figure (a) clearly shows a hexagonal structure.
+- Figure (b) also shows a hexagonal structure.
+- Figures (c) and (d) do not have a hexagonal structure.
+
+Therefore, the figures that satisfy the condition are (a) and (b). & \xmark & a, b, c, d & \cmark \\
+\midrule
+InternVL2-26B & To determine which figures satisfy the condition of including a hexagonal structure, we need to identify the structures that have a hexagonal ring within them.
+
+- Figure (a) has a benzene ring, which is a hexagon.
+- Figure (b) has a benzene ring, which is a hexagon.
+- Figure (c) has a benzene ring, which is a hexagon.
+- Figure (d) has a benzene ring, which is a hexagon.
+
+All four figures (a, b, c, and d) have a hexagonal structure, specifically a benzene ring.
+
+Final answer: a, b, c, d & \cmark & a, b, c, d & \cmark \\
+\midrule
+InternVL2-76B & To determine which figures satisfy the condition of including a hexagonal structure, we need to visually inspect each figure for the presence of a hexagon.
+
+- Figure (a): This figure shows a hexagonal structure with a double bond attached to one of the carbons.
+- Figure (b): This figure also shows a hexagonal structure with a double bond attached to one of the carbons.
+- Figure (c): This figure shows a hexagonal structure with two double bonds attached to two different carbons.
+- Figure (d): This figure shows a hexagonal structure with a double bond attached to one of the carbons.
+
+All figures (a, b, c, and d) include a hexagonal structure.
+
+Final answer: a, b, c, d & \cmark & a, b, c, d & \cmark \\
+\midrule
+Claude 3.5 Sonnet & Let's examine each figure:
+
+(a) This structure has a hexagonal ring with an external double bond attached.
+(b) This structure has a hexagonal ring with an external double bond attached to the ring itself.
+(c) This structure has a hexagonal ring with an external methyl group attached.
+(d) This structure has a hexagonal ring with an internal double bond and an external methyl group.
+
+All of these structures (a, b, c, and d) satisfy the condition of including a hexagonal structure. Each figure shows a six-membered ring, which is the defining characteristic of a hexagonal structure in organic chemistry notation.
+
+Explanation: A hexagonal structure in this context refers to the six-sided ring that forms the base of each molecule depicted. This hexagonal ring is present in all four figures, regardless of the additional features like double bonds or methyl groups.
+
+Final answer: a, b, c, d & \cmark & a, b, c, d & \cmark \\
+\midrule
+GPT-4o & All the figures (a, b, c, and d) include a hexagonal structure. Each structure has a six-membered ring, which is the hexagonal part.
+
+Final answer: a, b, c, d. & \cmark & a, b, c, d & \cmark \\
+\midrule
+Gemini 1.5 Pro & All of the figures (a, b, c, and d) include a hexagonal structure as the base of their molecule.  Each one has a six-sided ring.
+
+Final Answer: a, b, c, d & \cmark & a, b, c, d & \cmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Chemistry-Shape-Multi} (1)} \label{tab:examples_Chemistry-Shape-Multi_1}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/test_Chemistry_112.png} & List all figures that satisfy the following conditions from a, b, c, and d. You must answer this question using visual information and do not need to use your knowledge of chemistry unless explicitly instructed to do so.
+
+Conditions: Including a pentagonal structure. & a \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & To determine which figures satisfy the condition of including a pentagonal structure, we need to identify the figures that have a five-sided polygon (pentagon).
+
+- Figure (a) is a bicyclic compound with a five-membered ring, which is a pentagon.
+- Figure (b) is a benzene ring, which is a hexagon.
+- Figure (c) is a bicyclic compound with a five-membered ring, which is a pentagon.
+- Figure (d) is a square, which is a four-sided polygon.
+
+Based on this analysis, figures (a) and (c) satisfy the condition of including a pentagonal structure.
+
+Final answer: a, c & \xmark & (b), (c), (d) & \xmark \\
+\midrule
+InternVL2-8B & To identify the figures that include a pentagonal structure, we need to examine each figure for the presence of a five-sided polygon.
+
+- **Figure (a)**: This structure contains a pentagonal ring.
+- **Figure (b)**: This structure contains a hexagonal ring.
+- **Figure (c)**: This structure contains a pentagonal ring.
+- **Figure (d)**: This structure contains a linear structure with a chlorine atom at each end.
+
+Based on the conditions provided, the figures that include a pentagonal structure are (a) and (c).
+
+**Final answer: (a, c)** & \xmark & a, b, c & \xmark \\
+\midrule
+InternVL2-26B & To determine which figures satisfy the condition of including a pentagonal structure, we need to identify the structures that have a five-sided shape.
+
+- Figure (a) shows a pentagonal structure with two chlorine atoms attached to it.
+- Figure (b) is a hexagonal structure with three chlorine atoms attached to it.
+- Figure (c) is a triangular structure with three chlorine atoms attached to it.
+- Figure (d) is a square structure with one chlorine atom attached to it.
+
+The only figure that includes a pentagonal structure is (a).
+
+Final answer: (a) & \cmark & a & \cmark \\
+\midrule
+InternVL2-76B & To determine which figures include a pentagonal structure, we need to visually inspect each figure for a five-sided polygon.
+
+- Figure (a) contains a five-sided ring, which is a pentagon.
+- Figure (b) contains a six-sided ring, which is a hexagon.
+- Figure (c) contains a three-sided ring, which is a triangle.
+- Figure (d) contains a four-sided ring, which is a square.
+
+Based on this analysis, the only figure that includes a pentagonal structure is (a).
+
+Final answer: (a) & \cmark & a & \cmark \\
+\midrule
+Claude 3.5 Sonnet & Let's examine each figure:
+
+(a) This structure shows a pentagonal (five-sided) ring with two chlorine atoms attached.
+(b) This structure shows a hexagonal (six-sided) ring with two chlorine atoms attached.
+(c) This structure shows a triangular shape with four chlorine atoms attached.
+(d) This structure shows a square (four-sided) ring with two chlorine atoms attached.
+
+Reasoning: The question asks for figures that include a pentagonal structure. Looking at the shapes, only one of these figures contains a five-sided ring, which is the definition of a pentagonal structure.
+
+Final answer: a & \cmark & a & \cmark \\
+\midrule
+GPT-4o & The figure that includes a pentagonal structure is (a). It has a five-sided ring, which is characteristic of a pentagon.
+
+Final answer: a & \cmark & a & \cmark \\
+\midrule
+Gemini 1.5 Pro & The condition is including a pentagonal structure.
+
+Figure (a) contains a pentagon.
+
+Final Answer: The final answer is \$\textbackslash boxed\{a\}\$ & \cmark & a & \cmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Chemistry-Shape-Multi} (2)} \label{tab:examples_Chemistry-Shape-Multi_2}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/test_Chemistry_19.png} & List all figures that satisfy the following conditions from a, b, c, and d. You must answer this question using visual information and do not need to use your knowledge of chemistry unless explicitly instructed to do so.
+
+Conditions: Including a pentagonal structure. & a,d \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & To determine which figures satisfy the condition of including a pentagonal structure, we need to identify the structures that have a five-membered ring.
+
+- Figure (a) shows a benzene ring, which is a hexagonal structure.
+- Figure (b) shows a benzene ring, which is a hexagonal structure.
+- Figure (c) shows a benzene ring, which is a hexagonal structure.
+- Figure (d) shows a benzene ring, which is a hexagonal structure.
+
+None of the figures (a, b, c, or d) include a pentagonal structure.
+
+Final answer: None of the figures (a, b, c, or d) satisfy the condition of including a pentagonal structure. & \xmark & (a), (b), (c), (d) & \xmark \\
+\midrule
+InternVL2-8B & To identify the figures that include a pentagonal structure, we need to examine each figure for the presence of a five-sided polygon.
+
+- **Figure (a)**: This structure is a hexagon, not a pentagon.
+- **Figure (b)**: This structure is a hexagon, not a pentagon.
+- **Figure (c)**: This structure is a hexagon, not a pentagon.
+- **Figure (d)**: This structure is a pentagon.
+
+Therefore, the only figure that includes a pentagonal structure is **Figure (d)**.
+
+Final answer: (d) & \xmark & a, c & \xmark \\
+\midrule
+InternVL2-26B & To determine which figures satisfy the condition of including a pentagonal structure, we need to identify the structures that have a five-sided ring.
+
+- Figure (a) shows a pentagonal structure with a methyl group attached to one of the vertices.
+- Figure (b) shows a pentagonal structure with a methyl group attached to one of the vertices.
+- Figure (c) shows a pentagonal structure with a hydroxyl group attached to one of the vertices.
+- Figure (d) shows a pentagonal structure with a chlorine atom attached to one of the vertices.
+
+All four figures (a, b, c, and d) satisfy the condition of including a pentagonal structure.
+
+Final answer: a, b, c, d & \xmark & a, b, c, d & \xmark \\
+\midrule
+InternVL2-76B & To determine which figures satisfy the condition of including a pentagonal structure, we need to visually inspect each figure for the presence of a five-sided ring.
+
+- Figure (a) contains a five-membered ring with one oxygen atom, which is a pentagonal structure.
+- Figure (b) also contains a five-membered ring with one oxygen atom, which is a pentagonal structure.
+- Figure (c) contains a five-membered ring with one oxygen atom and a hydroxyl group, which is a pentagonal structure.
+- Figure (d) contains a five-membered ring with one chlorine atom, which is a pentagonal structure.
+
+All figures (a, b, c, and d) include a pentagonal structure.
+
+Final answer: a, b, c, d & \xmark & a, b, c, d & \xmark \\
+\midrule
+Claude 3.5 Sonnet & Let's examine each figure for a pentagonal structure:
+
+(a) This molecule has a pentagonal (5-sided) ring structure.
+(b) This molecule has a 7-membered ring, not pentagonal.
+(c) This molecule also has a 7-membered ring, not pentagonal.
+(d) This molecule has a pentagonal (5-sided) ring structure.
+
+Reasoning: A pentagonal structure is defined by having 5 sides or vertices. Only figures (a) and (d) contain a 5-membered ring, which satisfies the condition of including a pentagonal structure.
+
+Final answer: a, d & \cmark & a, d & \cmark \\
+\midrule
+GPT-4o & All the figures (a, b, c, and d) include a pentagonal structure. Each structure has a five-membered ring, which is a pentagon.
+
+Final answer: a, b, c, d. & \xmark & a, b, c, d & \xmark \\
+\midrule
+Gemini 1.5 Pro & The figures (a), (b), (c), and (d) all depict pentagonal structures as part of their molecular diagrams.
+
+Final Answer: a, b, c, d & \xmark & a, b, c, d & \xmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Chemistry-Shape-Multi} (3)} \label{tab:examples_Chemistry-Shape-Multi_3}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/arXiv_src_2302_084--2302--2302.11423--calibration.jpg} & Answer the following question about the chart in the figure. Select the most reasonable answer from the provided options.
+
+Stock Index of Dow Jones on 28 Jan is
+(a) 200 (b) 350 (c) 250 (d) 0.08 (e) 3000  & a \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & To determine the Stock Index of Dow Jones on 28 Jan, we need to look at the chart labeled "Dow Jones" in the figure. The chart shows the Dow Jones index with a time series from 14 Jan to 29 Oct.
+
+On 28 Jan, the Dow Jones index is clearly marked on the chart. The value is approximately 250.
+
+Therefore, the most reasonable answer is:
+(c) 250
+
+Final answer: (c) 250 & \xmark & (e) 3000 & \xmark \\
+\midrule
+InternVL2-8B & To determine the stock index of Dow Jones on 28 Jan, we need to look at the graph corresponding to the Dow Jones index. The graph shows the index value over time. 
+
+Upon examining the graph, we can see that on 28 Jan, the Dow Jones index is around the 350 mark. This is visually confirmed by locating the date 28 Jan on the x-axis and finding the corresponding value on the y-axis.
+
+Therefore, the correct answer is:
+(b) 350 & \xmark & b) 350 & \xmark \\
+\midrule
+InternVL2-26B & To determine the stock index of Dow Jones on 28 Jan, we need to look at the graph corresponding to the Dow Jones index. The graph shows the index values over time. 
+
+On 28 Jan, the graph shows the index value at a point that is just above 250. The closest value to this point on the graph is 250.
+
+Therefore, the most reasonable answer is (c) 250.
+
+Final answer: (c) 250 & \xmark & e & \xmark \\
+\midrule
+InternVL2-76B & The chart for the Dow Jones shows the stock index value over time. On 28 Jan, the value is just above 3000, which is closest to option (e) 3000.
+
+Final answer: (e) 3000 & \xmark & (b) 350 & \xmark \\
+\midrule
+Claude 3.5 Sonnet & To answer this question, I'll look at the Dow Jones chart in the image, which is the third chart from the top on the left side.
+
+Looking at the Dow Jones chart, we can see that on 28 Jan (the start date of the chart), the stock index value is approximately 200.
+
+The options given are:
+(a) 200
+(b) 350
+(c) 250
+(d) 0.08
+(e) 3000
+
+Among these, 200 is the closest to the actual value shown on the chart for 28 Jan.
+
+Explanation: The Dow Jones chart clearly shows the stock index starting at around 200 on 28 Jan. The other values are either too high (350, 250, 3000) or represent a completely different scale (0.08) that doesn't match the y-axis of the chart.
+
+Final answer: (a) & \cmark & a & \cmark \\
+\midrule
+GPT-4o & The chart for the Dow Jones is located in the middle row on the left side. On January 28, the stock index value is approximately 350.
+
+The most reasonable answer is (b) 350. & \xmark & (c) 250 & \xmark \\
+\midrule
+Gemini 1.5 Pro & The question asks for the Stock Index of Dow Jones on 28 Jan.  The Dow Jones plot is the third row, left side. We look for 28 Jan on the x-axis of this plot.  The corresponding value on the y-axis is approximately 200.
+
+Final Answer: The final answer is \$\textbackslash boxed\{a\}\$ & \cmark & a & \cmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Charts-Extraction} (1)} \label{tab:examples_Charts-Extraction_1}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/arXiv_src_2105_050--2105--2105.08679--RAME_S.jpg} & Answer the following question about the chart in the figure. Select the most reasonable answer from the provided options.
+
+The value of SC of N=500 in graph (ii) is:
+(a) 0.195\% (b) 0.045\% (c) 0.170\% (d) 0.095\% (e) 0.145\%  & b \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & To determine the value of SC for N=500 in graph (ii), we need to look at the bar corresponding to N=500 in the SC category. The bar reaches up to the 0.15 mark on the RMAE axis.
+
+Reasoning:
+- The bar for N=500 in the SC category is clearly visible and reaches the 0.15 mark on the RMAE axis.
+
+Final Answer: (c) 0.170\% & \xmark & (e) 0.145\% & \xmark \\
+\midrule
+InternVL2-8B & To determine the value of SC (Standardized Coefficient) for N=500 in graph (ii), we need to look at the height of the SC bar for N=500. The SC bar for N=500 is the third bar from the left in the graph (ii).
+
+The height of the SC bar for N=500 is approximately 0.045\% on the y-axis.
+
+Therefore, the correct answer is:
+(b) 0.045\% & \cmark & (b) 0.045\% & \cmark \\
+\midrule
+InternVL2-26B & To determine the value of SC for N=500 in graph (ii), we need to look at the bar corresponding to SC in the N=500 column. The bar for SC is the one with the blue dashed pattern.
+
+From the graph, the height of the SC bar for N=500 is just above 0.1 on the y-axis, which represents the RMAE (Root Mean Absolute Error) percentage.
+
+The closest value to this height from the given options is 0.145\%.
+
+Therefore, the most reasonable answer is (e) 0.145\%.
+
+Final answer: (e) 0.145\% & \xmark & (b) 0.045\% & \cmark \\
+\midrule
+InternVL2-76B & In graph (ii), the SC (Shortest Chain) for N=500 is represented by the blue bar. The height of the bar corresponds to the value on the y-axis, which is approximately 0.045\%.
+
+Therefore, the correct answer is (b) 0.045\%. & \cmark & (d) 0.095\% & \xmark \\
+\midrule
+Claude 3.5 Sonnet & To answer this question, I'll examine graph (ii) in the image and look at the SC (striped) bar for N=500.
+
+Looking at graph (ii), the SC bar for N=500 is very small, barely visible above the x-axis. The y-axis for this graph goes from 0.00 to 0.20, with tick marks at 0.05, 0.10, and 0.15.
+
+The SC bar for N=500 appears to be just slightly above 0.00, but definitely below the 0.05 mark. Among the given options, 0.045\% (which is equivalent to 0.00045 on the scale of the graph) is the closest match to what we can see.
+
+Therefore, the most reasonable answer is (b) 0.045\%.
+
+Final answer: b & \cmark & b & \cmark \\
+\midrule
+GPT-4o & To determine the value of SC for \textbackslash ( N=500 \textbackslash ) in graph (ii), we need to look at the height of the SC bar in the middle graph. The SC bar is represented by the striped pattern with a red outline.
+
+By examining the graph, the SC bar for \textbackslash ( N=500 \textbackslash ) in graph (ii) appears to be slightly below the 0.05 mark on the RMAE axis.
+
+Therefore, the most reasonable answer is:
+
+(b) 0.045\% & \cmark & (b) 0.045\% & \cmark \\
+\midrule
+Gemini 1.5 Pro & The y-axis of the graph (ii) represents RMAE values. We look for the bar that corresponds to SC and N=500. The height of this bar is slightly below 0.05. Among the choices provided, the closest value is 0.045 (b).
+
+Final Answer: The final answer is \$\textbackslash boxed\{b\}\$ & \cmark & e & \xmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Charts-Extraction} (2)} \label{tab:examples_Charts-Extraction_2}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/arXiv_src_2010_011--2010--2010.01893--images--regularization.jpg} & Answer the following question about the chart in the figure. Select the most reasonable answer from the provided options.
+
+PPL of NEXUS at Perturbation = 0.08 is
+(a) 5x10\^2 (b) 1x10\^2 (c) 4x10\^2 (d) 3x10\^2 (e) 2x10\^2  & d \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & To determine the PPL (Perplexity) of NEXUS at a perturbation of 0.08, we need to locate the point on the graph where the perturbation value is 0.08 and then find the corresponding PPL value on the y-axis.
+
+1. Locate the perturbation value of 0.08 on the x-axis.
+2. Draw a vertical line from the perturbation value of 0.08 up to the NEXUS line.
+3. Draw a horizontal line from the point where the vertical line intersects the NEXUS line to the y-axis.
+
+From the graph, the PPL value at a perturbation of 0.08 for NEXUS is approximately 2x10\^2.
+
+Final answer: (e) 2x10\^2 & \xmark & e) 2x10\^2 & \xmark \\
+\midrule
+InternVL2-8B & To determine the PPL (Posterior Predictive Likelihood) of NEXUS at Perturbation = 0.08, we need to locate the point on the graph where the perturbation value is 0.08 and identify the corresponding PPL value on the y-axis.
+
+1. Locate the perturbation value of 0.08 on the x-axis.
+2. Observe the line corresponding to NEXUS (blue line with diamond markers).
+3. Find the y-value (PPL) at the point where the perturbation is 0.08.
+
+From the graph, at Perturbation = 0.08, the PPL for NEXUS is approximately 3x10\^2.
+
+Therefore, the correct answer is (d) 3x10\^2. & \cmark & b & \xmark \\
+\midrule
+InternVL2-26B & To determine the PPL of NEXUS at Perturbation = 0.08, we need to locate the point on the graph where the perturbation is 0.08 and find the corresponding PPL value for NEXUS.
+
+1. Locate the point on the x-axis where Perturbation = 0.08.
+2. Follow the vertical line up from this point to the graph lines.
+3. Identify the line corresponding to NEXUS (cyan diamond markers).
+4. The PPL value at this point is approximately 3x10\^2.
+
+Therefore, the PPL of NEXUS at Perturbation = 0.08 is 3x10\^2.
+
+Final answer: (d) 3x10\^2 & \cmark & (d) 3x10\^2 & \cmark \\
+\midrule
+InternVL2-76B & At Perturbation = 0.08, the PPL of NEXUS is indicated by the cyan line with diamond markers. The value on the graph at this perturbation level is approximately 3x10\^2.
+
+Final answer: (d) 3x10\^2 & \cmark & (d) 3x10\^2 & \cmark \\
+\midrule
+Claude 3.5 Sonnet & To answer this question, I'll look at the line for NEXUS on the graph at the perturbation value of 0.08 on the x-axis.
+
+Following the NEXUS line (light blue with diamond markers) to the 0.08 mark on the x-axis, I can see that the corresponding y-axis value is just above the 3x10\^2 mark.
+
+The PPL value for NEXUS at 0.08 perturbation appears to be slightly higher than 3x10\^2, but definitely lower than 4x10\^2. The closest option provided is 3x10\^2.
+
+Therefore, the most reasonable answer is (d) 3x10\^2.
+
+Final answer: d & \cmark & d & \cmark \\
+\midrule
+GPT-4o & To determine the PPL of NEXUS at Perturbation = 0.08, we need to look at the cyan diamond line on the graph. At Perturbation = 0.08, the PPL value for NEXUS is approximately 3x10\^2.
+
+Therefore, the most reasonable answer is:
+
+(d) 3x10\^2 & \cmark & d & \cmark \\
+\midrule
+Gemini 1.5 Pro & The NEXUS line has a diamond marker. At Perturbation = 0.08, the NEXUS line corresponds to a PPL value of just above 3x10\^2.
+
+Final Answer: (d) & \cmark & d & \cmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Charts-Extraction} (3)} \label{tab:examples_Charts-Extraction_3}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/arXiv_src_2204_038--2204--2204.05662--mix-highT.jpg} & In the left chart in the figure, the lines for 10 eV and 100 eV do not intersect between x-value=60 and 80. True or False? & False \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & The lines for 10 eV and 100 eV intersect between x-value=60 and 80.
+
+**Explanation:**
+Upon examining the left chart in the figure, it is evident that the lines representing 10 eV and 100 eV intersect at some point between x-value=60 and 80. This can be observed by the crossing of the two lines within this range of x-values.
+
+**Final Answer:**
+False & \cmark & True & \xmark \\
+\midrule
+InternVL2-8B & The lines for 10 eV and 100 eV in the left chart do not intersect between x-value=60 and 80. The 10 eV line is consistently above the 100 eV line throughout this range.
+
+Final answer: True. & \xmark & True & \xmark \\
+\midrule
+InternVL2-26B & The lines for 10 eV (green) and 100 eV (purple) do not cross each other between x-values 60 and 80. The green line is always above the purple line within this range.
+
+True. & \xmark & True & \xmark \\
+\midrule
+InternVL2-76B & The left chart shows the lines for 10 eV and 100 eV as separate and distinct without any intersection points between the x-values of 60 and 80.
+
+Therefore, the correct answer is True. & \xmark & True & \xmark \\
+\midrule
+Claude 3.5 Sonnet & Let's examine the left chart (a) carefully:
+
+1. The 10 eV line (green with circles) is decreasing steadily throughout the graph.
+2. The 100 eV line (purple with circles) is relatively flat with some small fluctuations.
+3. Between x-values of 60 and 80, we can see that:
+   - The 10 eV line continues its downward trend
+   - The 100 eV line remains relatively stable
+
+Importantly, these two lines do not cross each other in the interval between x=60 and x=80. The 100 eV line remains above the 10 eV line throughout this range.
+
+Therefore, the statement is correct.
+
+Final answer: True & \xmark & False & \cmark \\
+\midrule
+GPT-4o & To determine if the lines for 10 eV and 100 eV intersect between x-values 60 and 80 in the left chart, we need to examine the lines closely. The 10 eV line is represented by green circles, and the 100 eV line is represented by purple diamonds. 
+
+Upon inspection, the green circles (10 eV) and purple diamonds (100 eV) do not cross each other between x-values 60 and 80. The green line remains above the purple line throughout this range.
+
+Therefore, the statement is **True**. & \xmark & True & \xmark \\
+\midrule
+Gemini 1.5 Pro & The 10 eV (light green, dotted line with circles) and 100 eV (purple, dotted line with pentagons) lines do appear to intersect between x-value=60 and 80 on the left chart in the figure. 
+
+Final Answer: False & \cmark & True & \xmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Charts-Intersection} (1)} \label{tab:examples_Charts-Intersection_1}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/12051.png} & In the figure, the lines for India and the Taliban intersect between 2012 and 2014. True or False? & False \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & The lines for India and the Taliban do not intersect between 2012 and 2014. The line for India shows a decrease in concern from 59\% in 2012 to 38\% in 2014, while the line for the Taliban shows an increase from 23\% in 2012 to 33\% in 2013.
+
+False & \cmark & False & \cmark \\
+\midrule
+InternVL2-8B & True.
+
+The lines for India and the Taliban intersect between 2012 and 2014 at the point where both are at 38\% in 2013. & \xmark & True & \xmark \\
+\midrule
+InternVL2-26B & The lines for India and the Taliban intersect at a point between 2012 and 2014. In 2012, the percentage for India is higher than the Taliban, but by 2014, the percentage for the Taliban has increased to the point where it intersects with India's line, indicating that the concern about the Taliban as a threat to Pakistan is equal to the concern about India during that period.
+
+Therefore, the final answer is True. & \xmark & True & \xmark \\
+\midrule
+InternVL2-76B & True. The lines for India and the Taliban intersect between 2012 and 2014, as indicated by the graph where the orange line (India) and the green line (Taliban) cross each other.
+
+True & \xmark & True & \xmark \\
+\midrule
+Claude 3.5 Sonnet & Let's examine the graph carefully:
+
+1. The line for India (orange) shows a sharp decline from 2012 to 2013, dropping from 59\% to 38\%.
+2. The line for the Taliban (green) shows an increase from 2012 to 2013, rising from 23\% to 35\%.
+3. Between 2013 and 2014, the India line rises again to 51\%, while the Taliban line drops to 25\%.
+
+Crucially, we can see that the lines for India and the Taliban do cross each other between 2012 and 2014. This intersection occurs sometime in 2013, when India's perceived threat level dropped below the Taliban's before rising again.
+
+Therefore, the statement is correct.
+
+Final answer: True & \xmark & False & \cmark \\
+\midrule
+GPT-4o & The lines for India and the Taliban intersect between 2012 and 2014. In 2013, the percentage for India is 38, and for the Taliban, it is 33. In 2014, the percentage for India is 51, and for the Taliban, it is 25. This indicates that the lines intersected between these years.
+
+True. & \xmark & True & \xmark \\
+\midrule
+Gemini 1.5 Pro & The lines for India and the Taliban intersect between the years 2012 and 2013, which is within the range of 2012 and 2014. 
+
+Final Answer: True & \xmark & True & \xmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Charts-Intersection} (2)} \label{tab:examples_Charts-Intersection_2}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/12275.png} & In the figure, the lines for China and U.S. intersect between 2009 and 2011. True or False? & True \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & The lines for China and the U.S. do not intersect between 2009 and 2011. The line representing China shows a steady increase in the percentage of respondents who see China as the leading economic power during this period, while the line for the U.S. shows a decrease.
+
+Final answer: False. & \xmark & False & \xmark \\
+\midrule
+InternVL2-8B & False.
+
+The lines for China and the U.S. do not intersect between 2009 and 2011. The line for China starts at 29 in 2008, increases to 40 in 2010, and then rises to 57 in 2012. The line for the U.S. starts at 44 in 2008, decreases to 37 in 2011, and then increases to 33 in 2012. The two lines do not cross each other during this period. & \xmark & False & \xmark \\
+\midrule
+InternVL2-26B & The lines for China and U.S. intersect at a point between 2009 and 2011, as can be seen where the green line (U.S.) crosses the orange line (China) on the graph.
+
+True & \cmark & False & \xmark \\
+\midrule
+InternVL2-76B & True. The lines for China and U.S. intersect between the years 2009 and 2011, indicating a crossover point where the perception of leading economic power shifted from the U.S. to China according to the median across the 5 European nations surveyed.
+
+The graph shows that in 2009, the U.S. was seen as the leading economic power by a larger percentage than China. However, by 2011, China surpassed the U.S. in this perception, as indicated by the point where the two lines cross. & \cmark & True & \cmark \\
+\midrule
+Claude 3.5 Sonnet & Let's examine the graph closely:
+
+1. In 2009, the U.S. line is at 28\% while China's line is at 33\%.
+2. In 2010, the U.S. line rises to 37\% while China's line rises to 40\%.
+3. In 2011, the U.S. line continues to rise to 47\% while China's line rises to 44\%.
+
+We can see that between 2009 and 2011, the lines for China and the U.S. do indeed cross each other. The intersection occurs somewhere between 2010 and 2011, as China's percentage starts higher but is overtaken by the U.S. during this period.
+
+Therefore, the statement is True. & \cmark & True & \cmark \\
+\midrule
+GPT-4o & The lines for China and the U.S. intersect between 2009 and 2011. In 2009, both are at 44\%, and after that, China's line rises above the U.S. line. Therefore, the statement is true.
+
+True. & \cmark & True & \cmark \\
+\midrule
+Gemini 1.5 Pro & The lines intersect between 2009 and 2010, not between 2009 and 2011.
+
+Final Answer: False & \xmark & True & \cmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Charts-Intersection} (3)} \label{tab:examples_Charts-Intersection_3}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/syntheticgeometry_01333noise_0.jpeg} & There is a triangle CBG in the figure. True or False?
+
+A triangle is a polygon with three edges and three vertices, which are explicitly connected in the figure. & False \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & \multicolumn{1}{c}{--} & -- & True & \xmark \\
+\midrule
+InternVL2-8B & \multicolumn{1}{c}{--} & -- & True & \xmark \\
+\midrule
+InternVL2-26B & \multicolumn{1}{c}{--} & -- & True & \xmark \\
+\midrule
+InternVL2-76B & \multicolumn{1}{c}{--} & -- & True & \xmark \\
+\midrule
+Claude 3.5 Sonnet & \multicolumn{1}{c}{--} & -- & True & \xmark \\
+\midrule
+GPT-4o & \multicolumn{1}{c}{--} & -- & True & \xmark \\
+\midrule
+Gemini 1.5 Pro & \multicolumn{1}{c}{--} & -- & True & \xmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Syntheticgeometry-Triangle} (1)} \label{tab:examples_Syntheticgeometry-Triangle_1}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/syntheticgeometry_01170.png} & There is a triangle AKI in the figure. True or False?
+
+A triangle is a polygon with three edges and three vertices, which are explicitly connected in the figure. & True \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & \multicolumn{1}{c}{--} & -- & True & \cmark \\
+\midrule
+InternVL2-8B & \multicolumn{1}{c}{--} & -- & False & \xmark \\
+\midrule
+InternVL2-26B & \multicolumn{1}{c}{--} & -- & True & \cmark \\
+\midrule
+InternVL2-76B & \multicolumn{1}{c}{--} & -- & True & \cmark \\
+\midrule
+Claude 3.5 Sonnet & \multicolumn{1}{c}{--} & -- & False & \xmark \\
+\midrule
+GPT-4o & \multicolumn{1}{c}{--} & -- & True & \cmark \\
+\midrule
+Gemini 1.5 Pro & \multicolumn{1}{c}{--} & -- & True & \cmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Syntheticgeometry-Triangle} (2)} \label{tab:examples_Syntheticgeometry-Triangle_2}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/syntheticgeometry_01719noise_1.jpeg} & There is a triangle GEF in the figure. True or False?
+
+A triangle is a polygon with three edges and three vertices, which are explicitly connected in the figure. & False \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & \multicolumn{1}{c}{--} & -- & True & \xmark \\
+\midrule
+InternVL2-8B & \multicolumn{1}{c}{--} & -- & True & \xmark \\
+\midrule
+InternVL2-26B & \multicolumn{1}{c}{--} & -- & True & \xmark \\
+\midrule
+InternVL2-76B & \multicolumn{1}{c}{--} & -- & True & \xmark \\
+\midrule
+Claude 3.5 Sonnet & \multicolumn{1}{c}{--} & -- & True & \xmark \\
+\midrule
+GPT-4o & \multicolumn{1}{c}{--} & -- & False & \cmark \\
+\midrule
+Gemini 1.5 Pro & \multicolumn{1}{c}{--} & -- & True & \xmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Syntheticgeometry-Triangle} (3)} \label{tab:examples_Syntheticgeometry-Triangle_3}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/syntheticgeometry_01355noise_0.jpeg} & There is no quadrilateral CBAD in this figure. True or False?
+
+A quadrilateral is a four-sided polygon having four edges (sides) and four corners (vertices). & False \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & \multicolumn{1}{c}{--} & -- & True & \xmark \\
+\midrule
+InternVL2-8B & \multicolumn{1}{c}{--} & -- & False & \cmark \\
+\midrule
+InternVL2-26B & \multicolumn{1}{c}{--} & -- & True & \xmark \\
+\midrule
+InternVL2-76B & \multicolumn{1}{c}{--} & -- & False & \cmark \\
+\midrule
+Claude 3.5 Sonnet & \multicolumn{1}{c}{--} & -- & False & \cmark \\
+\midrule
+GPT-4o & \multicolumn{1}{c}{--} & -- & True & \xmark \\
+\midrule
+Gemini 1.5 Pro & \multicolumn{1}{c}{--} & -- & False & \cmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Syntheticgeometry-Quadrilateral} (1)} \label{tab:examples_Syntheticgeometry-Quadrilateral_1}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/syntheticgeometry_01006noise_1.jpeg} & There is a quadrilateral HFDE in this figure. True or False?
+
+A quadrilateral is a four-sided polygon having four edges (sides) and four corners (vertices). & True \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & \multicolumn{1}{c}{--} & -- & False & \xmark \\
+\midrule
+InternVL2-8B & \multicolumn{1}{c}{--} & -- & True & \cmark \\
+\midrule
+InternVL2-26B & \multicolumn{1}{c}{--} & -- & True & \cmark \\
+\midrule
+InternVL2-76B & \multicolumn{1}{c}{--} & -- & True & \cmark \\
+\midrule
+Claude 3.5 Sonnet & \multicolumn{1}{c}{--} & -- & True & \cmark \\
+\midrule
+GPT-4o & \multicolumn{1}{c}{--} & -- & True & \cmark \\
+\midrule
+Gemini 1.5 Pro & \multicolumn{1}{c}{--} & -- & False & \xmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Syntheticgeometry-Quadrilateral} (2)} \label{tab:examples_Syntheticgeometry-Quadrilateral_2}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/syntheticgeometry_01363noise_1.jpeg} & There is no quadrilateral EMPQ in this figure. True or False?
+
+A quadrilateral is a four-sided polygon having four edges (sides) and four corners (vertices). & True \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & \multicolumn{1}{c}{--} & -- & True & \cmark \\
+\midrule
+InternVL2-8B & \multicolumn{1}{c}{--} & -- & False & \xmark \\
+\midrule
+InternVL2-26B & \multicolumn{1}{c}{--} & -- & True & \cmark \\
+\midrule
+InternVL2-76B & \multicolumn{1}{c}{--} & -- & False & \xmark \\
+\midrule
+Claude 3.5 Sonnet & \multicolumn{1}{c}{--} & -- & False & \xmark \\
+\midrule
+GPT-4o & \multicolumn{1}{c}{--} & -- & True & \cmark \\
+\midrule
+Gemini 1.5 Pro & \multicolumn{1}{c}{--} & -- & False & \xmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Syntheticgeometry-Quadrilateral} (3)} \label{tab:examples_Syntheticgeometry-Quadrilateral_3}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/syntheticgeometry_01889.png} & Line BG is X times longer than DF. Which of the following options is a reasonable estimate of X? You only need to estimate from the visual information and do not need to do any mathematical reasoning. (a) 1 (b) 2 (c) 4 (d) 0.5 (e) 0.25  & d \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & \multicolumn{1}{c}{--} & -- & b & \xmark \\
+\midrule
+InternVL2-8B & \multicolumn{1}{c}{--} & -- & b) 2 & \xmark \\
+\midrule
+InternVL2-26B & \multicolumn{1}{c}{--} & -- & b & \xmark \\
+\midrule
+InternVL2-76B & \multicolumn{1}{c}{--} & -- & (c) 4 & \xmark \\
+\midrule
+Claude 3.5 Sonnet & \multicolumn{1}{c}{--} & -- & b & \xmark \\
+\midrule
+GPT-4o & \multicolumn{1}{c}{--} & -- & (b) & \xmark \\
+\midrule
+Gemini 1.5 Pro & \multicolumn{1}{c}{--} & -- & b & \xmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Syntheticgeometry-Length} (1)} \label{tab:examples_Syntheticgeometry-Length_1}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/syntheticgeometry_01716noise_0.jpeg} & Line CE is X times longer than AC. Which of the following options is a reasonable estimate of X? You only need to estimate from the visual information and do not need to do any mathematical reasoning. (a) 0.5 (b) 4 (c) 0.25 (d) 1 (e) 2  & a \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & \multicolumn{1}{c}{--} & -- & e & \xmark \\
+\midrule
+InternVL2-8B & \multicolumn{1}{c}{--} & -- & b & \xmark \\
+\midrule
+InternVL2-26B & \multicolumn{1}{c}{--} & -- & (b) 4 & \xmark \\
+\midrule
+InternVL2-76B & \multicolumn{1}{c}{--} & -- & (e) 2 & \xmark \\
+\midrule
+Claude 3.5 Sonnet & \multicolumn{1}{c}{--} & -- & e & \xmark \\
+\midrule
+GPT-4o & \multicolumn{1}{c}{--} & -- & (e) 2 & \xmark \\
+\midrule
+Gemini 1.5 Pro & \multicolumn{1}{c}{--} & -- & e & \xmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Syntheticgeometry-Length} (2)} \label{tab:examples_Syntheticgeometry-Length_2}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/syntheticgeometry_01574.png} & Line CF is X times longer than JM. Which of the following options is a reasonable estimate of X? You only need to estimate from the visual information and do not need to do any mathematical reasoning. (a) 4 (b) 1 (c) 2 (d) 0.5 (e) 0.25  & e \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & \multicolumn{1}{c}{--} & -- & a & \xmark \\
+\midrule
+InternVL2-8B & \multicolumn{1}{c}{--} & -- & a) 4 & \xmark \\
+\midrule
+InternVL2-26B & \multicolumn{1}{c}{--} & -- & (a) 4 & \xmark \\
+\midrule
+InternVL2-76B & \multicolumn{1}{c}{--} & -- & (c) 2 & \xmark \\
+\midrule
+Claude 3.5 Sonnet & \multicolumn{1}{c}{--} & -- & c & \xmark \\
+\midrule
+GPT-4o & \multicolumn{1}{c}{--} & -- & (c) 2 & \xmark \\
+\midrule
+Gemini 1.5 Pro & \multicolumn{1}{c}{--} & -- & c & \xmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Syntheticgeometry-Length} (3)} \label{tab:examples_Syntheticgeometry-Length_3}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/syntheticgeometry_01816noise_0.jpeg} & Which of the following options is a reasonable estimate of the angle CFB in the figure? You only need to estimate from the visual information and do not need to do any mathematical reasoning. (a) 90 degrees (b) 10 degrees (c) 180 degrees (d) 135 degrees (e) 45 degrees  & c \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & \multicolumn{1}{c}{--} & -- & e & \xmark \\
+\midrule
+InternVL2-8B & \multicolumn{1}{c}{--} & -- & a) 90 degrees & \xmark \\
+\midrule
+InternVL2-26B & \multicolumn{1}{c}{--} & -- & (a) 90 degrees & \xmark \\
+\midrule
+InternVL2-76B & \multicolumn{1}{c}{--} & -- & (e) 45 degrees & \xmark \\
+\midrule
+Claude 3.5 Sonnet & \multicolumn{1}{c}{--} & -- & e & \xmark \\
+\midrule
+GPT-4o & \multicolumn{1}{c}{--} & -- & e & \xmark \\
+\midrule
+Gemini 1.5 Pro & \multicolumn{1}{c}{--} & -- & e & \xmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Syntheticgeometry-Angle} (1)} \label{tab:examples_Syntheticgeometry-Angle_1}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/syntheticgeometry_01006noise_0.jpeg} & Which of the following options is a reasonable estimate of the angle LIA in the figure? You only need to estimate from the visual information and do not need to do any mathematical reasoning. (a) 45 degrees (b) 90 degrees (c) 180 degrees (d) 135 degrees (e) 10 degrees  & d \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & \multicolumn{1}{c}{--} & -- & d) 135 degrees & \cmark \\
+\midrule
+InternVL2-8B & \multicolumn{1}{c}{--} & -- & a) 45 degrees & \xmark \\
+\midrule
+InternVL2-26B & \multicolumn{1}{c}{--} & -- & (b) 90 degrees & \xmark \\
+\midrule
+InternVL2-76B & \multicolumn{1}{c}{--} & -- & (a) 45 degrees & \xmark \\
+\midrule
+Claude 3.5 Sonnet & \multicolumn{1}{c}{--} & -- & b & \xmark \\
+\midrule
+GPT-4o & \multicolumn{1}{c}{--} & -- & (a) 45 degrees & \xmark \\
+\midrule
+Gemini 1.5 Pro & \multicolumn{1}{c}{--} & -- & a & \xmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Syntheticgeometry-Angle} (2)} \label{tab:examples_Syntheticgeometry-Angle_2}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/syntheticgeometry_01922.png} & Which of the following options is a reasonable estimate of the angle FDE in the figure? You only need to estimate from the visual information and do not need to do any mathematical reasoning. (a) 90 degrees (b) 10 degrees (c) 135 degrees (d) 45 degrees (e) 180 degrees  & d \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & \multicolumn{1}{c}{--} & -- & d) 45 degrees & \cmark \\
+\midrule
+InternVL2-8B & \multicolumn{1}{c}{--} & -- & a) 90 degrees & \xmark \\
+\midrule
+InternVL2-26B & \multicolumn{1}{c}{--} & -- & (a) 90 degrees & \xmark \\
+\midrule
+InternVL2-76B & \multicolumn{1}{c}{--} & -- & (d) 45 degrees & \cmark \\
+\midrule
+Claude 3.5 Sonnet & \multicolumn{1}{c}{--} & -- & d & \cmark \\
+\midrule
+GPT-4o & \multicolumn{1}{c}{--} & -- & (d) 45 degrees & \cmark \\
+\midrule
+Gemini 1.5 Pro & \multicolumn{1}{c}{--} & -- & d & \cmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Syntheticgeometry-Angle} (3)} \label{tab:examples_Syntheticgeometry-Angle_3}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/syntheticgeometry_01990noise_0.jpeg} & AEB is X times larger in area than ECBA. Which of the following options is a reasonable estimate? You only need to estimate from the visual information and do not need to do any mathematical reasoning. (a) 2 (b) 0.25 (c) 1 (d) 0.5 (e) 4  & c \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & \multicolumn{1}{c}{--} & -- & e & \xmark \\
+\midrule
+InternVL2-8B & \multicolumn{1}{c}{--} & -- & e & \xmark \\
+\midrule
+InternVL2-26B & \multicolumn{1}{c}{--} & -- & (a) 2 & \xmark \\
+\midrule
+InternVL2-76B & \multicolumn{1}{c}{--} & -- & (d) 0.5 & \xmark \\
+\midrule
+Claude 3.5 Sonnet & \multicolumn{1}{c}{--} & -- & c & \cmark \\
+\midrule
+GPT-4o & \multicolumn{1}{c}{--} & -- & (a) 2 & \xmark \\
+\midrule
+Gemini 1.5 Pro & \multicolumn{1}{c}{--} & -- & d & \xmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Syntheticgeometry-Area} (1)} \label{tab:examples_Syntheticgeometry-Area_1}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/syntheticgeometry_01716.png} & EADJ is X times larger in area than ABD. Which of the following options is a reasonable estimate? You only need to estimate from the visual information and do not need to do any mathematical reasoning. (a) 0.25 (b) 4 (c) 0.5 (d) 2 (e) 1  & c \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & \multicolumn{1}{c}{--} & -- & d & \xmark \\
+\midrule
+InternVL2-8B & \multicolumn{1}{c}{--} & -- & b & \xmark \\
+\midrule
+InternVL2-26B & \multicolumn{1}{c}{--} & -- & (b) 4 & \xmark \\
+\midrule
+InternVL2-76B & \multicolumn{1}{c}{--} & -- & (b) 4 & \xmark \\
+\midrule
+Claude 3.5 Sonnet & \multicolumn{1}{c}{--} & -- & d & \xmark \\
+\midrule
+GPT-4o & \multicolumn{1}{c}{--} & -- & e & \xmark \\
+\midrule
+Gemini 1.5 Pro & \multicolumn{1}{c}{--} & -- & c & \cmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Syntheticgeometry-Area} (2)} \label{tab:examples_Syntheticgeometry-Area_2}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/syntheticgeometry_01454.png} & AEB is X times larger in area than BAC. Which of the following options is a reasonable estimate? You only need to estimate from the visual information and do not need to do any mathematical reasoning. (a) 0.25 (b) 4 (c) 2 (d) 0.5 (e) 1  & d \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & \multicolumn{1}{c}{--} & -- & b & \xmark \\
+\midrule
+InternVL2-8B & \multicolumn{1}{c}{--} & -- & b & \xmark \\
+\midrule
+InternVL2-26B & \multicolumn{1}{c}{--} & -- & (b) 4 & \xmark \\
+\midrule
+InternVL2-76B & \multicolumn{1}{c}{--} & -- & (b) 4 & \xmark \\
+\midrule
+Claude 3.5 Sonnet & \multicolumn{1}{c}{--} & -- & c & \xmark \\
+\midrule
+GPT-4o & \multicolumn{1}{c}{--} & -- & (c) 2 & \xmark \\
+\midrule
+Gemini 1.5 Pro & \multicolumn{1}{c}{--} & -- & a & \xmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{Syntheticgeometry-Area} (3)} \label{tab:examples_Syntheticgeometry-Area_3}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/CLEVR_val_001491.png} & The blue cylinder is X times taller than the red sphere. Which of the following options is a reasonable estimate? (a) 2 (b) 0.5 (c) 1  & c \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & \multicolumn{1}{c}{--} & -- & a & \xmark \\
+\midrule
+InternVL2-8B & \multicolumn{1}{c}{--} & -- & b) 0.5 & \xmark \\
+\midrule
+InternVL2-26B & \multicolumn{1}{c}{--} & -- & (c) 1 & \cmark \\
+\midrule
+InternVL2-76B & \multicolumn{1}{c}{--} & -- & (a) 1 & \xmark \\
+\midrule
+Claude 3.5 Sonnet & \multicolumn{1}{c}{--} & -- & a & \xmark \\
+\midrule
+GPT-4o & \multicolumn{1}{c}{--} & -- & a & \xmark \\
+\midrule
+Gemini 1.5 Pro & \multicolumn{1}{c}{--} & -- & a & \xmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{3D-Size} (1)} \label{tab:examples_3D-Size_1}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/CLEVR_val_007654.png} & The cyan cylinder is X times taller than the brown cylinder. Which of the following options is a reasonable estimate? (a) 0.5 (b) 1 (c) 2  & c \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & \multicolumn{1}{c}{--} & -- & c & \cmark \\
+\midrule
+InternVL2-8B & \multicolumn{1}{c}{--} & -- & (b) 1 & \xmark \\
+\midrule
+InternVL2-26B & \multicolumn{1}{c}{--} & -- & (c) 2 & \cmark \\
+\midrule
+InternVL2-76B & \multicolumn{1}{c}{--} & -- & (c) 2 & \cmark \\
+\midrule
+Claude 3.5 Sonnet & \multicolumn{1}{c}{--} & -- & c & \cmark \\
+\midrule
+GPT-4o & \multicolumn{1}{c}{--} & -- & c & \cmark \\
+\midrule
+Gemini 1.5 Pro & \multicolumn{1}{c}{--} & -- & c & \cmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{3D-Size} (2)} \label{tab:examples_3D-Size_2}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/CLEVR_val_012151.png} & The yellow rubber sphere is X times wider than the yellow cube. Which of the following options is a reasonable estimate? (a) 1 (b) 0.5 (c) 2  & a \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & \multicolumn{1}{c}{--} & -- & b & \xmark \\
+\midrule
+InternVL2-8B & \multicolumn{1}{c}{--} & -- & b) 0.5 & \xmark \\
+\midrule
+InternVL2-26B & \multicolumn{1}{c}{--} & -- & (a) 1 & \cmark \\
+\midrule
+InternVL2-76B & \multicolumn{1}{c}{--} & -- & (a) 1 & \cmark \\
+\midrule
+Claude 3.5 Sonnet & \multicolumn{1}{c}{--} & -- & b & \xmark \\
+\midrule
+GPT-4o & \multicolumn{1}{c}{--} & -- & a & \cmark \\
+\midrule
+Gemini 1.5 Pro & \multicolumn{1}{c}{--} & -- & a & \cmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{3D-Size} (3)} \label{tab:examples_3D-Size_3}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/superCLEVR_new_026342.png} & Which of the following options is a reasonable estimate of the angle between the directions of the gray motorcycle and the brown airplane in the figure? We define 0 degrees if the direction is the same and 180 degrees if the direction is opposite. (a) 180 degrees (b) 45 degrees (c) 0 degrees (d) 135 degrees (e) 90 degrees  & e \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & \multicolumn{1}{c}{--} & -- & a & \xmark \\
+\midrule
+InternVL2-8B & \multicolumn{1}{c}{--} & -- & e & \cmark \\
+\midrule
+InternVL2-26B & \multicolumn{1}{c}{--} & -- & (a) 180 degrees & \xmark \\
+\midrule
+InternVL2-76B & \multicolumn{1}{c}{--} & -- & (e) 90 degrees & \cmark \\
+\midrule
+Claude 3.5 Sonnet & \multicolumn{1}{c}{--} & -- & d & \xmark \\
+\midrule
+GPT-4o & \multicolumn{1}{c}{--} & -- & e & \cmark \\
+\midrule
+Gemini 1.5 Pro & \multicolumn{1}{c}{--} & -- & d & \xmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{3D-Angle} (1)} \label{tab:examples_3D-Angle_1}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/superCLEVR_new_028732.png} & Which of the following options is a reasonable estimate of the angle between the directions of the left blue car and the fighter jet in the figure? We define 0 degrees if the direction is the same and 180 degrees if the direction is opposite. (a) 90 degrees (b) 135 degrees (c) 180 degrees (d) 0 degrees (e) 45 degrees  & d \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & \multicolumn{1}{c}{--} & -- & e & \xmark \\
+\midrule
+InternVL2-8B & \multicolumn{1}{c}{--} & -- & b) 135 degrees & \xmark \\
+\midrule
+InternVL2-26B & \multicolumn{1}{c}{--} & -- & (a) 90 degrees & \xmark \\
+\midrule
+InternVL2-76B & \multicolumn{1}{c}{--} & -- & (a) 90 degrees & \xmark \\
+\midrule
+Claude 3.5 Sonnet & \multicolumn{1}{c}{--} & -- & e & \xmark \\
+\midrule
+GPT-4o & \multicolumn{1}{c}{--} & -- & b & \xmark \\
+\midrule
+Gemini 1.5 Pro & \multicolumn{1}{c}{--} & -- & b & \xmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{3D-Angle} (2)} \label{tab:examples_3D-Angle_2}%
+\end{table*}
+%
+%
+%
+\clearpage
+%
+%
+%
+\begin{table*}[t]
+    \centering
+    \scriptsize
+    %
+    \begin{tabular}{cL{.5\linewidth}M{.1\linewidth}}
+    \toprule
+        Image & \multicolumn{1}{c}{Question} & Gold Answer \\
+    \midrule
+\includegraphics[width=0.3\linewidth]{figures/data-examples/superCLEVR_new_009843.png} & Which of the following options is a reasonable estimate of the angle between the directions of the airplane and the purple motorcycle in the figure? We define 0 degrees if the direction is the same and 180 degrees if the direction is opposite. (a) 90 degrees (b) 180 degrees (c) 135 degrees (d) 45 degrees (e) 0 degrees  & a \\
+\bottomrule
+    \end{tabular}
+    %
+\vskip 1em
+%
+%
+%
+%
+    \begin{tabular}{M{.1\linewidth}L{.65\linewidth}M{.04\linewidth}M{.07\linewidth}M{.04\linewidth}}
+    \toprule
+    Model & \multicolumn{1}{c}{Answer w/ CoT} &  & Answer w/o CoT & \\
+    \midrule
+InternVL2-4B & \multicolumn{1}{c}{--} & -- & a & \cmark \\
+\midrule
+InternVL2-8B & \multicolumn{1}{c}{--} & -- & a & \cmark \\
+\midrule
+InternVL2-26B & \multicolumn{1}{c}{--} & -- & (a) 90 degrees & \cmark \\
+\midrule
+InternVL2-76B & \multicolumn{1}{c}{--} & -- & (a) 90 degrees & \cmark \\
+\midrule
+Claude 3.5 Sonnet & \multicolumn{1}{c}{--} & -- & c & \xmark \\
+\midrule
+GPT-4o & \multicolumn{1}{c}{--} & -- & d & \xmark \\
+\midrule
+Gemini 1.5 Pro & \multicolumn{1}{c}{--} & -- & a & \cmark \\
+\bottomrule
+    \end{tabular}
+    %
+    \caption{Examples of dataset and model responses for \texttt{3D-Angle} (3)} \label{tab:examples_3D-Angle_3}%
+\end{table*}
+%
+%
+%
+\clearpage

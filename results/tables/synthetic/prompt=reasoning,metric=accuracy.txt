@@ -1,0 +1,28 @@
+ & Triangle & Quadrilateral & Length & Angle & Area & Size & Angle &  \\
+\midrule
+Random & 50.0 & 50.0 & 20.0 & 20.0 & 20.0 & 33.3 & 20.0 & 30.5 \\
+\midrule
+\rowcolor{cyan!20}Phi-3.5-vision &  &  &  &  &  &  &  &  \\
+LLaVA-Next 8B &  &  &  &  &  &  &  &  \\
+\rowcolor{Orange!20}LLaVA-Next 34B &  &  &  &  &  &  &  &  \\
+Llama 3.2 11B &  &  &  &  &  &  &  &  \\
+\rowcolor{Blue!20}Llama 3.2 90B &  &  &  &  &  &  &  &  \\
+MolMo 7B-D &  &  &  &  &  &  &  &  \\
+\rowcolor{Lavender!20}MolMo 72B &  &  &  &  &  &  &  &  \\
+Qwen2-VL-2B &  &  &  &  &  &  &  &  \\
+Qwen2-VL-7B &  &  &  &  &  &  &  &  \\
+\rowcolor{RoyalPurple!20}Qwen2-VL-72B &  &  &  &  &  &  &  &  \\
+InternVL2-4B &  &  &  &  &  &  &  &  \\
+InternVL2-8B &  &  &  &  &  &  &  &  \\
+InternVL2-26B &  &  &  &  &  &  &  &  \\
+InternVL2-40B &  &  &  &  &  &  &  &  \\
+\rowcolor{RedOrange!20}InternVL2-76B &  &  &  &  &  &  &  &  \\
+\midrule
+\rowcolor{YellowOrange!20}Claude 3.5 Sonnet &  &  &  &  &  &  &  &  \\
+GPT-4o-mini &  &  &  &  &  &  &  &  \\
+\rowcolor{Green!20}GPT-4o &  &  &  &  &  &  &  &  \\
+Gemini 1.5 Flash &  &  &  &  &  &  &  &  \\
+\rowcolor{BlueViolet!20}Gemini 1.5 Pro &  &  &  &  &  &  &  &  \\
+\midrule
+\midrule
+Human & 95.0 & 95.0 & 95.0 & 90.0 & 95.0 & 100.0 & 95.0 & 95.0 \\

@@ -1,0 +1,60 @@
+{
+    "error_counts": {
+        "geometry__triangle": {
+            "Perception Error": 4,
+            "Question Understanding Error": 1
+        },
+        "all": {
+            "Perception Error": 46,
+            "Question Understanding Error": 4,
+            "Redundant Reasoning": 2,
+            "Reasoning Error": 6
+        },
+        "geometry__quadrilateral": {
+            "Question Understanding Error": 1,
+            "Perception Error": 4
+        },
+        "geometry__length": {
+            "Perception Error": 5
+        },
+        "geometry__angle": {
+            "Question Understanding Error": 2,
+            "Perception Error": 4,
+            "Redundant Reasoning": 1,
+            "Reasoning Error": 4
+        },
+        "geometry__area": {
+            "Perception Error": 4,
+            "Reasoning Error": 2
+        },
+        "geometry__diameter_radius": {
+            "Perception Error": 5
+        },
+        "chemistry__shape_single": {
+            "Perception Error": 5,
+            "Redundant Reasoning": 1
+        },
+        "chemistry__shape_multi": {
+            "Perception Error": 5
+        },
+        "charts__extraction": {
+            "Perception Error": 5
+        },
+        "charts__intersection": {
+            "Perception Error": 5
+        }
+    },
+    "split_counts": {
+        "geometry__triangle": 5,
+        "all": 50,
+        "geometry__quadrilateral": 5,
+        "geometry__length": 5,
+        "geometry__angle": 5,
+        "geometry__area": 5,
+        "geometry__diameter_radius": 5,
+        "chemistry__shape_single": 5,
+        "chemistry__shape_multi": 5,
+        "charts__extraction": 5,
+        "charts__intersection": 5
+    }
+}

@@ -1,0 +1,600 @@
+{
+    "('syntheticgeometry__triangle', 0)": {
+        "accuracy": 0.9,
+        "annotations": {
+            "y_true": [
+                "FALSE",
+                "TRUE",
+                "FALSE",
+                "FALSE",
+                "TRUE",
+                "TRUE",
+                "TRUE",
+                "FALSE",
+                "FALSE",
+                "TRUE"
+            ],
+            "y_pred": [
+                "False",
+                "True",
+                "True",
+                "False",
+                "True",
+                "True",
+                "True",
+                "False",
+                "False",
+                "True"
+            ],
+            "correct_list": [
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('syntheticgeometry__quadrilateral', 0)": {
+        "accuracy": 1.0,
+        "annotations": {
+            "y_true": [
+                "FALSE",
+                "TRUE",
+                "FALSE",
+                "FALSE",
+                "TRUE",
+                "TRUE",
+                "TRUE",
+                "FALSE",
+                "FALSE",
+                "TRUE"
+            ],
+            "y_pred": [
+                "False",
+                "True",
+                "False",
+                "False",
+                "True",
+                "True",
+                "True",
+                "False",
+                "False",
+                "True"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('syntheticgeometry__length', 0)": {
+        "accuracy": 0.9,
+        "annotations": {
+            "y_true": [
+                "c",
+                "a",
+                "b",
+                "e",
+                "c",
+                "e",
+                "a",
+                "d",
+                "d",
+                "a"
+            ],
+            "y_pred": [
+                "c",
+                "a",
+                "b",
+                "d",
+                "c",
+                "e",
+                "a",
+                "d",
+                "d",
+                "a"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('syntheticgeometry__angle', 0)": {
+        "accuracy": 1.0,
+        "annotations": {
+            "y_true": [
+                "b",
+                "b",
+                "a",
+                "d",
+                "d",
+                "e",
+                "a",
+                "b",
+                "a",
+                "c"
+            ],
+            "y_pred": [
+                "b",
+                "b",
+                "a",
+                "d",
+                "d",
+                "e",
+                "a",
+                "b",
+                "a",
+                "c"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('syntheticgeometry__area', 0)": {
+        "accuracy": 1.0,
+        "annotations": {
+            "y_true": [
+                "a",
+                "a",
+                "a",
+                "a",
+                "d",
+                "e",
+                "c",
+                "c",
+                "d",
+                "a"
+            ],
+            "y_pred": [
+                "a",
+                "a",
+                "a",
+                "a",
+                "d",
+                "e",
+                "c",
+                "c",
+                "d",
+                "a"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('3d__size', 0)": {
+        "accuracy": 1.0,
+        "annotations": {
+            "y_true": [
+                "b",
+                "c",
+                "a",
+                "a",
+                "c",
+                "a",
+                "a",
+                "b",
+                "a",
+                "b"
+            ],
+            "y_pred": [
+                "b",
+                "c",
+                "a",
+                "a",
+                "c",
+                "a",
+                "a",
+                "b",
+                "a",
+                "b"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('3d__angle', 0)": {
+        "accuracy": 1.0,
+        "annotations": {
+            "y_true": [
+                "d",
+                "e",
+                "a",
+                "e",
+                "a",
+                "e",
+                "b",
+                "b",
+                "b",
+                "d"
+            ],
+            "y_pred": [
+                "d",
+                "e",
+                "a",
+                "e",
+                "a",
+                "e",
+                "b",
+                "b",
+                "b",
+                "d"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('syntheticgeometry__triangle', 1)": {
+        "accuracy": 1.0,
+        "annotations": {
+            "y_true": [
+                "FALSE",
+                "FALSE",
+                "TRUE",
+                "FALSE",
+                "FALSE",
+                "TRUE",
+                "TRUE",
+                "FALSE",
+                "TRUE",
+                "TRUE"
+            ],
+            "y_pred": [
+                "False",
+                "False",
+                "True",
+                "False",
+                "False",
+                "True",
+                "True",
+                "False",
+                "True",
+                "True"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('syntheticgeometry__quadrilateral', 1)": {
+        "accuracy": 0.9,
+        "annotations": {
+            "y_true": [
+                "FALSE",
+                "FALSE",
+                "TRUE",
+                "FALSE",
+                "FALSE",
+                "TRUE",
+                "TRUE",
+                "FALSE",
+                "TRUE",
+                "TRUE"
+            ],
+            "y_pred": [
+                "True",
+                "False",
+                "True",
+                "False",
+                "False",
+                "True",
+                "True",
+                "False",
+                "True",
+                "True"
+            ],
+            "correct_list": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('syntheticgeometry__length', 1)": {
+        "accuracy": 1.0,
+        "annotations": {
+            "y_true": [
+                "e",
+                "c",
+                "d",
+                "d",
+                "d",
+                "b",
+                "b",
+                "e",
+                "a",
+                "b"
+            ],
+            "y_pred": [
+                "e",
+                "c",
+                "d",
+                "d",
+                "d",
+                "b",
+                "b",
+                "e",
+                "a",
+                "b"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('syntheticgeometry__angle', 1)": {
+        "accuracy": 0.8,
+        "annotations": {
+            "y_true": [
+                "b",
+                "c",
+                "b",
+                "b",
+                "d",
+                "d",
+                "a",
+                "d",
+                "b",
+                "b"
+            ],
+            "y_pred": [
+                "b",
+                "c",
+                "b",
+                "b",
+                "c",
+                "c",
+                "a",
+                "d",
+                "b",
+                "b"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('syntheticgeometry__area', 1)": {
+        "accuracy": 0.9,
+        "annotations": {
+            "y_true": [
+                "c",
+                "e",
+                "e",
+                "e",
+                "d",
+                "b",
+                "c",
+                "e",
+                "a",
+                "c"
+            ],
+            "y_pred": [
+                "c",
+                "e",
+                "e",
+                "e",
+                "b",
+                "b",
+                "c",
+                "e",
+                "a",
+                "c"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('3d__size', 1)": {
+        "accuracy": 1.0,
+        "annotations": {
+            "y_true": [
+                "a",
+                "c",
+                "a",
+                "a",
+                "b",
+                "b",
+                "a",
+                "b",
+                "c",
+                "b"
+            ],
+            "y_pred": [
+                "a",
+                "c",
+                "a",
+                "a",
+                "b",
+                "b",
+                "a",
+                "b",
+                "c",
+                "b"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('3d__angle', 1)": {
+        "accuracy": 0.9,
+        "annotations": {
+            "y_true": [
+                "b",
+                "a",
+                "d",
+                "a",
+                "d",
+                "c",
+                "e",
+                "c",
+                "e",
+                "a"
+            ],
+            "y_pred": [
+                "b",
+                "a",
+                "d",
+                "a",
+                "c",
+                "c",
+                "e",
+                "c",
+                "e",
+                "a"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('syntheticgeometry__triangle', 'average')": {
+        "accuracy": 0.95
+    },
+    "('syntheticgeometry__quadrilateral', 'average')": {
+        "accuracy": 0.95
+    },
+    "('syntheticgeometry__length', 'average')": {
+        "accuracy": 0.95
+    },
+    "('syntheticgeometry__angle', 'average')": {
+        "accuracy": 0.9
+    },
+    "('syntheticgeometry__area', 'average')": {
+        "accuracy": 0.95
+    },
+    "('3d__size', 'average')": {
+        "accuracy": 1.0
+    },
+    "('3d__angle', 'average')": {
+        "accuracy": 0.95
+    },
+    "('all', 'average')": {
+        "accuracy": 0.95
+    }
+}

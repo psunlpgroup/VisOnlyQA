@@ -1,0 +1,1221 @@
+{
+    "('geometry__triangle', 0)": {
+        "accuracy": 1.0,
+        "annotations": {
+            "y_true": [
+                "FALSE",
+                "TRUE",
+                "FALSE",
+                "TRUE",
+                "FALSE",
+                "TRUE",
+                "FALSE",
+                "FALSE",
+                "FALSE",
+                "TRUE"
+            ],
+            "y_pred": [
+                "False",
+                "True",
+                "False",
+                "True",
+                "False",
+                "True",
+                "False",
+                "False",
+                "False",
+                "True"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('geometry__quadrilateral', 0)": {
+        "accuracy": 1.0,
+        "annotations": {
+            "y_true": [
+                "FALSE",
+                "TRUE",
+                "TRUE",
+                "FALSE",
+                "FALSE",
+                "TRUE",
+                "FALSE",
+                "FALSE",
+                "TRUE",
+                "TRUE"
+            ],
+            "y_pred": [
+                "False",
+                "True",
+                "True",
+                "False",
+                "False",
+                "True",
+                "False",
+                "False",
+                "True",
+                "True"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('geometry__length', 0)": {
+        "accuracy": 1.0,
+        "annotations": {
+            "y_true": [
+                "e",
+                "a",
+                "e",
+                "d",
+                "a",
+                "a",
+                "c",
+                "d",
+                "d",
+                "a"
+            ],
+            "y_pred": [
+                "e",
+                "a",
+                "e",
+                "d",
+                "a",
+                "a",
+                "c",
+                "d",
+                "d",
+                "a"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('geometry__angle', 0)": {
+        "accuracy": 0.9,
+        "annotations": {
+            "y_true": [
+                "c",
+                "d",
+                "a",
+                "c",
+                "d",
+                "d",
+                "a",
+                "d",
+                "b",
+                "b"
+            ],
+            "y_pred": [
+                "c",
+                "d",
+                "a",
+                "a",
+                "d",
+                "d",
+                "a",
+                "d",
+                "b",
+                "b"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('geometry__area', 0)": {
+        "accuracy": 0.9,
+        "annotations": {
+            "y_true": [
+                "d",
+                "b",
+                "c",
+                "b",
+                "a",
+                "c",
+                "a",
+                "c",
+                "b",
+                "a"
+            ],
+            "y_pred": [
+                "d",
+                "b",
+                "c",
+                "b",
+                "b",
+                "c",
+                "a",
+                "c",
+                "b",
+                "a"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('geometry__diameter_radius', 0)": {
+        "accuracy": 1.0,
+        "annotations": {
+            "y_true": [
+                "TRUE",
+                "FALSE",
+                "FALSE",
+                "FALSE",
+                "FALSE",
+                "TRUE",
+                "FALSE",
+                "FALSE",
+                "FALSE",
+                "TRUE"
+            ],
+            "y_pred": [
+                "True",
+                "False",
+                "False",
+                "False",
+                "False",
+                "True",
+                "False",
+                "False",
+                "False",
+                "True"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('chemistry__shape_single', 0)": {
+        "accuracy": 0.9,
+        "annotations": {
+            "y_true": [
+                "TRUE",
+                "FALSE",
+                "TRUE",
+                "TRUE",
+                "FALSE",
+                "TRUE",
+                "FALSE",
+                "FALSE",
+                "TRUE",
+                "FALSE"
+            ],
+            "y_pred": [
+                "True",
+                "False",
+                "True",
+                "True",
+                "False",
+                "True",
+                "False",
+                "False",
+                "True",
+                "True"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0
+            ]
+        }
+    },
+    "('chemistry__shape_multi', 0)": {
+        "accuracy": 1.0,
+        "annotations": {
+            "y_true": [
+                "a,b,c,d",
+                "a,d",
+                "a,c,d",
+                "c,d",
+                "c",
+                "b,d",
+                "a",
+                "c,d",
+                "a",
+                "d"
+            ],
+            "y_pred": [
+                "a,b,c,d",
+                "a,d",
+                "a,c,d",
+                "c,d",
+                "c",
+                "b,d",
+                "a",
+                "c,d",
+                "a",
+                "d"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('charts__extraction', 0)": {
+        "accuracy": 0.9,
+        "annotations": {
+            "y_true": [
+                "b",
+                "c",
+                "e",
+                "b",
+                "e",
+                "d",
+                "d",
+                "a",
+                "b",
+                "e"
+            ],
+            "y_pred": [
+                "b",
+                "a",
+                "e",
+                "b",
+                "e",
+                "d",
+                "d",
+                "a",
+                "b",
+                "e"
+            ],
+            "correct_list": [
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('charts__intersection', 0)": {
+        "accuracy": 0.9,
+        "annotations": {
+            "y_true": [
+                "FALSE",
+                "FALSE",
+                "FALSE",
+                "TRUE",
+                "TRUE",
+                "FALSE",
+                "FALSE",
+                "FALSE",
+                "FALSE",
+                "TRUE"
+            ],
+            "y_pred": [
+                "True",
+                "False",
+                "False",
+                "True",
+                "True",
+                "False",
+                "False",
+                "False",
+                "False",
+                "True"
+            ],
+            "correct_list": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('geometry__triangle', 1)": {
+        "accuracy": 1.0,
+        "annotations": {
+            "y_true": [
+                "TRUE",
+                "TRUE",
+                "TRUE",
+                "FALSE",
+                "FALSE",
+                "FALSE",
+                "FALSE",
+                "TRUE",
+                "FALSE",
+                "TRUE"
+            ],
+            "y_pred": [
+                "True",
+                "True",
+                "True",
+                "False",
+                "False",
+                "False",
+                "False",
+                "True",
+                "False",
+                "True"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('geometry__quadrilateral', 1)": {
+        "accuracy": 0.9,
+        "annotations": {
+            "y_true": [
+                "FALSE",
+                "FALSE",
+                "TRUE",
+                "TRUE",
+                "FALSE",
+                "TRUE",
+                "FALSE",
+                "TRUE",
+                "TRUE",
+                "TRUE"
+            ],
+            "y_pred": [
+                "True",
+                "False",
+                "True",
+                "True",
+                "False",
+                "True",
+                "False",
+                "True",
+                "True",
+                "True"
+            ],
+            "correct_list": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('geometry__length', 1)": {
+        "accuracy": 1.0,
+        "annotations": {
+            "y_true": [
+                "e",
+                "d",
+                "b",
+                "c",
+                "e",
+                "c",
+                "d",
+                "c",
+                "e",
+                "a"
+            ],
+            "y_pred": [
+                "e",
+                "d",
+                "b",
+                "c",
+                "e",
+                "c",
+                "d",
+                "c",
+                "e",
+                "a"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('geometry__angle', 1)": {
+        "accuracy": 0.9,
+        "annotations": {
+            "y_true": [
+                "b",
+                "a",
+                "a",
+                "d",
+                "b",
+                "b",
+                "a",
+                "d",
+                "e",
+                "a"
+            ],
+            "y_pred": [
+                "b",
+                "a",
+                "a",
+                "d",
+                "c",
+                "b",
+                "a",
+                "d",
+                "e",
+                "a"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('geometry__area', 1)": {
+        "accuracy": 0.8,
+        "annotations": {
+            "y_true": [
+                "a",
+                "c",
+                "b",
+                "e",
+                "b",
+                "d",
+                "a",
+                "c",
+                "b",
+                "d"
+            ],
+            "y_pred": [
+                "a",
+                "c",
+                "d",
+                "e",
+                "b",
+                "d",
+                "c",
+                "c",
+                "b",
+                "d"
+            ],
+            "correct_list": [
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('geometry__diameter_radius', 1)": {
+        "accuracy": 1.0,
+        "annotations": {
+            "y_true": [
+                "TRUE",
+                "TRUE",
+                "TRUE",
+                "FALSE",
+                "TRUE",
+                "FALSE",
+                "FALSE",
+                "TRUE",
+                "FALSE",
+                "TRUE"
+            ],
+            "y_pred": [
+                "True",
+                "True",
+                "True",
+                "False",
+                "True",
+                "False",
+                "False",
+                "True",
+                "False",
+                "True"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('chemistry__shape_single', 1)": {
+        "accuracy": 0.9,
+        "annotations": {
+            "y_true": [
+                "FALSE",
+                "TRUE",
+                "TRUE",
+                "FALSE",
+                "FALSE",
+                "FALSE",
+                "FALSE",
+                "TRUE",
+                "FALSE",
+                "TRUE"
+            ],
+            "y_pred": [
+                "False",
+                "True",
+                "False",
+                "False",
+                "False",
+                "False",
+                "False",
+                "True",
+                "False",
+                "True"
+            ],
+            "correct_list": [
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('chemistry__shape_multi', 1)": {
+        "accuracy": 0.9,
+        "annotations": {
+            "y_true": [
+                "a,b,c,d",
+                "c",
+                "a,b,c,d",
+                "b,c,d",
+                "a,b,c,d",
+                "d",
+                "d",
+                "d",
+                "a,b,c,d",
+                "b,c,d"
+            ],
+            "y_pred": [
+                "a,b,c,d",
+                "c",
+                "a,b,c,d",
+                "b,c,d",
+                "a,b,c,d",
+                "d",
+                "d",
+                "d",
+                "a,b,c,d",
+                "b,d"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0
+            ]
+        }
+    },
+    "('charts__extraction', 1)": {
+        "accuracy": 1.0,
+        "annotations": {
+            "y_true": [
+                "d",
+                "d",
+                "e",
+                "d",
+                "a",
+                "a",
+                "b",
+                "a",
+                "d",
+                "b"
+            ],
+            "y_pred": [
+                "d",
+                "d",
+                "e",
+                "d",
+                "a",
+                "a",
+                "b",
+                "a",
+                "d",
+                "b"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('charts__intersection', 1)": {
+        "accuracy": 1.0,
+        "annotations": {
+            "y_true": [
+                "TRUE",
+                "TRUE",
+                "FALSE",
+                "FALSE",
+                "FALSE",
+                "TRUE",
+                "TRUE",
+                "TRUE",
+                "FALSE",
+                "FALSE"
+            ],
+            "y_pred": [
+                "True",
+                "True",
+                "False",
+                "False",
+                "False",
+                "True",
+                "True",
+                "True",
+                "False",
+                "False"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('geometry__triangle', 2)": {
+        "accuracy": 0.9,
+        "annotations": {
+            "y_true": [
+                "FALSE",
+                "FALSE",
+                "TRUE",
+                "TRUE",
+                "TRUE",
+                "FALSE",
+                "FALSE",
+                "TRUE",
+                "FALSE",
+                "TRUE"
+            ],
+            "y_pred": [
+                "False",
+                "False",
+                "True",
+                "True",
+                "True",
+                "False",
+                "False",
+                "True",
+                "False",
+                "False"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0
+            ]
+        }
+    },
+    "('geometry__quadrilateral', 2)": {
+        "accuracy": 0.8,
+        "annotations": {
+            "y_true": [
+                "FALSE",
+                "FALSE",
+                "TRUE",
+                "TRUE",
+                "FALSE",
+                "FALSE",
+                "TRUE",
+                "FALSE",
+                "FALSE",
+                "FALSE"
+            ],
+            "y_pred": [
+                "False",
+                "False",
+                "True",
+                "False",
+                "False",
+                "True",
+                "True",
+                "False",
+                "False",
+                "False"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                0,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('geometry__length', 2)": {
+        "accuracy": 0.8,
+        "annotations": {
+            "y_true": [
+                "e",
+                "c",
+                "e",
+                "c",
+                "d",
+                "a",
+                "b",
+                "c",
+                "b",
+                "d"
+            ],
+            "y_pred": [
+                "e",
+                "c",
+                "d",
+                "c",
+                "d",
+                "a",
+                "e",
+                "c",
+                "b",
+                "d"
+            ],
+            "correct_list": [
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('geometry__angle', 2)": {
+        "accuracy": 1.0,
+        "annotations": {
+            "y_true": [
+                "d",
+                "e",
+                "d",
+                "c",
+                "a",
+                "d",
+                "b",
+                "b",
+                "c",
+                "a"
+            ],
+            "y_pred": [
+                "d",
+                "e",
+                "d",
+                "c",
+                "a",
+                "d",
+                "b",
+                "b",
+                "c",
+                "a"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('geometry__area', 2)": {
+        "accuracy": 0.9,
+        "annotations": {
+            "y_true": [
+                "c",
+                "e",
+                "d",
+                "c",
+                "b",
+                "c",
+                "c",
+                "c",
+                "c",
+                "d"
+            ],
+            "y_pred": [
+                "c",
+                "e",
+                "d",
+                "c",
+                "b",
+                "c",
+                "d",
+                "c",
+                "c",
+                "d"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('geometry__diameter_radius', 2)": {
+        "accuracy": 1.0,
+        "annotations": {
+            "y_true": [
+                "TRUE",
+                "FALSE",
+                "TRUE",
+                "TRUE",
+                "TRUE",
+                "FALSE",
+                "FALSE",
+                "TRUE",
+                "FALSE",
+                "FALSE"
+            ],
+            "y_pred": [
+                "True",
+                "False",
+                "True",
+                "True",
+                "True",
+                "False",
+                "False",
+                "True",
+                "False",
+                "False"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('chemistry__shape_single', 2)": {
+        "accuracy": 1.0,
+        "annotations": {
+            "y_true": [
+                "TRUE",
+                "FALSE",
+                "TRUE",
+                "FALSE",
+                "FALSE",
+                "TRUE",
+                "TRUE",
+                "FALSE",
+                "FALSE",
+                "TRUE"
+            ],
+            "y_pred": [
+                "True",
+                "False",
+                "True",
+                "False",
+                "False",
+                "True",
+                "True",
+                "False",
+                "False",
+                "True"
+            ],
+            "correct_list": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('chemistry__shape_multi', 2)": {
+        "accuracy": 0.8888888888888888,
+        "annotations": {
+            "y_true": [
+                "a,b,c,d",
+                "c",
+                "a,c",
+                "b",
+                "b,c,d",
+                "c,d",
+                "b,c",
+                "a,b,d",
+                "b,c,d"
+            ],
+            "y_pred": [
+                "a,b,c,d",
+                "a,c",
+                "a,c",
+                "b",
+                "b,c,d",
+                "c,d",
+                "b,c",
+                "a,b,d",
+                "b,c,d"
+            ],
+            "correct_list": [
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('charts__extraction', 2)": {
+        "accuracy": 0.9,
+        "annotations": {
+            "y_true": [
+                "d",
+                "b",
+                "e",
+                "e",
+                "a",
+                "a",
+                "b",
+                "c",
+                "e",
+                "a"
+            ],
+            "y_pred": [
+                "b",
+                "b",
+                "e",
+                "e",
+                "a",
+                "a",
+                "b",
+                "c",
+                "e",
+                "a"
+            ],
+            "correct_list": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    },
+    "('geometry__triangle', 'average')": {
+        "accuracy": 0.9666666666666667
+    },
+    "('geometry__quadrilateral', 'average')": {
+        "accuracy": 0.9
+    },
+    "('geometry__length', 'average')": {
+        "accuracy": 0.9333333333333332
+    },
+    "('geometry__angle', 'average')": {
+        "accuracy": 0.9333333333333332
+    },
+    "('geometry__area', 'average')": {
+        "accuracy": 0.8666666666666667
+    },
+    "('geometry__diameter_radius', 'average')": {
+        "accuracy": 1.0
+    },
+    "('chemistry__shape_single', 'average')": {
+        "accuracy": 0.9333333333333332
+    },
+    "('chemistry__shape_multi', 'average')": {
+        "accuracy": 0.9296296296296296
+    },
+    "('charts__extraction', 'average')": {
+        "accuracy": 0.9333333333333332
+    },
+    "('charts__intersection', 'average')": {
+        "accuracy": 0.95
+    },
+    "('all', 'average')": {
+        "accuracy": 0.9346296296296295
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "geometry__triangle": {
+        "num_examples": 50
+    },
+    "geometry__quadrilateral": {
+        "num_examples": 50
+    },
+    "geometry__length": {
+        "num_examples": 50
+    },
+    "geometry__angle": {
+        "num_examples": 50
+    },
+    "geometry__area": {
+        "num_examples": 50
+    },
+    "geometry__diameter_radius": {
+        "num_examples": 50
+    },
+    "chemistry__shape_single": {
+        "num_examples": 50
+    },
+    "chemistry__shape_multi": {
+        "num_examples": 50
+    },
+    "charts__extraction": {
+        "num_examples": 50
+    },
+    "charts__intersection": {
+        "num_examples": 50
+    },
+    "all": {
+        "num_examples": 500
+    }
+}

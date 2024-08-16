@@ -1,0 +1,26 @@
+{
+    "text_syntheticgeometry__triangle": {
+        "num_examples": 100
+    },
+    "text_syntheticgeometry__quadrilateral": {
+        "num_examples": 100
+    },
+    "text_syntheticgeometry__length": {
+        "num_examples": 100
+    },
+    "text_syntheticgeometry__angle": {
+        "num_examples": 100
+    },
+    "text_syntheticgeometry__area": {
+        "num_examples": 100
+    },
+    "text_3d__size": {
+        "num_examples": 100
+    },
+    "text_3d__angle": {
+        "num_examples": 100
+    },
+    "all": {
+        "num_examples": 700
+    }
+}

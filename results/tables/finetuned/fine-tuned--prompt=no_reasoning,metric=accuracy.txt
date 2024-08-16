@@ -1,0 +1,36 @@
+ &  & Triangle & Quadrilateral & Length & Angle & Area & Size & Angle \\
+\midrule
+\multirow{11}{*}{Eval-Synthetic (In-Domain)} & \multicolumn{2}{c}{Random} & 50.0 & 50.0 & 20.0 & 20.0 & 20.0 & 33.3 & 20.0 \\
+\cmidrule{2-11}
+ & \multirow{2}{*}{Phi-3.5-vision} & Original & 54.0 & 55.0 & 15.0 & 22.0 & 21.0 & 39.0 & 20.0 & 32.3 \\
+ &  & Fine-tuned & 62.0 & 50.0 & 27.0 & 25.0 & 29.0 & 87.0 & 28.0 & 44.0 \\
+\cmidrule{2-11}
+ & \multirow{2}{*}{InternVL2-4B} & Original & 50.0 & 51.0 & 21.0 & 24.0 & 18.0 & 57.0 & 18.0 & 34.1 \\
+ &  & Fine-tuned & 74.0 & 75.0 & 64.0 & 29.0 & 39.0 & 100.0 & 23.0 & 57.7 \\
+\cmidrule{2-11}
+ & \multirow{2}{*}{InternVL2-8B} & Original & 51.0 & 57.0 & 21.0 & 17.0 & 23.0 & 46.0 & 30.0 & 35.0 \\
+ &  & Fine-tuned & 76.0 & 76.0 & 78.0 & 36.0 & 66.0 & 100.0 & 20.0 & 64.6 \\
+\cmidrule{2-11}
+ & \multirow{2}{*}{Qwen2-VL-2B} & Original & 50.0 & 50.0 & 31.0 & 23.0 & 20.0 & 38.0 & 23.0 & 33.6 \\
+ &  & Fine-tuned & 69.0 & 68.0 & 41.0 & 28.0 & 56.0 & 100.0 & 20.0 & 54.6 \\
+\cmidrule{2-11}
+ & \multirow{2}{*}{Qwen2-VL-7B} & Original & 58.0 & 59.0 & 24.0 & 18.0 & 22.0 & 58.0 & 21.0 & 37.1 \\
+ &  & Fine-tuned & 77.0 & 73.0 & 71.0 & 42.0 & 68.0 & 100.0 & 24.0 & 65.0 \\
+\cmidrule{2-11}
+\multirow{11}{*}{Eval-Real (Out-of-Domain)} & \multicolumn{2}{c}{Random} & 50.0 & 50.0 & 20.0 & 20.0 & 20.0 & -- & -- \\
+\cmidrule{2-11}
+ & \multirow{2}{*}{Phi-3.5-vision} & Original & 48.0 & 54.0 & 22.0 & 16.0 & 24.0 & -- & -- & 32.8 \\
+ &  & Fine-tuned & 46.0 & 50.0 & 20.0 & 18.0 & 16.0 & -- & -- & 30.0 \\
+\cmidrule{2-11}
+ & \multirow{2}{*}{InternVL2-4B} & Original & 50.0 & 46.0 & 24.0 & 18.0 & 18.0 & -- & -- & 31.2 \\
+ &  & Fine-tuned & 68.0 & 56.0 & 34.0 & 32.0 & 30.0 & -- & -- & 44.0 \\
+\cmidrule{2-11}
+ & \multirow{2}{*}{InternVL2-8B} & Original & 50.0 & 38.0 & 30.0 & 34.0 & 28.0 & -- & -- & 36.0 \\
+ &  & Fine-tuned & 72.0 & 44.0 & 72.0 & 26.0 & 40.0 & -- & -- & 50.8 \\
+\cmidrule{2-11}
+ & \multirow{2}{*}{Qwen2-VL-2B} & Original & 46.0 & 52.0 & 6.0 & 20.0 & 32.0 & -- & -- & 31.2 \\
+ &  & Fine-tuned & 58.0 & 56.0 & 40.0 & 26.0 & 30.0 & -- & -- & 42.0 \\
+\cmidrule{2-11}
+ & \multirow{2}{*}{Qwen2-VL-7B} & Original & 52.0 & 56.0 & 16.0 & 22.0 & 34.0 & -- & -- & 36.0 \\
+ &  & Fine-tuned & 58.0 & 52.0 & 50.0 & 36.0 & 36.0 & -- & -- & 46.4 \\
+\cmidrule{2-11}

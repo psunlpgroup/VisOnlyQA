@@ -1,0 +1,64 @@
+{
+    "error_counts": {
+        "geometry__triangle": {
+            "Correct": 4,
+            "Perception Error": 1
+        },
+        "all": {
+            "Correct": 37,
+            "Perception Error": 6,
+            "Vague Reasoning": 3,
+            "Redundant Reasoning": 4,
+            "Reasoning Error": 3
+        },
+        "geometry__quadrilateral": {
+            "Vague Reasoning": 2,
+            "Correct": 2,
+            "Perception Error": 1
+        },
+        "geometry__length": {
+            "Vague Reasoning": 1,
+            "Correct": 4
+        },
+        "geometry__angle": {
+            "Correct": 2,
+            "Redundant Reasoning": 3
+        },
+        "geometry__area": {
+            "Correct": 2,
+            "Perception Error": 2,
+            "Reasoning Error": 3
+        },
+        "geometry__diameter_radius": {
+            "Correct": 5,
+            "Redundant Reasoning": 1
+        },
+        "chemistry__shape_single": {
+            "Correct": 4,
+            "Perception Error": 1
+        },
+        "chemistry__shape_multi": {
+            "Correct": 5
+        },
+        "charts__extraction": {
+            "Perception Error": 1,
+            "Correct": 4
+        },
+        "charts__intersection": {
+            "Correct": 5
+        }
+    },
+    "split_counts": {
+        "geometry__triangle": 5,
+        "all": 50,
+        "geometry__quadrilateral": 5,
+        "geometry__length": 5,
+        "geometry__angle": 5,
+        "geometry__area": 5,
+        "geometry__diameter_radius": 5,
+        "chemistry__shape_single": 5,
+        "chemistry__shape_multi": 5,
+        "charts__extraction": 5,
+        "charts__intersection": 5
+    }
+}

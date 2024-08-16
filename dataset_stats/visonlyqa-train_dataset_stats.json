@@ -1,0 +1,14 @@
+{
+    "train_geometry__triangle": {
+        "num_examples": 3132
+    },
+    "train_geometry__length": {
+        "num_examples": 3994
+    },
+    "train_synthetic__size": {
+        "num_examples": 5000
+    },
+    "train_synthetic__angle": {
+        "num_examples": 5000
+    }
+}
