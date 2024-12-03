@@ -1,6 +1,6 @@
 # VisOnlyQA
 
-This repository contains the code and data for the paper "VisOnlyQA: Large Vision Language Models Still Struggle with Visual Perception of Geometric Information".
+This repository contains the code and data for the paper "[VisOnlyQA: Large Vision Language Models Still Struggle with Visual Perception of Geometric Information](https://arxiv.org/abs/2412.00947)".
 
 VisOnlyQA is designed to evaluate the visual perception capability of large vision language models (LVLMs) on geometric information of scientific figures. The evaluation set includes 1,200 mlutiple choice questions in 12 visual perception tasks on 4 categories of scientific figures. We also provide a training dataset consisting of 70k instances.
 
@@ -19,6 +19,7 @@ VisOnlyQA is designed to evaluate the visual perception capability of large visi
     title={VisOnlyQA: Large Vision Language Models Still Struggle with Visual Perception of Geometric Information}, 
     author={Ryo Kamoi and Yusen Zhang and Sarkar Snigdha Sarathi Das and Ranran Haoran Zhang and Rui Zhang},
     year={2024},
+    journal={arXiv preprint arXiv:2412.00947}
 }
 ```
 
