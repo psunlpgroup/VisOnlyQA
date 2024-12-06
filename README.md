@@ -5,9 +5,12 @@ This repository contains the code and data for the paper "[VisOnlyQA: Large Visi
 VisOnlyQA is designed to evaluate the visual perception capability of large vision language models (LVLMs) on geometric information of scientific figures. The evaluation set includes 1,200 mlutiple choice questions in 12 visual perception tasks on 4 categories of scientific figures. We also provide a training dataset consisting of 70k instances.
 
 * Datasets:
-  * Eval-Real: [https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Real](https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Real)
-  * Eval-Synthetic: [https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Synthetic](https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Synthetic)
-  * Train: [https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Train](https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Train)
+  * VisOnlyQA is available at [VLMEvalKit](https://github.com/open-compass/VLMEvalKit) 🔥🔥🔥
+    * VisOnlyQA in VLMEvalKit is different from the original one. Refer to [this section](#vlmevalkit) for details.
+  * Hugging Face
+    * Eval-Real: [https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Real](https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Real)
+    * Eval-Synthetic: [https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Synthetic](https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Synthetic)
+    * Train: [https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Train](https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Train)
 * Code: [https://github.com/psunlpgroup/VisOnlyQA](https://github.com/psunlpgroup/VisOnlyQA)
 
 <p align="center">
@@ -25,7 +28,32 @@ VisOnlyQA is designed to evaluate the visual perception capability of large visi
 
 ## Dataset
 
-The dataset is provided in Hugging Face Dataset.
+VisOnlyQA is provided in two formats: VLMEvalKit and Hugging Face Dataset. You can use either of them to evaluate your models and report the results in your papers. However, when you report the results, please explicitly mention which version of the dataset you used because the two versions are different.
+
+### Examples
+
+<p align="center">
+<img src="readme_figures/examples.png" width="800">
+</p>
+
+### VLMEvalKit
+
+[VLMEvalKit](https://github.com/open-compass/VLMEvalKit) provides one-command evaluation. However, VLMEvalKit is not designed to reproduce the results in the paper. We welcome using it to report the results on VisOnlyQA in your papers, but please explicitly mention that you used VLMEvalKit.
+
+The major differences are:
+
+* VisOnlyQA on VLMEvalKit does not include the `chemistry__shape_multi` split
+* VLMEvalKit uses different prompts and postprocessing.
+
+Refer to [this document](https://github.com/open-compass/VLMEvalKit/blob/main/docs/en/Quickstart.md) for the installation and setup of VLMEvalKit. After setting up the environment, you can evaluate any supported models on VisOnlyQA with the following command (this example is for InternVL2-26B).
+
+```bash
+python run.py --data VisOnlyQA-VLMEvalKit --model InternVL2-26B
+```
+
+### Hugging Face Dataset
+
+The original VisOnlyQA dataset is provided in Hugging Face Dataset. If you want to reproduce the results in our paper, please use this version and code in the GitHub repository.
 
 * Eval-Real: [https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Real](https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Real)
   * 500 instances for questions on figures in existing datasets (e.g., MathVista, MMMU, and CharXiv)
@@ -35,14 +63,6 @@ The dataset is provided in Hugging Face Dataset.
   * 70,000 instances for training (synthetic figures)
 
 [dataset](https://github.com/psunlpgroup/VisOnlyQA/tree/main/dataset) folder of the GitHub repository includes identical datasets, except for the training data.
-
-### Examples
-
-<p align="center">
-<img src="readme_figures/examples.png" width="800">
-</p>
-
-### Usage
 
 ```python
 from datasets import load_dataset

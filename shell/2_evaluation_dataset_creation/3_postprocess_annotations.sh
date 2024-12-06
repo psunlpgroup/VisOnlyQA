@@ -3,6 +3,11 @@ python src/evaluation_dataset/postprocess_annotation/postprocess_annotation_test
 # set environment variable HF_ACCOUNT for huggingface upload
 python src/upload_to_huggingface/upload_to_huggingface_test_set.py
 
+# create vlmeval version
+conda activate molmo  # whatever environment with vlmeval requirements
+python src/evaluation_dataset/vlmeval/create_vlmeval_version.py
+conda deactivate
+
 # get dataset statistics
 python src/evaluation_dataset/dataset_statistics/get_dataset_statistics.py
 python src/evaluation_dataset/dataset_statistics/get_geometry_statistics.py
