@@ -2,9 +2,8 @@ from typing import Union, Literal
 
 
 # dataset
-huggingface_eval_real_data_name = "VisOnlyQA_Eval_Real"
+huggingface_eval_real_data_name = "VisOnlyQA_Eval_Real_v1.1"
 huggingface_eval_synthetic_data_name = "VisOnlyQA_Eval_Synthetic"
-huggingface_eval_synthetic_with_text_data_name = "VisOnlyQA_Eval_Synthetic_with_Text"
 huggingface_train_data_name = "VisOnlyQA_Train"
 
 # evaluation dataset
@@ -18,8 +17,6 @@ visonlyqa_synthetic_splits = [
     "syntheticgeometry__triangle", "syntheticgeometry__quadrilateral", "syntheticgeometry__length", "syntheticgeometry__angle", "syntheticgeometry__area",
     "3d__size", "3d__angle",
 ]
-
-visonlyqa_synthetic_with_text_splits = [f"text_{s}" for s in visonlyqa_synthetic_splits]  # this is not used in the paper
 
 visonlyqa_response_type_dir: dict[str, tuple[str, list[str]]] = {
     #
@@ -48,28 +45,17 @@ visonlyqa_response_type_dir: dict[str, tuple[str, list[str]]] = {
     "syntheticgeometry__length": ("single_answer", ["a", "b", "c", "d", "e"]),
     "syntheticgeometry__angle": ("single_answer", ["a", "b", "c", "d", "e"]),
     "syntheticgeometry__area": ("single_answer", ["a", "b", "c", "d", "e"]),
-    #
-    "text_3d__size": ("single_answer", ["a", "b", "c"]),
-    "text_3d__angle": ("single_answer", ["a", "b", "c", "d", "e"]),
-    #
-    "text_syntheticgeometry__triangle": ("single_answer", ["True", "False"]),
-    "text_syntheticgeometry__quadrilateral": ("single_answer", ["True", "False"]),
-    "text_syntheticgeometry__length": ("single_answer", ["a", "b", "c", "d", "e"]),
-    "text_syntheticgeometry__angle": ("single_answer", ["a", "b", "c", "d", "e"]),
-    "text_syntheticgeometry__area": ("single_answer", ["a", "b", "c", "d", "e"]),
 }
 
 # train dataset
-finetuning_splits_dict: dict[Literal["finetuning_splits", "corresponding_real_splits", "finetuning_text_splits"], list[Union[str, None]]] = {
+finetuning_splits_dict: dict[Literal["finetuning_splits", "corresponding_real_splits"], list[Union[str, None]]] = {
     "finetuning_splits": visonlyqa_synthetic_splits,
     "corresponding_real_splits": [
         "geometry__triangle", "geometry__quadrilateral", "geometry__length", "geometry__angle", "geometry__area",
         None, None,
-    ],
-    "finetuning_text_splits": visonlyqa_synthetic_with_text_splits,
+    ]
 }
 train_data_splits = finetuning_splits_dict["finetuning_splits"]
-train_data_text_splits = visonlyqa_synthetic_with_text_splits
 
 # models
 open_models_list = [
@@ -114,15 +100,15 @@ convert_model_name = {
 }
 
 model_row_colors = {  # for the tables in the paper
-    "microsoft/Phi-3.5-vision-instruct": "cyan",
-    "llava_next_yi_34b": "Orange",
-    "Qwen/Qwen2-VL-72B-Instruct": "RoyalPurple",
-    "Llama-3.2-90B-Vision-Instruct": "Blue",
-    "molmo-72B-0924": "Lavender",
-    "OpenGVLab/InternVL2-Llama3-76B": "RedOrange",
-    "claude-3-5-sonnet-20240620": "YellowOrange",
-    "gpt-4o-2024-08-06": "Green",
-    "gemini-1.5-pro-002": "BlueViolet",
+    # "microsoft/Phi-3.5-vision-instruct": "cyan",
+    # "llava_next_yi_34b": "Orange",
+    # "Qwen/Qwen2-VL-72B-Instruct": "RoyalPurple",
+    # "Llama-3.2-90B-Vision-Instruct": "Blue",
+    # "molmo-72B-0924": "Lavender",
+    # "OpenGVLab/InternVL2-Llama3-76B": "RedOrange",
+    # "claude-3-5-sonnet-20240620": "YellowOrange",
+    # "gpt-4o-2024-08-06": "Green",
+    # "gemini-1.5-pro-002": "BlueViolet",
 }
 
 # for these models we use for fine-tuning, we implement model specific code
@@ -130,8 +116,8 @@ open_models_with_specific_code_list = ["InternVL", "Phi-3.5", "Qwen2-VL"]
 
 finetuning_base_models_list = [
     "microsoft/Phi-3.5-vision-instruct",
-    "OpenGVLab/InternVL2-4B", "OpenGVLab/InternVL2-8B",
-    "Qwen/Qwen2-VL-2B-Instruct", "Qwen/Qwen2-VL-7B-Instruct"
+    "Qwen/Qwen2-VL-2B-Instruct", "Qwen/Qwen2-VL-7B-Instruct",
+    "OpenGVLab/InternVL2-4B", "OpenGVLab/InternVL2-8B", "OpenGVLab/InternVL2-26B",
 ]
 base_model_to_finetuned_model_dict: dict[str, dict[str, str]] = {
     "OpenGVLab/InternVL2-4B": {
@@ -142,13 +128,6 @@ base_model_to_finetuned_model_dict: dict[str, dict[str, str]] = {
         "syntheticgeometry__area": "finetuning_results/internvl_finetuning_log/InternVL2-4B_syntheticgeometry__area_20241107_002108",
         "3d__size": "finetuning_results/internvl_finetuning_log/InternVL2-4B_3d__size_20241106_193554",
         "3d__angle": "finetuning_results/internvl_finetuning_log/InternVL2-4B_3d__angle_20241106_203320",
-        "text_syntheticgeometry__angle": "finetuning_results/internvl_finetuning_log/InternVL2-4B_text_syntheticgeometry__angle_20241126_015556",
-        "text_syntheticgeometry__area": "finetuning_results/internvl_finetuning_log/InternVL2-4B_text_syntheticgeometry__area_20241126_030459",
-        "text_syntheticgeometry__length": "finetuning_results/internvl_finetuning_log/InternVL2-4B_text_syntheticgeometry__length_20241126_041211",
-        "text_syntheticgeometry__quadrilateral": "finetuning_results/internvl_finetuning_log/InternVL2-4B_text_syntheticgeometry__quadrilateral_20241126_005040",
-        "text_syntheticgeometry__triangle": "finetuning_results/internvl_finetuning_log/InternVL2-4B_text_syntheticgeometry__triangle_20241125_234554",
-        "text_3d__size": "finetuning_results/internvl_finetuning_log/InternVL2-4B_text_3d__size_20241125_212829",
-        "text_3d__angle": "finetuning_results/internvl_finetuning_log/InternVL2-4B_text_3d__angle_20241125_223732",
     },
     "OpenGVLab/InternVL2-8B": {
         "syntheticgeometry__triangle": "finetuning_results/internvl_finetuning_log/InternVL2-8B_syntheticgeometry__triangle_20241106_200045",
@@ -158,13 +137,15 @@ base_model_to_finetuned_model_dict: dict[str, dict[str, str]] = {
         "syntheticgeometry__area": "finetuning_results/internvl_finetuning_log/InternVL2-8B_syntheticgeometry__area_20241107_003601",
         "3d__size": "finetuning_results/internvl_finetuning_log/InternVL2-8B_3d__size_20241106_165308",
         "3d__angle": "finetuning_results/internvl_finetuning_log/InternVL2-8B_3d__angle_20241106_182532",
-        "text_syntheticgeometry__angle": "finetuning_results/internvl_finetuning_log/InternVL2-8B_text_syntheticgeometry__angle_20241125_023740",
-        "text_syntheticgeometry__area": "finetuning_results/internvl_finetuning_log/InternVL2-8B_text_syntheticgeometry__area_20241125_042312",
-        "text_syntheticgeometry__length": "finetuning_results/internvl_finetuning_log/InternVL2-8B_text_syntheticgeometry__length_20241125_060917",
-        "text_syntheticgeometry__quadrilateral": "finetuning_results/internvl_finetuning_log/InternVL2-8B_text_syntheticgeometry__quadrilateral_20241125_005431",
-        "text_syntheticgeometry__triangle": "finetuning_results/internvl_finetuning_log/InternVL2-8B_text_syntheticgeometry__triangle_20241124_231134",
-        "text_3d__size": "finetuning_results/internvl_finetuning_log/InternVL2-8B_text_3d__size_20241124_193710",
-        "text_3d__angle": "finetuning_results/internvl_finetuning_log/InternVL2-8B_text_3d__angle_20241124_212445",
+    },
+    "OpenGVLab/InternVL2-26B": {
+        "syntheticgeometry__triangle": "finetuning_results/internvl_finetuning_log/InternVL2-26B_syntheticgeometry__triangle_20250308_152241",
+        "syntheticgeometry__quadrilateral": "finetuning_results/internvl_finetuning_log/InternVL2-26B_syntheticgeometry__quadrilateral_20250309_030712",
+        "syntheticgeometry__length": "finetuning_results/internvl_finetuning_log/InternVL2-26B_syntheticgeometry__length_20250308_231745",
+        "syntheticgeometry__angle": "finetuning_results/internvl_finetuning_log/InternVL2-26B_syntheticgeometry__angle_20250308_180057",
+        "syntheticgeometry__area": "finetuning_results/internvl_finetuning_log/InternVL2-26B_syntheticgeometry__area_20250308_204016",
+        "3d__size": "finetuning_results/internvl_finetuning_log/InternVL2-26B_3d__size_20250308_095737",
+        "3d__angle": "finetuning_results/internvl_finetuning_log/InternVL2-26B_3d__angle_20250308_123856",
     },
     "Qwen/Qwen2-VL-2B-Instruct": {
         "3d__angle": "finetuning_results/qwen2vl_finetuning_log/Qwen2-VL-2B-Instruct_finetuned_3d__angle",
@@ -174,13 +155,6 @@ base_model_to_finetuned_model_dict: dict[str, dict[str, str]] = {
         "syntheticgeometry__length": "finetuning_results/qwen2vl_finetuning_log/Qwen2-VL-2B-Instruct_finetuned_syntheticgeometry__length",
         "syntheticgeometry__quadrilateral": "finetuning_results/qwen2vl_finetuning_log/Qwen2-VL-2B-Instruct_finetuned_syntheticgeometry__quadrilateral",
         "syntheticgeometry__triangle": "finetuning_results/qwen2vl_finetuning_log/Qwen2-VL-2B-Instruct_finetuned_syntheticgeometry__triangle",
-        "text_3d__angle": "finetuning_results/qwen2vl_finetuning_log/Qwen2-VL-2B-Instruct_finetuned_text_3d__angle",
-        "text_3d__size": "finetuning_results/qwen2vl_finetuning_log/Qwen2-VL-2B-Instruct_finetuned_text_3d__size",
-        "text_syntheticgeometry__angle": "finetuning_results/qwen2vl_finetuning_log/Qwen2-VL-2B-Instruct_finetuned_text_syntheticgeometry__angle",
-        "text_syntheticgeometry__area": "finetuning_results/qwen2vl_finetuning_log/Qwen2-VL-2B-Instruct_finetuned_text_syntheticgeometry__area",
-        "text_syntheticgeometry__length": "finetuning_results/qwen2vl_finetuning_log/Qwen2-VL-2B-Instruct_finetuned_text_syntheticgeometry__length",
-        "text_syntheticgeometry__quadrilateral": "finetuning_results/qwen2vl_finetuning_log/Qwen2-VL-2B-Instruct_finetuned_text_syntheticgeometry__quadrilateral",
-        "text_syntheticgeometry__triangle": "finetuning_results/qwen2vl_finetuning_log/Qwen2-VL-2B-Instruct_finetuned_text_syntheticgeometry__triangle",
     },
     "Qwen/Qwen2-VL-7B-Instruct": {
         "3d__angle": "finetuning_results/qwen2vl_finetuning_log/Qwen2-VL-7B-Instruct_finetuned_3d__angle",
@@ -190,13 +164,6 @@ base_model_to_finetuned_model_dict: dict[str, dict[str, str]] = {
         "syntheticgeometry__length": "finetuning_results/qwen2vl_finetuning_log/Qwen2-VL-7B-Instruct_finetuned_syntheticgeometry__length",
         "syntheticgeometry__quadrilateral": "finetuning_results/qwen2vl_finetuning_log/Qwen2-VL-7B-Instruct_finetuned_syntheticgeometry__quadrilateral",
         "syntheticgeometry__triangle": "finetuning_results/qwen2vl_finetuning_log/Qwen2-VL-7B-Instruct_finetuned_syntheticgeometry__triangle",
-        "text_3d__angle": "finetuning_results/qwen2vl_finetuning_log/Qwen2-VL-7B-Instruct_finetuned_text_3d__angle",
-        "text_3d__size": "finetuning_results/qwen2vl_finetuning_log/Qwen2-VL-7B-Instruct_finetuned_text_3d__size",
-        "text_syntheticgeometry__angle": "finetuning_results/qwen2vl_finetuning_log/Qwen2-VL-7B-Instruct_finetuned_text_syntheticgeometry__angle",
-        "text_syntheticgeometry__area": "finetuning_results/qwen2vl_finetuning_log/Qwen2-VL-7B-Instruct_finetuned_text_syntheticgeometry__area",
-        "text_syntheticgeometry__length": "finetuning_results/qwen2vl_finetuning_log/Qwen2-VL-7B-Instruct_finetuned_text_syntheticgeometry__length",
-        "text_syntheticgeometry__quadrilateral": "finetuning_results/qwen2vl_finetuning_log/Qwen2-VL-7B-Instruct_finetuned_text_syntheticgeometry__quadrilateral",
-        "text_syntheticgeometry__triangle": "finetuning_results/qwen2vl_finetuning_log/Qwen2-VL-7B-Instruct_finetuned_text_syntheticgeometry__triangle",
     },
     "microsoft/Phi-3.5-vision-instruct": {
         "3d__angle": "finetuning_results/phi35v_finetuning_log/Phi-3.5-vision-instruct_3d__angle_2024-11-26_02-31-59",
@@ -206,13 +173,6 @@ base_model_to_finetuned_model_dict: dict[str, dict[str, str]] = {
         "syntheticgeometry__triangle": "finetuning_results/phi35v_finetuning_log/Phi-3.5-vision-instruct_syntheticgeometry__triangle_2024-11-27_00-39-36",
         "syntheticgeometry__quadrilateral": "finetuning_results/phi35v_finetuning_log/Phi-3.5-vision-instruct_syntheticgeometry__quadrilateral_2024-11-25_13-31-01",
         "syntheticgeometry__length": "finetuning_results/phi35v_finetuning_log/Phi-3.5-vision-instruct_syntheticgeometry__length_2024-11-25_16-35-41",
-        "text_3d__size": "finetuning_results/phi35v_finetuning_log/Phi-3.5-vision-instruct_text_3d__size_2024-11-26_19-57-29",
-        "text_3d__angle": "finetuning_results/phi35v_finetuning_log/Phi-3.5-vision-instruct_text_3d__angle_2024-11-26_22-48-57",
-        "text_syntheticgeometry__angle": "finetuning_results/phi35v_finetuning_log/Phi-3.5-vision-instruct_text_syntheticgeometry__angle_2024-11-26_16-28-27",
-        "text_syntheticgeometry__area": "finetuning_results/phi35v_finetuning_log/Phi-3.5-vision-instruct_text_syntheticgeometry__area_2024-11-27_12-37-00",
-        "text_syntheticgeometry__quadrilateral": "finetuning_results/phi35v_finetuning_log/Phi-3.5-vision-instruct_text_syntheticgeometry__quadrilateral_2024-11-26_08-29-45",
-        "text_syntheticgeometry__triangle": "finetuning_results/phi35v_finetuning_log/Phi-3.5-vision-instruct_text_syntheticgeometry__triangle_2024-11-26_05-06-20",
-        "text_syntheticgeometry__length": "finetuning_results/phi35v_finetuning_log/Phi-3.5-vision-instruct_text_syntheticgeometry__length_2024-11-26_11-53-56",
     }
 }
 
@@ -243,10 +203,8 @@ def convert_split_name(split_name: str, full=False) -> str:
 
 eval_real_splits_capitalized = [convert_split_name(split) for split in visonlyqa_real_splits]
 eval_synthetic_splits_capitalized = [convert_split_name(split) for split in visonlyqa_synthetic_splits]
-eval_synthetic_with_text_splits_capitalized = [convert_split_name(split) for split in visonlyqa_synthetic_with_text_splits]
 finetuning_splits_capitalized = [convert_split_name(split) for split in finetuning_splits_dict["finetuning_splits"]]
 
 eval_real_splits_capitalized_full = [convert_split_name(split, full=True) for split in visonlyqa_real_splits]
 eval_synthetic_splits_capitalized_full = [convert_split_name(split, full=True) for split in visonlyqa_synthetic_splits]
-eval_synthetic_with_text_splits_capitalized_full = [convert_split_name(split, full=True) for split in visonlyqa_synthetic_with_text_splits]
 finetuning_splits_capitalized_full = [convert_split_name(split, full=True) for split in finetuning_splits_dict["finetuning_splits"]]

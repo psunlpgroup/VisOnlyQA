@@ -1,0 +1,8 @@
+{
+    "accuracy": 0.7,
+    "bootstrap": {
+        "std": {
+            "accuracy": 0.04615261206042405
+        }
+    }
+}

@@ -5,7 +5,7 @@ from transformers import AutoConfig
 
 from src.config import (
     open_models_with_specific_code_list,
-    huggingface_eval_real_data_name, huggingface_eval_synthetic_data_name, huggingface_eval_synthetic_with_text_data_name, huggingface_train_data_name
+    huggingface_eval_real_data_name, huggingface_eval_synthetic_data_name, huggingface_train_data_name
 )
 
 
@@ -22,7 +22,7 @@ def check_hf_model_exists(model_name: str) -> bool:
         return False
 
 
-def get_hf_dataset_name(split: Literal["train", "eval"]) -> str:
+def get_hf_dataset_name(split: Literal["train", "eval", "metadata"]) -> str:
     hf_account = os.getenv("HF_ACCOUNT")
     if hf_account is None:
         raise ValueError("Please set your HuggingFace to HF_ACCOUNT environment variable: export HF_ACCOUNT=your_username")
@@ -33,7 +33,7 @@ def get_hf_dataset_name(split: Literal["train", "eval"]) -> str:
         return f"{hf_account}/{huggingface_eval_real_data_name}"
     elif split == "eval_synthetic":
         return f"{hf_account}/{huggingface_eval_synthetic_data_name}"
-    elif split == "eval_synthetic_with_text":
-        return f"{hf_account}/{huggingface_eval_synthetic_with_text_data_name}"
+    elif split == "metadata":
+        return f"{hf_account}/VisOnlyQA_metadata_v1.1"
     else:
         raise ValueError(f"Invalid split: {split} not in ['train', 'eval_real', 'eval_synthetic']")

@@ -1,0 +1,100 @@
+{
+    "syntheticgeometry__triangle": {
+        "root": "../../VisOnlyQA/dataset/train",
+        "annotation": "../../VisOnlyQA/dataset/train/internvl_annotations/syntheticgeometry__triangle.jsonl",
+        "data_augment": false,
+        "repeat_time": 1,
+        "length": 10000
+    },
+    "syntheticgeometry__quadrilateral": {
+        "root": "../../VisOnlyQA/dataset/train",
+        "annotation": "../../VisOnlyQA/dataset/train/internvl_annotations/syntheticgeometry__quadrilateral.jsonl",
+        "data_augment": false,
+        "repeat_time": 1,
+        "length": 10000
+    },
+    "syntheticgeometry__length": {
+        "root": "../../VisOnlyQA/dataset/train",
+        "annotation": "../../VisOnlyQA/dataset/train/internvl_annotations/syntheticgeometry__length.jsonl",
+        "data_augment": false,
+        "repeat_time": 1,
+        "length": 10000
+    },
+    "syntheticgeometry__angle": {
+        "root": "../../VisOnlyQA/dataset/train",
+        "annotation": "../../VisOnlyQA/dataset/train/internvl_annotations/syntheticgeometry__angle.jsonl",
+        "data_augment": false,
+        "repeat_time": 1,
+        "length": 10000
+    },
+    "syntheticgeometry__area": {
+        "root": "../../VisOnlyQA/dataset/train",
+        "annotation": "../../VisOnlyQA/dataset/train/internvl_annotations/syntheticgeometry__area.jsonl",
+        "data_augment": false,
+        "repeat_time": 1,
+        "length": 10000
+    },
+    "3d__size": {
+        "root": "../../VisOnlyQA/dataset/train",
+        "annotation": "../../VisOnlyQA/dataset/train/internvl_annotations/3d__size.jsonl",
+        "data_augment": false,
+        "repeat_time": 1,
+        "length": 10000
+    },
+    "3d__angle": {
+        "root": "../../VisOnlyQA/dataset/train",
+        "annotation": "../../VisOnlyQA/dataset/train/internvl_annotations/3d__angle.jsonl",
+        "data_augment": false,
+        "repeat_time": 1,
+        "length": 10000
+    },
+    "text_syntheticgeometry__triangle": {
+        "root": "../../VisOnlyQA/dataset/train",
+        "annotation": "../../VisOnlyQA/dataset/train/internvl_annotations/text_syntheticgeometry__triangle.jsonl",
+        "data_augment": false,
+        "repeat_time": 1,
+        "length": 10000
+    },
+    "text_syntheticgeometry__quadrilateral": {
+        "root": "../../VisOnlyQA/dataset/train",
+        "annotation": "../../VisOnlyQA/dataset/train/internvl_annotations/text_syntheticgeometry__quadrilateral.jsonl",
+        "data_augment": false,
+        "repeat_time": 1,
+        "length": 10000
+    },
+    "text_syntheticgeometry__length": {
+        "root": "../../VisOnlyQA/dataset/train",
+        "annotation": "../../VisOnlyQA/dataset/train/internvl_annotations/text_syntheticgeometry__length.jsonl",
+        "data_augment": false,
+        "repeat_time": 1,
+        "length": 10000
+    },
+    "text_syntheticgeometry__angle": {
+        "root": "../../VisOnlyQA/dataset/train",
+        "annotation": "../../VisOnlyQA/dataset/train/internvl_annotations/text_syntheticgeometry__angle.jsonl",
+        "data_augment": false,
+        "repeat_time": 1,
+        "length": 10000
+    },
+    "text_syntheticgeometry__area": {
+        "root": "../../VisOnlyQA/dataset/train",
+        "annotation": "../../VisOnlyQA/dataset/train/internvl_annotations/text_syntheticgeometry__area.jsonl",
+        "data_augment": false,
+        "repeat_time": 1,
+        "length": 10000
+    },
+    "text_3d__size": {
+        "root": "../../VisOnlyQA/dataset/train",
+        "annotation": "../../VisOnlyQA/dataset/train/internvl_annotations/text_3d__size.jsonl",
+        "data_augment": false,
+        "repeat_time": 1,
+        "length": 10000
+    },
+    "text_3d__angle": {
+        "root": "../../VisOnlyQA/dataset/train",
+        "annotation": "../../VisOnlyQA/dataset/train/internvl_annotations/text_3d__angle.jsonl",
+        "data_augment": false,
+        "repeat_time": 1,
+        "length": 10000
+    }
+}

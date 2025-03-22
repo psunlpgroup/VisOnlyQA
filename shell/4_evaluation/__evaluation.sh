@@ -19,6 +19,7 @@ do
     do
         echo "Evaluating model $MODEL with prompt $PROMPT"
         python src/evaluation/evaluation.py --model $MODEL --prompt $PROMPT --data eval_${REAL_SYNTHETIC}
+        python src/evaluation/bootstrap.py --model $MODEL --prompt $PROMPT --data eval_${REAL_SYNTHETIC}
     done
 
     conda deactivate

@@ -8,4 +8,6 @@ pip install -r setup/requirements_vlmevalkit.txt
 pip install torch==2.4 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
 pip install transformers==4.44.2
 
+pip install httpx==0.27.2  # downgrade to avoid openai issue
+
 conda deactivate

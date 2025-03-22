@@ -49,7 +49,21 @@ def get_evaluation_prompt(prompt_name: str, question: str, response_options: lis
     return prompt.format(question=question, response_type=", ".join(response_options))
 
 
-def shuffle_options(question: str, answer: str, options: list[str], question_type: Literal["single_answer", "multiple_answers"]) -> tuple[str, str]:
+def extract_options_from_question(question: str, options: list[str]) -> dict:
+    options_dict = {}
+    for option in options[::-1]:
+        option_index = question.rfind(f"({option})")
+        option_str = question[option_index+3:]
+        if option == options[-1]:
+            option_str += " "
+        options_dict[option] = option_str
+        
+        question = question[:option_index]
+    
+    return {"question": question, "options": options_dict}
+
+
+def shuffle_options(question: str, answer: str, options: list[str], question_type: QTYPE) -> tuple[str, str]:
     if question_type == "multiple_answers":
         # we do not shuffle the order of options
         return question, answer
@@ -61,15 +75,9 @@ def shuffle_options(question: str, answer: str, options: list[str], question_typ
     shuffled_options = random.Random(question).sample(options, len(options))
     
     # extract options from the question
-    options_dict = {}
-    for option in options[::-1]:
-        option_index = question.rfind(f"({option})")
-        option_str = question[option_index+3:]
-        if option == options[-1]:
-            option_str += " "
-        options_dict[option] = option_str
-        
-        question = question[:option_index]
+    extracted_dict = extract_options_from_question(question, options)
+    question = extracted_dict["question"]
+    options_dict = extracted_dict["options"]
     
     # shuffle options
     for idx, original_option in enumerate(shuffled_options):

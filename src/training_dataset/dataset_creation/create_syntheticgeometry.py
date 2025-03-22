@@ -20,9 +20,8 @@ from src.path import (
 )
 from src.prompts import shuffle_options
 from src.training_dataset.dataset_creation.dataset_creation_utils import get_data_instance
-from src.training_dataset.dataset_creation.create_geometry3k import get_relative_lengths_of_all_lines
 from src.training_dataset.dataset_creation.dataset_creation_configs import (
-    triangle_prompt_template, quadrilateral_prompt_template, diameter_prompt_template, length_prompt_template, angle_prompt_template, area_prompt_template
+    triangle_prompt_template, quadrilateral_prompt_template, length_prompt_template, angle_prompt_template, area_prompt_template
 )
 
 # alphageometry
@@ -39,6 +38,55 @@ class GeoInfo(TypedDict):
     point_positions: dict[str, tuple[float, float]]
     line_instances: list[list[str]]
     circle_instances: dict[str, tuple[tuple[float, float], float]]
+
+
+def get_relative_lengths_of_all_lines(logic_form: dict) -> dict[str, list[tuple[str, str]]]:
+    points = logic_form["point_positions"]
+    lines_list = logic_form["line_instances"]
+    
+    lengths = {}
+    for line in lines_list:
+        if len(line) != 2:
+            continue
+        point1, point2 = line
+        
+        if point1 not in points or point2 not in points:
+            continue
+        
+        x1, y1 = points[point1]
+        x2, y2 = points[point2]
+        
+        lengths[line] = ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 0.5
+    
+    relative_length_dict: dict[str, list] = {}
+    for idx1 in range(len(lines_list)):
+        for idx2 in range(idx1 + 1, len(lines_list)):
+            line1 = lines_list[idx1]
+            line2 = lines_list[idx2]
+            
+            if line1 not in lengths or line2 not in lengths:
+                continue
+            
+            len1, len2 = sorted([(line1, lengths[line1]), (line2, lengths[line2])], key=lambda x: x[1])
+            
+            # avoid zero division
+            if len1[1] < 0.00001:
+                continue
+            
+            relative_length = len2[1] / len1[1]
+            
+            if .9 < relative_length < 1.1:
+                relative_length_dict.setdefault("c", []).append((len2[0], len1[0]))  # 1
+            elif 1.9 < relative_length < 2.1:
+                relative_length_dict.setdefault("d", []).append((len2[0], len1[0]))  # 2
+                relative_length_dict.setdefault("b", []).append((len1[0], len2[0]))  # 0.5
+            elif 3.6 < relative_length < 4.4:
+                relative_length_dict.setdefault("e", []).append((len2[0], len1[0]))  # 4
+                relative_length_dict.setdefault("a", []).append((len1[0], len2[0]))  # 0.25
+            else:
+                continue    
+    
+    return relative_length_dict
 
 
 def convert_graph_to_information(graph: gh.Graph, id: str) -> GeoInfo:

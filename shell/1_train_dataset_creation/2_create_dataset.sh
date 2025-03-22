@@ -9,5 +9,10 @@ python src/training_dataset/convert_from_internvl_to_sharegpt.py
 # set environment variable HF_ACCOUNT for huggingface upload
 python src/upload_to_huggingface/upload_to_huggingface_train_set.py
 
+# synthetic geometry metadata
+tar -C intermediate/alphageometry -cvzf intermediate/alphageometry/info.tar.gz info
+tar -C intermediate/alphageometry -cvzf intermediate/alphageometry/images.tar.gz images
+python src/upload_to_huggingface/upload_to_huggingface_metadata.py
+
 # get dataset statistics
 python src/training_dataset/get_dataset_statistics.py

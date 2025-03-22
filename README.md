@@ -1,14 +1,18 @@
 # VisOnlyQA
 
+<p align="center">
+<image src="readme_figures/visonlyqa_icon.png" width="18px"> <a href="https://visonlyqa.github.io/">Project Website</a> | 📄 <a href="https://arxiv.org/abs/2412.00947">Paper</a> | 🤗 <a href="https://huggingface.co/collections/ryokamoi/visonlyqa-674e86c7ec384b629bb97bc3">Dataset</a> | 🔥 <a href="https://github.com/open-compass/VLMEvalKit">VLMEvalKit</a>
+</p>
+
 This repository contains the code and data for the paper "[VisOnlyQA: Large Vision Language Models Still Struggle with Visual Perception of Geometric Information](https://arxiv.org/abs/2412.00947)".
 
-VisOnlyQA is designed to evaluate the visual perception capability of large vision language models (LVLMs) on geometric information of scientific figures. The evaluation set includes 1,200 mlutiple choice questions in 12 visual perception tasks on 4 categories of scientific figures. We also provide a training dataset consisting of 70k instances.
+VisOnlyQA is designed to evaluate the visual perception capability of large vision language models (LVLMs) on geometric information of scientific figures. The evaluation set includes 1,600 mlutiple choice questions in 12 visual perception tasks on 4 categories of scientific figures. We also provide a training dataset consisting of 70k instances.
 
 * Datasets:
   * VisOnlyQA is available at [VLMEvalKit](https://github.com/open-compass/VLMEvalKit) 🔥🔥🔥
     * VisOnlyQA in VLMEvalKit is different from the original one. Refer to [this section](#vlmevalkit) for details.
   * Hugging Face
-    * Eval-Real: [https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Real](https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Real)
+    * Eval-Real: [https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Real_v1.1](https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Real_v1.1)
     * Eval-Synthetic: [https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Synthetic](https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Synthetic)
     * Train: [https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Train](https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Train)
 * Code: [https://github.com/psunlpgroup/VisOnlyQA](https://github.com/psunlpgroup/VisOnlyQA)
@@ -25,6 +29,11 @@ VisOnlyQA is designed to evaluate the visual perception capability of large visi
     journal={arXiv preprint arXiv:2412.00947}
 }
 ```
+
+## Update
+
+* v1.1
+  * Increased the number of instances in the Real split.
 
 ## Dataset
 
@@ -55,8 +64,8 @@ python run.py --data VisOnlyQA-VLMEvalKit --model InternVL2-26B
 
 The original VisOnlyQA dataset is provided in Hugging Face Dataset. If you want to reproduce the results in our paper, please use this version and code in the GitHub repository.
 
-* Eval-Real: [https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Real](https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Real)
-  * 500 instances for questions on figures in existing datasets (e.g., MathVista, MMMU, and CharXiv)
+* Eval-Real: [https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Real_v1.1](https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Real_v1.1)
+  * 900 instances for questions on figures in existing datasets (e.g., MathVista, MMMU, and CharXiv)
 * Eval-Synthetic: [https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Synthetic](https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Synthetic)
   * 700 instances for questions on synthetic figures
 * Train: [https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Train](https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Train)
@@ -67,7 +76,7 @@ The original VisOnlyQA dataset is provided in Hugging Face Dataset. If you want 
 ```python
 from datasets import load_dataset
 
-real_eval = load_dataset("ryokamoi/VisOnlyQA_Eval_Real")
+real_eval = load_dataset("ryokamoi/VisOnlyQA_Eval_Real_v1.1")
 real_synthetic = load_dataset("ryokamoi/VisOnlyQA_Eval_Synthetic")
 
 # Splits
@@ -166,7 +175,7 @@ bash shell/4_evaluation/evaluation_open_small.sh
 
 We fine-tuned the following LVLMs on VisOnlyQA-Train.
 
-* [InternVL2 (4B, 8B)](https://internvl.github.io/blog/2024-07-02-InternVL-2.0/)
+* [InternVL2 (4B, 8B, 26B)](https://internvl.github.io/blog/2024-07-02-InternVL-2.0/)
 * [Qwen2-VL (2B, 7B)](https://qwenlm.github.io/blog/qwen2-vl/)
 * [Phi-3.5-Vision](https://huggingface.co/microsoft/Phi-3.5-vision-instruct)
 

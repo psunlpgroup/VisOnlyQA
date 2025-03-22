@@ -1,12 +1,13 @@
 import json
 from tqdm import tqdm
 from typing import Literal
+import gc
 
 import torch
 from tap import Tap
 import datasets
 
-from src.config import visonlyqa_real_splits, visonlyqa_synthetic_splits, train_data_splits, train_data_text_splits
+from src.config import visonlyqa_real_splits, visonlyqa_synthetic_splits, train_data_splits
 from src.path import get_evaluation_model_responses_path, get_evaluation_metrics_path
 from src.prompts.prompts import get_image_token, get_postprocess_prompt
 from src.evaluation.call_llm import call_llm
@@ -64,6 +65,12 @@ def get_final_answer_from_response(prompt: str, response: str, question_type: QT
 
 
 if __name__ == "__main__":
+    # make sure to release the memory of previous runs
+    gc.collect()
+    torch.cuda.empty_cache()
+    torch.cuda.ipc_collect()
+    
+    # start the evaluation
     args = EvaluationTap().parse_args()
     
     repository_name = get_hf_dataset_name(args.data)
@@ -74,7 +81,6 @@ if __name__ == "__main__":
         "train": ["train_all_first_100"] + [f"{split}_50" for split in train_data_splits],
         "eval_real": visonlyqa_real_splits,
         "eval_synthetic": visonlyqa_synthetic_splits,
-        "eval_synthetic_with_text": train_data_text_splits,
     }[args.data]
     
     if "finetuning_results" in args.model:
@@ -84,7 +90,22 @@ if __name__ == "__main__":
     all_y_true = []
     for split in splits_list:
         print(f"Split: {split}")
-        dataset = datasets.load_dataset(repository_name, split=split)
+        
+        # load dataset
+        try_tolerance = 3
+        for try_num in range(try_tolerance):
+            try:
+                dataset = datasets.load_dataset(repository_name, split=split)
+                break
+            except Exception as e:
+                if try_num < try_tolerance - 1:
+                    print(f"Error: {e}")
+                    print("Sleeping for 5 seconds")
+                    import time
+                    time.sleep(5)
+                    continue
+                else:
+                    raise e
         
         # get responses
         responses_list = []
@@ -142,6 +163,8 @@ if __name__ == "__main__":
             json.dump(metrics, f, indent=4)
 
     # make sure to release the memory
-    open_model = None
-    tokenizer = None
+    del open_model
+    del tokenizer
+    gc.collect()
     torch.cuda.empty_cache()
+    torch.cuda.ipc_collect()

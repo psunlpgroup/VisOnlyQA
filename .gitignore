@@ -2,6 +2,7 @@ credentials
 client_secrets.json
 
 *all.jsonl
+*.bootstrap.json
 
 finetuning_results/**
 !finetuning_results/**/
@@ -14,9 +15,7 @@ finetuning_results/**
 !finetuning_results/**/preprocessor_config.json
 
 intermediate/**/images
-intermediate/alphageometry/graphs
-intermediate/alphageometry/questions
-intermediate/alphageometry/info
+intermediate/alphageometry/
 intermediate/images_for_examples_in_paper
 
 dataset/train/images/CLEVR/

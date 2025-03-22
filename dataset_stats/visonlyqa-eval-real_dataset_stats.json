@@ -1,35 +1,116 @@
 {
     "geometry__triangle": {
-        "num_examples": 50
+        "num_examples": 100,
+        "answer_counts": {
+            "False": 50,
+            "True": 50
+        }
     },
     "geometry__quadrilateral": {
-        "num_examples": 50
+        "num_examples": 100,
+        "answer_counts": {
+            "False": 50,
+            "True": 50
+        }
     },
     "geometry__length": {
-        "num_examples": 50
+        "num_examples": 100,
+        "answer_counts": {
+            "e": 30,
+            "b": 18,
+            "a": 18,
+            "d": 22,
+            "c": 12
+        }
     },
     "geometry__angle": {
-        "num_examples": 50
+        "num_examples": 100,
+        "answer_counts": {
+            "b": 23,
+            "e": 15,
+            "a": 30,
+            "c": 13,
+            "d": 19
+        }
     },
     "geometry__area": {
-        "num_examples": 50
+        "num_examples": 100,
+        "answer_counts": {
+            "c": 28,
+            "e": 18,
+            "b": 18,
+            "a": 15,
+            "d": 21
+        }
     },
     "geometry__diameter_radius": {
-        "num_examples": 50
+        "num_examples": 100,
+        "answer_counts": {
+            "False": 50,
+            "True": 50
+        }
     },
     "chemistry__shape_single": {
-        "num_examples": 50
+        "num_examples": 50,
+        "answer_counts": {
+            "False": 23,
+            "True": 27
+        }
     },
     "chemistry__shape_multi": {
-        "num_examples": 50
+        "num_examples": 50,
+        "answer_counts": {
+            "d": 6,
+            "b,d": 4,
+            "b": 6,
+            "a,b,c,d": 11,
+            "a,d": 2,
+            "a,b,d": 1,
+            "c,d": 3,
+            "a": 3,
+            "b,c,d": 4,
+            "b,c": 3,
+            "c": 5,
+            "a,c": 1,
+            "a,c,d": 1
+        }
     },
     "charts__extraction": {
-        "num_examples": 50
+        "num_examples": 100,
+        "answer_counts": {
+            "a": 26,
+            "b": 22,
+            "d": 18,
+            "e": 22,
+            "c": 12
+        }
     },
     "charts__intersection": {
-        "num_examples": 50
+        "num_examples": 100,
+        "answer_counts": {
+            "False": 50,
+            "True": 50
+        }
     },
     "all": {
-        "num_examples": 500
+        "num_examples": 900,
+        "answer_counts": {
+            "False": 223,
+            "True": 227,
+            "e": 85,
+            "b": 87,
+            "a": 92,
+            "d": 86,
+            "c": 70,
+            "b,d": 4,
+            "a,b,c,d": 11,
+            "a,d": 2,
+            "a,b,d": 1,
+            "c,d": 3,
+            "b,c,d": 4,
+            "b,c": 3,
+            "a,c": 1,
+            "a,c,d": 1
+        }
     }
 }

@@ -6,7 +6,7 @@ from functools import partial
 from huggingface_hub import HfApi
 
 from src.path import test_dataset_dir, train_dataset_dir
-from src.config import visonlyqa_real_splits, visonlyqa_synthetic_splits, visonlyqa_synthetic_with_text_splits
+from src.config import visonlyqa_real_splits, visonlyqa_synthetic_splits
 from src.utils import get_hf_dataset_name
 
 
@@ -30,7 +30,7 @@ def add_image_to_example(example, split="test"):
 
 
 if __name__ == "__main__":
-    for real_synthetic in ["synthetic", "synthetic_with_text", "real"]:
+    for real_synthetic in ["synthetic", "real"]:
         repository_name = get_hf_dataset_name(f"eval_{real_synthetic}")
         
         ###
@@ -38,7 +38,16 @@ if __name__ == "__main__":
         api = HfApi()
         
         # create repository
-        api.create_repo(repo_id=repository_name, private=True, repo_type="dataset", exist_ok=True)
+        try:
+            api.create_repo(repo_id=repository_name, private=True, repo_type="dataset")  # , exist_ok=True)
+        except Exception as e:
+            # skip if exists
+            # please manually delete the repository if you want to re-upload
+            print("Skip", repository_name)
+            print("This is likely because the repository already exists. Check the following error message:\n")
+            
+            print(e)
+            continue
         
         # upload license
         api.upload_file(repo_type="dataset", repo_id=repository_name, path_in_repo="LICENSE.md", path_or_fileobj=Path("LICENSE.md"))
@@ -57,7 +66,7 @@ if __name__ == "__main__":
         
         ###
         # upload dataset
-        splits_list = {"synthetic": visonlyqa_synthetic_splits, "synthetic_with_text": visonlyqa_synthetic_with_text_splits, "real": visonlyqa_real_splits}[real_synthetic]
+        splits_list = {"synthetic": visonlyqa_synthetic_splits, "real": visonlyqa_real_splits}[real_synthetic]
         for split_name in splits_list:
             print(split_name)
             

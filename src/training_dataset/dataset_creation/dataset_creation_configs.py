@@ -8,9 +8,6 @@ quadrilateral_prompt_template = """There is {a_or_no} quadrilateral {quadrilater
 A quadrilateral is a four-sided polygon having four edges (sides) and four corners (vertices)."""
 
 
-diameter_prompt_template = """In the figure, the line {line} is {a_or_not_a} diameter of a circle. True or False?"""
-
-
 length_prompt_template = """Line {line1} is X times longer than {line2}. Which of the following options is a reasonable estimate of X? You only need to estimate from the visual information and do not need to do any mathematical reasoning. (a) 0.25 (b) 0.5 (c) 1 (d) 2 (e) 4"""
 
 

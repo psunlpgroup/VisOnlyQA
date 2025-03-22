@@ -12,7 +12,8 @@ from src.utils import get_sha512_hash_hex
 
 annotation_csv_files_dict_of_lists = {
     "geometry": [
-        "VisOnlyQA_geometry_diagram_annotation - MathVista.csv"
+        "VisOnlyQA_geometry_diagram_annotation - MathVista.csv",
+        "VisOnlyQA_geometry_diagram_annotation - MathVista_test.csv",
     ],
     "chemistry": [
         "VisOnlyQA_chemistry_annotation - MMMU_Chemistry.csv",
@@ -43,8 +44,6 @@ def get_deta_id(image_path: str, question: str, answer: str) -> str:
 if __name__ == "__main__":
     real_test_dataset_dir = test_dataset_dir / "real"
     real_test_dataset_dir.mkdir(parents=True, exist_ok=True)
-    
-    target_num = 50
     
     annotations: dict[str, list[VisonlyQA_Instance]] = {}
     skipped_split_cache: set[str] = set()  # splits that are not included in visonlyqa_splits
@@ -91,6 +90,10 @@ if __name__ == "__main__":
                                 "id": get_deta_id(image_path, q, a),
                             }
                         )
+                        
+                        if len(image_path) == 0:
+                            print(annotations[split_name][-1])
+                            raise ValueError("image_path is empty")
 
                         source_image_path = test_intermediate_dir / image_path
                         destination_image_path = test_dataset_dir / image_path
@@ -102,6 +105,11 @@ if __name__ == "__main__":
         annotation_jsonl_path = real_test_dataset_dir / f"{split_name}.jsonl"
         
         annotation_list = random.Random(split_name).sample(annotation_list, len(annotation_list))
+
+        if "chemistry" in split_name:
+            target_num = 50
+        else:
+            target_num = 100
 
         with open(annotation_jsonl_path, "w") as f:
             for annotation in annotation_list[:target_num]:

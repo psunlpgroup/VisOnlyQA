@@ -1,26 +1,76 @@
 {
     "syntheticgeometry__triangle": {
-        "num_examples": 100
+        "num_examples": 100,
+        "answer_counts": {
+            "False": 50,
+            "True": 50
+        }
     },
     "syntheticgeometry__quadrilateral": {
-        "num_examples": 100
+        "num_examples": 100,
+        "answer_counts": {
+            "False": 50,
+            "True": 50
+        }
     },
     "syntheticgeometry__length": {
-        "num_examples": 100
+        "num_examples": 100,
+        "answer_counts": {
+            "d": 23,
+            "b": 23,
+            "a": 14,
+            "c": 21,
+            "e": 19
+        }
     },
     "syntheticgeometry__angle": {
-        "num_examples": 100
+        "num_examples": 100,
+        "answer_counts": {
+            "c": 15,
+            "e": 17,
+            "a": 17,
+            "d": 27,
+            "b": 24
+        }
     },
     "syntheticgeometry__area": {
-        "num_examples": 100
+        "num_examples": 100,
+        "answer_counts": {
+            "c": 26,
+            "d": 16,
+            "e": 22,
+            "b": 21,
+            "a": 15
+        }
     },
     "3d__size": {
-        "num_examples": 100
+        "num_examples": 100,
+        "answer_counts": {
+            "a": 31,
+            "b": 32,
+            "c": 37
+        }
     },
     "3d__angle": {
-        "num_examples": 100
+        "num_examples": 100,
+        "answer_counts": {
+            "e": 15,
+            "c": 17,
+            "b": 22,
+            "d": 27,
+            "a": 19
+        }
     },
     "all": {
-        "num_examples": 700
+        "num_examples": 700,
+        "answer_counts": {
+            "False": 100,
+            "True": 100,
+            "d": 93,
+            "b": 122,
+            "a": 96,
+            "c": 116,
+            "e": 73
+        }
     }
 }

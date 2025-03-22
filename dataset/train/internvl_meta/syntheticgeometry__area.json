@@ -1,0 +1,9 @@
+{
+    "syntheticgeometry__area": {
+        "root": "../../VisOnlyQA/dataset/train",
+        "annotation": "../../VisOnlyQA/dataset/train/internvl_annotations/syntheticgeometry__area.jsonl",
+        "data_augment": false,
+        "repeat_time": 1,
+        "length": 10000
+    }
+}

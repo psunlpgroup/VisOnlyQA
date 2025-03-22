@@ -6,8 +6,10 @@ conda env create -f setup/environment.yml
 conda activate visonlyqa  # main
 
 # for evaluation
-# https://github.com/open-compass/VLMEvalKit/commit/9099cdacaa92995fae4ef23c957d1b78d89ae466
 git clone https://github.com/open-compass/VLMEvalKit ../VLMEvalKit
+cd ../VLMEvalKit
+git checkout 9099cdacaa92995fae4ef23c957d1b78d89ae466
+cd ../VisOnlyQA
 
 pip install torch==2.4 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
 pip install transformers==4.37.2 einops==0.8.0 timm==1.0.9 accelerate==0.33.0 sentencepiece==0.2.0

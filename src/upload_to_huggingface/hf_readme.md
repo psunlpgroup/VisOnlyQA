@@ -1,11 +1,15 @@
 # VisOnlyQA
 
+<p align="center">
+🌐 <a href="https://visonlyqa.github.io/">Project Website</a> | 📄 <a href="https://arxiv.org/abs/2412.00947">Paper</a> | 🤗 <a href="https://huggingface.co/collections/ryokamoi/visonlyqa-674e86c7ec384b629bb97bc3">Dataset</a> | 🔥 <a href="https://github.com/open-compass/VLMEvalKit">VLMEvalKit</a>
+</p>
+
 This repository contains the code and data for the paper "VisOnlyQA: Large Vision Language Models Still Struggle with Visual Perception of Geometric Information".
 
 VisOnlyQA is designed to evaluate the visual perception capability of large vision language models (LVLMs) on geometric information of scientific figures. The evaluation set includes 1,200 mlutiple choice questions in 12 visual perception tasks on 4 categories of scientific figures. We also provide a training dataset consisting of 70k instances.
 
 * Datasets:
-  * Eval-Real: [https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Real](https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Real)
+  * Eval-Real: [https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Real_v1.1](https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Real_v1.1)
   * Eval-Synthetic: [https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Synthetic](https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Synthetic)
   * Train: [https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Train](https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Train)
 * Code: [https://github.com/psunlpgroup/VisOnlyQA](https://github.com/psunlpgroup/VisOnlyQA)
@@ -22,12 +26,17 @@ VisOnlyQA is designed to evaluate the visual perception capability of large visi
 }
 ```
 
+## Update
+
+* v1.1
+  * Increased the number of instances in the Real split.
+
 ## Dataset
 
 The dataset is provided in Hugging Face Dataset.
 
-* Eval-Real: [https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Real](https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Real)
-  * 500 instances for questions on figures in existing datasets (e.g., MathVista, MMMU, and CharXiv)
+* Eval-Real: [https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Real_v1.1](https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Real_v1.1)
+  * 900 instances for questions on figures in existing datasets (e.g., MathVista, MMMU, and CharXiv)
 * Eval-Synthetic: [https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Synthetic](https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Eval_Synthetic)
   * 700 instances for questions on synthetic figures
 * Train: [https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Train](https://huggingface.co/datasets/ryokamoi/VisOnlyQA_Train)
@@ -46,7 +55,7 @@ The dataset is provided in Hugging Face Dataset.
 ```python
 from datasets import load_dataset
 
-real_eval = load_dataset("ryokamoi/VisOnlyQA_Eval_Real")
+real_eval = load_dataset("ryokamoi/VisOnlyQA_Eval_Real_v1.1")
 real_synthetic = load_dataset("ryokamoi/VisOnlyQA_Eval_Synthetic")
 
 # Splits

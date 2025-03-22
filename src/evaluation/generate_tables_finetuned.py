@@ -2,12 +2,11 @@ import json
 
 from src.config import (
     visonlyqa_real_splits, eval_real_splits_capitalized, visonlyqa_synthetic_splits, eval_synthetic_splits_capitalized,
-    visonlyqa_synthetic_with_text_splits, eval_synthetic_with_text_splits_capitalized,
     finetuning_splits_dict,
     convert_model_name, visonlyqa_response_type_dir,
     finetuning_base_models_list, finetuning_splits_capitalized, base_model_to_finetuned_model_dict
 )
-from src.path import get_evaluation_metrics_path, tables_dir, eval_real_dataset_stats_path, eval_synthetic_dataset_stats_path, eval_synthetic_with_text_dataset_stats_path
+from src.path import get_evaluation_metrics_path, tables_dir, eval_real_dataset_stats_path, eval_synthetic_dataset_stats_path
 from src.evaluation.generate_tables import get_random_baseline_performance, row_to_str
 
 
@@ -18,17 +17,17 @@ if __name__ == "__main__":
     dataset_stats = {}
     for real_synthetic in ["real", "synthetic", "synthetic_with_text"]:
         # get dataset stats
-        eval_dataset_stats_path = {"real": eval_real_dataset_stats_path, "synthetic": eval_synthetic_dataset_stats_path, "synthetic_with_text": eval_synthetic_with_text_dataset_stats_path}[real_synthetic]
+        eval_dataset_stats_path = {"real": eval_real_dataset_stats_path, "synthetic": eval_synthetic_dataset_stats_path}[real_synthetic]
         with open(eval_dataset_stats_path, "r") as f:
             dataset_stats[real_synthetic] = json.load(f)
     
-    splits_list_dir = {"real": visonlyqa_real_splits, "synthetic": visonlyqa_synthetic_splits, "synthetic_with_text": visonlyqa_synthetic_with_text_splits}
-    splits_capitalized_dir = {"real": eval_real_splits_capitalized, "synthetic": eval_synthetic_splits_capitalized, "synthetic_with_text": eval_synthetic_with_text_splits_capitalized}
+    splits_list_dir = {"real": visonlyqa_real_splits, "synthetic": visonlyqa_synthetic_splits}
+    splits_capitalized_dir = {"real": eval_real_splits_capitalized, "synthetic": eval_synthetic_splits_capitalized}
     
     # finetuning table
     prompt_type = "no_reasoning"
     for metric_name in ["accuracy"]:
-        for splits_list in [["finetuning_splits", "corresponding_real_splits"], ["finetuning_text_splits"]]:
+        for splits_list in [["finetuning_splits", "corresponding_real_splits"]]:
             table = []
             first_row = ["", ""] + finetuning_splits_capitalized
             table.append(first_row)
@@ -38,7 +37,6 @@ if __name__ == "__main__":
                 real_synthetic = {
                     "finetuning_splits": "synthetic",
                     "corresponding_real_splits": "real",
-                    "finetuning_text_splits": "synthetic_with_text"
                 }[splits_name]
                 
                 # first column

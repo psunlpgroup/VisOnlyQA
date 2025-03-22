@@ -1,3 +1,8 @@
 {
-    "accuracy": NaN
+    "accuracy": NaN,
+    "bootstrap": {
+        "std": {
+            "accuracy": NaN
+        }
+    }
 }

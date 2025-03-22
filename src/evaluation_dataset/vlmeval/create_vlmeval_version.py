@@ -6,7 +6,7 @@ from huggingface_hub import HfApi
 
 from src.typing import VisonlyQA_Instance
 from src.utils import get_hf_dataset_name
-from src.config import visonlyqa_real_splits, visonlyqa_synthetic_splits, visonlyqa_synthetic_with_text_splits
+from src.config import visonlyqa_real_splits, visonlyqa_synthetic_splits
 from src.path import intermediate_dir
 from src.prompts import extract_options_from_question
 

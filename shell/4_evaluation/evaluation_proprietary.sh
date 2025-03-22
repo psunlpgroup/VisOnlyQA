@@ -12,6 +12,7 @@ do
 
             echo "Evaluating model $MODEL on $DATA data with prompt $PROMPT"
             python src/evaluation/evaluation.py --model $MODEL --prompt $PROMPT --data eval_${DATA}
+            python src/evaluation/bootstrap.py --model $MODEL --prompt $PROMPT --data eval_${DATA}
         done
     done
 done

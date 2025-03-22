@@ -13,17 +13,17 @@ from src.path import test_intermediate_dir
 
 image_list_jsonl_files = {
     "geometry_diagram": [
-        ("MathVista", test_intermediate_dir / "data/geometry_diagram/MathVista.jsonl"),
-        ("MathVerse", test_intermediate_dir / "data/geometry_diagram/MathVerse.jsonl"),
+        # ("MathVista", test_intermediate_dir / "data/geometry_diagram/MathVista.jsonl"),
+        ("MathVista_test", test_intermediate_dir / "data/geometry_diagram/MathVista_test.jsonl"),
     ],
-    "chemistry": [
-        ("MMMU_Chemistry", test_intermediate_dir / "data/chemistry/MMMU_Chemistry.jsonl"),
-        ("MMMU_Chemistry_single", test_intermediate_dir / "data/chemistry/MMMU_Chemistry_single.jsonl")
-    ],
-    "charts": [
-        ("ChartQA", test_intermediate_dir / "data/charts/ChartQA.jsonl"),
-        ("CharXiv", test_intermediate_dir / "data/charts/CharXiv.jsonl")
-    ],
+    # "chemistry": [
+    #     ("MMMU_Chemistry", test_intermediate_dir / "data/chemistry/MMMU_Chemistry.jsonl"),
+    #     ("MMMU_Chemistry_single", test_intermediate_dir / "data/chemistry/MMMU_Chemistry_single.jsonl")
+    # ],
+    # "charts": [
+    #     ("ChartQA", test_intermediate_dir / "data/charts/ChartQA.jsonl"),
+    #     ("CharXiv", test_intermediate_dir / "data/charts/CharXiv.jsonl")
+    # ],
 }
 
 

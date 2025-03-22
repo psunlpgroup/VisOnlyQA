@@ -78,6 +78,27 @@ if __name__ == "__main__":
                 table.append(row)
                 table.append(["\\midrule"])
                 
+                # get all performance
+                all_performance_dict = {}
+                best_dict = {split: 0 for split in splits_list + ["all"]}
+                for model_name in models_list:
+                    all_performance_dict[model_name] = {}
+                    for split in splits_list + ["all"]:
+                        metrics_path = get_evaluation_metrics_path(split=split, prompt=prompt_type, model_name=model_name, train_eval=f"eval_{real_synthetic}")
+                        
+                        if metrics_path.exists():
+                            with open(metrics_path, "r") as f:
+                                metrics = json.load(f)
+                        else:
+                            metrics = None
+                        all_performance_dict[model_name][split] = metrics
+                        
+                        # best value
+                        if metrics is not None:
+                            best_dict[split] = max(
+                                best_dict[split], metrics[metric_name]
+                            )
+                
                 # model performance
                 for model_name in models_list:
                     model_name_str = convert_model_name[model_name]
@@ -86,13 +107,14 @@ if __name__ == "__main__":
                     
                     row = [model_name_str]
                     for split in splits_list + ["all"]:
-                        metrics_path = get_evaluation_metrics_path(split=split, prompt=prompt_type, model_name=model_name, train_eval=f"eval_{real_synthetic}")
+                        metrics = all_performance_dict[model_name][split]
                         
-                        if metrics_path.exists():
-                            with open(metrics_path, "r") as f:
-                                metrics = json.load(f)
-                            
+                        if metrics is not None:
                             metric_string = f"{metrics[metric_name]*100:.1f}"
+                            
+                            # best value
+                            if metrics[metric_name] == best_dict[split]:
+                                metric_string = f"\\textbf{{{metric_string}}}"
                         else:
                             metric_string = ""
                         row.append(metric_string)

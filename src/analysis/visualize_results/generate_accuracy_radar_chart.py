@@ -52,7 +52,7 @@ def plot_radar_chart(labels: list[str], scores: dict[str, list[float]], title: s
             ax.plot(angles, values, label=method, linewidth=2, color=color)
             ax.fill(angles, values, alpha=0.1)
     
-    ax.set_title(title, size=fontsize+2, pad=20)
+    ax.set_title(title, size=fontsize+8, pad=60)
     ax.set_yticks([10, 30, 50, 70, 90])
     ax.set_yticklabels(["10", "30", "50", "70", "90"], color="grey", size=fontsize)
     ax.set_xticks(angles[:-1])
@@ -112,7 +112,7 @@ if __name__ == "__main__":
     
     # Plot the radar charts
     fig, (ax1, ax2) = plt.subplots(1, 2, subplot_kw={'polar': True}, figsize=(14, 7))
-    fontsize = 15
+    fontsize = 18
 
     # Mathematical Reasoning Radar Chart
     plot_radar_chart([s.replace(" - ", "\n") for s in eval_real_splits_capitalized_full],

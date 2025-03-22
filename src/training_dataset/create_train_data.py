@@ -3,13 +3,13 @@ from pathlib import Path
 import random
 
 from src.path import train_dataset_dir
-from src.config import train_data_splits, train_data_text_splits
+from src.config import train_data_splits
 
 
 if __name__ == "__main__":
     print("Loading data")
     all_data_list_dict: dict[str, list] = {}
-    for dataset_name in train_data_splits + train_data_text_splits:
+    for dataset_name in train_data_splits:
         data_path = train_dataset_dir / "synthetic" / f"{dataset_name}.jsonl"
         with open(data_path, "r") as f:
             data_list = [json.loads(line) for line in f]

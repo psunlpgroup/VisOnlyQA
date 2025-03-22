@@ -12,8 +12,9 @@ from src.path import analysis_dir, figures_dir, get_evaluation_metrics_path
 colors_dict = {
     "microsoft/Phi-3.5-vision-instruct": "green",
     "OpenGVLab/InternVL2-4B": "plum",
-    "OpenGVLab/InternVL2-8B": "purple",
-    "Qwen/Qwen2-VL-2B-Instruct": "bisque",
+    "OpenGVLab/InternVL2-8B": "magenta",
+    "OpenGVLab/InternVL2-26B": "purple",
+    "Qwen/Qwen2-VL-2B-Instruct": "tan",
     "Qwen/Qwen2-VL-7B-Instruct": "darkorange",
 }
 
@@ -37,7 +38,7 @@ def plot_model_comparison_grouped_categories_bottom(diff_dict: dict, finetuned_a
     
     for category in ["improvement", "original"]:
         # Create the plot
-        fig, ax = plt.subplots(figsize=(24, 3))
+        fig, ax = plt.subplots(figsize=(24, 3.3))
         
         # Loop through each model to plot its data
         for i, (model_name, diff_list) in enumerate(diff_dict.items()):
@@ -46,24 +47,30 @@ def plot_model_comparison_grouped_categories_bottom(diff_dict: dict, finetuned_a
             else:
                 percent = [s * 100 for s in finetuned_accuracy_dict[model_name]]
             
-            ax.bar(x + (i - num_models / 2) * width, percent, width, label=convert_model_name[model_name], color=colors_dict[model_name])
+            ax.bar(x + (i - num_models / 2) * width, percent, width * 0.95, label=convert_model_name[model_name], color=colors_dict[model_name], edgecolor=colors_dict[model_name])
+            
+            if category == "original":
+                baseline_percent = [(s - diff) * 100 for s, diff in zip(finetuned_accuracy_dict[model_name], diff_list)]
+                ax.bar(x + (i - num_models / 2) * width, baseline_percent, width * 0.95, color="white", alpha=0.9, hatch="////", edgecolor=colors_dict[model_name])
             
             # add numbers on top of the bars
             for j, p in enumerate([s * 100 for s in diff_list]):
                 x_position = p if category == "improvement" else finetuned_accuracy_dict[model_name][j] * 100
                 
                 if sub_categories[j] != "":
-                    color = "black" if p >= 0 else "red"
-                    ax.text(x[j] + (i - num_models / 2) * width, max(x_position, 0),
-                            f"{p:+.1f}" if p!=0 else "0.0", ha="center", va="bottom", fontsize=fontsize-2, color=color)
+                    color = "royalblue" if p >= 0 else "red"
+                    ax.text(x[j] + (i - num_models / 2) * width, max(x_position, 0) - 14,
+                            f"{p:+.0f}" if p!=0 else "0.0", ha="center", va="bottom", fontsize=fontsize, color=color, weight="bold")
                 
                     finetuned_accuracies = [s * 100 for s in finetuned_accuracy_dict[model_name]]
-                    ax.text(x[j] + (i - num_models / 2) * width, max(x_position, 0) - 8,
-                            f"({finetuned_accuracies[j]:.0f}%)", ha="center", va="bottom", fontsize=fontsize-2, color="black")
+                    ax.text(x[j] + (i - num_models / 2) * width, max(x_position, 0),
+                            f"{finetuned_accuracies[j]:.0f}", ha="center", va="bottom", fontsize=fontsize, color="black")
+
+        ax.set_xlim(x[0] - width * (len(diff_dict) // 2 + 1), x[-1] + width * (len(diff_dict) // 2))
 
         # Add main x-labels
-        y_label = {"improvement": "Improvement by\nFine-tuning (Accuracy)", "original": "Fine-tuned Accuracy"}[category]
-        ax.set_ylabel(y_label, fontsize=fontsize)
+        y_label = {"improvement": "Improvement by\nFine-tuning (Accuracy)", "original": "Accuracy"}[category]
+        ax.set_ylabel(y_label, fontsize=fontsize+4)
         
         scores_list = {"improvement": list(diff_dict.values()), "original": list(finetuned_accuracy_dict.values())}[category]
         if category == "improvement":
@@ -76,7 +83,7 @@ def plot_model_comparison_grouped_categories_bottom(diff_dict: dict, finetuned_a
 
         # Create two rows of labels
         ax.set_xticks(x)
-        ax.set_xticklabels(sub_categories, fontsize=fontsize)  # , rotation=45, ha="right")
+        ax.set_xticklabels(sub_categories, fontsize=fontsize+8)  # , rotation=45, ha="right")
 
         # Create a secondary x-axis at the bottom for the major categories
         unique_categories = np.unique(major_categories)
@@ -85,11 +92,11 @@ def plot_model_comparison_grouped_categories_bottom(diff_dict: dict, finetuned_a
         
         ax_secondary = ax.secondary_xaxis('bottom')
         ax_secondary.set_xticks(major_category_positions)
-        ax_secondary.set_xticklabels(unique_categories, rotation=0)
+        ax_secondary.set_xticklabels(unique_categories, rotation=0, fontsize=fontsize+8)
 
         ax_secondary.spines['bottom'].set_position(('outward', 25))
         ax_secondary.spines['bottom'].set_visible(False)
-        ax_secondary.tick_params(axis='x', length=0, labelsize=fontsize)
+        ax_secondary.tick_params(axis='x', length=0, labelsize=fontsize+8)
         
         # add 0 horizontal line
         if category == "improvement":
@@ -97,11 +104,11 @@ def plot_model_comparison_grouped_categories_bottom(diff_dict: dict, finetuned_a
 
         # Add legend
         if add_legend:
-            ax.legend(fontsize=fontsize+2)
+            ax.legend(fontsize=fontsize+6, facecolor="white", framealpha=1.0, loc="lower right", ncol=2)
         
         # add title
         title = {"real": "VisOnlyQA-Eval-Real (Out-of-Distribution Figures)", "synthetic": "VisOnlyQA-Eval-Synthetic (In-Distribution Figures)"}[real_synthetic]
-        ax.set_title(title, fontsize=fontsize+2)
+        ax.set_title(title, fontsize=fontsize+16)
         
         # Display the plot
         plt.tight_layout()

@@ -11,4 +11,6 @@ pip install einops
 pip install einops-exts
 pip install transformers==4.41.1
 
+pip install httpx==0.27.2  # downgrade to avoid openai issue
+
 conda deactivate

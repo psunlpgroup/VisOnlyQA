@@ -5,7 +5,7 @@ first_device=$(echo $CUDA_VISIBLE_DEVICES | cut -d',' -f1)
 export MASTER_PORT=$((34229 + $first_device))
 echo "MASTER_PORT: $MASTER_PORT"
 
-for DATA_TYPE in "" "text_"
+for DATA_TYPE in ""
 do
     for DATASET_NAME in "syntheticgeometry__triangle" "syntheticgeometry__quadrilateral" "syntheticgeometry__length" "syntheticgeometry__area" "syntheticgeometry__angle" "3d__size" "3d__angle"
     do

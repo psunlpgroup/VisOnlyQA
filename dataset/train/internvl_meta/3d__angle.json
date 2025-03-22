@@ -1,0 +1,9 @@
+{
+    "3d__angle": {
+        "root": "../../VisOnlyQA/dataset/train",
+        "annotation": "../../VisOnlyQA/dataset/train/internvl_annotations/3d__angle.jsonl",
+        "data_augment": false,
+        "repeat_time": 1,
+        "length": 10000
+    }
+}

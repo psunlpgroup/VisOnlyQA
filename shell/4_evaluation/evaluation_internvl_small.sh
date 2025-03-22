@@ -1,4 +1,4 @@
-export MODELS_LIST="OpenGVLab/InternVL2-4B OpenGVLab/InternVL2-8B OpenGVLab/InternVL2-26B"
+export MODELS_LIST="OpenGVLab/InternVL2-4B OpenGVLab/InternVL2-8B"
 bash shell/4_evaluation/__evaluation.sh real
 bash shell/4_evaluation/__evaluation.sh synthetic
 unset MODELS_LIST

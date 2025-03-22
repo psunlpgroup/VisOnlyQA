@@ -44,8 +44,11 @@ def read_cache(input_dict: dict, image: Optional[PIL.Image.Image], cache_dir = P
     if not Path(cache_path).exists():
         return None
     
-    with open(cache_path, "r") as f:
-        return json.load(f)
+    try:
+        with open(cache_path, "r") as f:
+            return json.load(f)
+    except:
+        return None
 
 
 def dump_cache(cache: dict, input_dict: dict, image: PIL.Image.Image, cache_dir = Path("./cache")):

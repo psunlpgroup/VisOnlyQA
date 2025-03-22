@@ -35,7 +35,6 @@ llama_factory_data_info_path = llama_factory_dir / "data/dataset_info.json"
 dataset_stats_dir = Path("./dataset_stats")
 eval_real_dataset_stats_path = dataset_stats_dir / "visonlyqa-eval-real_dataset_stats.json"
 eval_synthetic_dataset_stats_path = dataset_stats_dir / "visonlyqa-eval-synthetic_dataset_stats.json"
-eval_synthetic_with_text_dataset_stats_path = dataset_stats_dir / "visonlyqa-eval-synthetic_with_text_dataset_stats.json"
 train_dataset_stats_path = dataset_stats_dir / "visonlyqa-train_dataset_stats.json"
 
 # evaluation
@@ -49,6 +48,7 @@ human_performance_dir = results_dir / "human_performance"
 # analysis
 analysis_dir = results_dir / "analysis"
 openvlm_leaderboard_dir = analysis_dir / "openvlm_leaderboard"
+statistical_test_dir = analysis_dir / "statistical_test"
 
 # VLMEvalKit
 vlmevalkit_models_list_path = Path("config/vlmevalkit_models_list.txt")
@@ -71,6 +71,15 @@ def get_evaluation_metrics_path(split: str, prompt: Literal["reasoning", "no_rea
     from src.utils.utils import get_short_model_name
     
     path = evaluation_metrics_dir / train_eval / split / f"prompt={prompt}" / f"{get_short_model_name(model_name)}.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    
+    return path
+
+
+def get_paired_bootstrap_path(model_1: str, model_2: str, split: str, prompt: Literal["reasoning", "no_reasoning"], train_eval: Literal["train", "eval_real", "eval_synthetic"]) -> Path:
+    from src.utils.utils import get_short_model_name
+    
+    path = statistical_test_dir / "paired_bootstrap" / train_eval / split / f"prompt={prompt}" / f"{get_short_model_name(model_1)}_{get_short_model_name(model_2)}.json"
     path.parent.mkdir(parents=True, exist_ok=True)
     
     return path

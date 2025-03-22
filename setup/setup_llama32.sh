@@ -4,8 +4,11 @@ conda env create -f setup/environment_llama32.yml
 conda activate llama32
 
 pip install -r setup/requirements_vlmevalkit.txt
+pip install moviepy==1.0.3  # fix version
 
 pip install torch==2.4 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
 pip install transformers==4.45.0
+
+pip install httpx==0.27.2  # downgrade to avoid openai issue
 
 conda deactivate
